@@ -33,7 +33,6 @@ module.exports = function(config) {
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',
-      'test/mock/**/*.js',
       'test/spec/**/*.js'
     ],
 
@@ -59,8 +58,20 @@ module.exports = function(config) {
     // Which plugins to enable
     plugins: [
       'karma-phantomjs-launcher',
-      'karma-jasmine'
+      'karma-jasmine',
+      'karma-coverage'
     ],
+
+    reporters: ['progress','coverage'],
+
+    preprocessors: {  
+      'app/scripts/**/*.js': ['coverage']
+    },
+    
+    coverageReporter: {
+        type: 'lcov',
+        dir: 'coverage'
+    },
 
     // Continuous Integration mode
     // if true, it capture browsers, run tests and exit
