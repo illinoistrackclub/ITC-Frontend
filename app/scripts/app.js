@@ -3,11 +3,12 @@
 /**
  * @ngdoc overview
  * @name itcFrontendApp
- * @description
- * # itcFrontendApp
- *
- * Main module of the application.
+ * @description 
+ * # Main module of the application. 
+ * 
+ * This sets up universal settings
  */
+
 angular
   .module('itcFrontendApp', [
     'ngAnimate',
@@ -16,20 +17,27 @@ angular
     'ngMaterial',
     'ngResource',
     'ngRoute',
-    'ngSanitize',
-    'ngTouch'
+    'ngSanitize'
   ])
+
+  /**
+   * @ngdoc overview
+   * @name  config module
+   * @description 
+   * # Config module of the application
+   * 
+   * $routeProvider sets up the routes (urls) and controllers (js files) of the site
+   */
+
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
+        templateUrl: 'views/home.html',
+        controller: 'HomeCtrl'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
+      .when('/news', {
+        templateUrl: 'views/news.html',
+        controller: 'NewsCtrl'
       })
       .otherwise({
         redirectTo: '/'
