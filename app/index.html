@@ -2,9 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Illinois Track Club</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -19,7 +22,34 @@
 
 
 
-  <div class="header"></div>
+  <div class="header">
+    <md-toolbar class="md-menu-toolbar md-whiteframe-4dp" layout="row" layout-align="end center">
+      <a><div class="menu-item">Home</div></a>
+      <a><div class="menu-item">News</div></a>
+      <a><div class="menu-item">Races</div></a>
+      <a><div class="menu-item">Club Relays</div></a>
+      <a><div class="menu-item">Results</div></a>
+      <a><div class="menu-item">Prospective Members</div></a>
+      <a><div class="menu-item">
+        <md-menu>
+          <span ng-click="$mdOpenMenu()">
+            Current Members
+          </span>
+          <md-menu-content>
+            <md-menu-item><md-button>Photos</md-button></md-menu-item>
+            <md-menu-item><md-button>Videos</md-button></md-menu-item>
+            <md-menu-item><md-button>Board Minutes</md-button></md-menu-item>
+            <md-menu-item><md-button>Training Resources</md-button></md-menu-item>
+            <md-menu-item><md-button>IXC Constitution</md-button></md-menu-item>
+            <md-menu-item><md-button>ITC Constitution</md-button></md-menu-item>
+          </md-menu-content>
+        </md-menu>
+      </div></a>
+      <a><div class="menu-item">Contact</div></a>
+      
+    </md-toolbar>
+  </div>
+
   <div class="page-container">
     <div ng-view></div>
   </div>
