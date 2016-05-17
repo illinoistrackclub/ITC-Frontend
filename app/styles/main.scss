@@ -2,6 +2,23 @@
 // endbower
 
 * {
+	font-family: 'Roboto';
   margin: 0;
   padding: 0;
+}
+
+a, a:visited, a:hover {
+	cursor: pointer;
+	color: inherit;
+}
+
+md-menu-content {
+	min-width: 200px;
+}
+
+.header {
+	.menu-item {
+		padding: 0 10px;
+    font-size: 16px;
+	}
 }
