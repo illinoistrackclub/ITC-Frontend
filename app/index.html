@@ -24,28 +24,28 @@
 
   <div class="header">
     <md-toolbar class="md-menu-toolbar md-whiteframe-4dp" layout="row" layout-align="end center">
-      <a><div class="menu-item">Home</div></a>
-      <a><div class="menu-item">News</div></a>
-      <a><div class="menu-item">Races</div></a>
-      <a><div class="menu-item">Club Relays</div></a>
-      <a><div class="menu-item">Results</div></a>
-      <a><div class="menu-item">Prospective Members</div></a>
+      <a href="#/"><div class="menu-item">Home</div></a>
+      <a href="#/news"><div class="menu-item">News</div></a>
+      <a href="#/races"><div class="menu-item">Races</div></a>
+      <a href="#/clubrelays"><div class="menu-item">Club Relays</div></a>
+      <a href="#/results"><div class="menu-item">Results</div></a>
+      <a href="#/prospective_members"><div class="menu-item">Prospective Members</div></a>
       <a><div class="menu-item">
         <md-menu>
           <span ng-click="$mdOpenMenu()">
             Current Members
           </span>
           <md-menu-content>
-            <md-menu-item><md-button>Photos</md-button></md-menu-item>
-            <md-menu-item><md-button>Videos</md-button></md-menu-item>
-            <md-menu-item><md-button>Board Minutes</md-button></md-menu-item>
-            <md-menu-item><md-button>Training Resources</md-button></md-menu-item>
-            <md-menu-item><md-button>IXC Constitution</md-button></md-menu-item>
-            <md-menu-item><md-button>ITC Constitution</md-button></md-menu-item>
+            <md-menu-item><md-button href="https://www.facebook.com/illinoisxctrackclub/photos">Photos</md-button></md-menu-item>
+            <md-menu-item><md-button href="https://www.youtube.com/channel/UCcZRTX-FYPADoTpgc1jAcow">Videos</md-button></md-menu-item>
+            <md-menu-item><md-button href="#/current_members/board_minutes">Board Minutes</md-button></md-menu-item>
+            <md-menu-item><md-button href="#/current_members/training_resources">Training Resources</md-button></md-menu-item>
+            <md-menu-item><md-button href="#/current_members/">IXC Constitution</md-button></md-menu-item>
+            <md-menu-item><md-button href="#/current_members/">ITC Constitution</md-button></md-menu-item>
           </md-menu-content>
         </md-menu>
       </div></a>
-      <a><div class="menu-item">Contact</div></a>
+      <a href="#/contact"><div class="menu-item">Contact</div></a>
       
     </md-toolbar>
   </div>
@@ -55,11 +55,7 @@
   </div>
   <div class="footer"></div>
 
-
-
-
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
    <script>
      !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
      (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
