@@ -33,6 +33,15 @@ md-menu-content {
 	}
 }
 
+.centered-content {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.padded-content {
+	padding: 10px;
+}
+
 .home-page-container {
 	.image-slider-container {
 		height: 400px;
@@ -64,5 +73,17 @@ md-menu-content {
 		.youtube-bar {
 			background-color: #cd201f;
 		}
+	}
+
+	.about-title {
+		font-size: 60px;
+		font-weight: 300;
+		margin: 25px 0;
+	}
+
+	.about-text {
+		font-size: 18px;
+		line-height: 1.3;
+		margin-bottom: 20px;
 	}
 }
