@@ -2,6 +2,6 @@
 
 angular.module('itcFrontendApp')
 
-.controller('NewsCtrl', function() {
+.controller('RacesCtrl', function() {
 
 });
