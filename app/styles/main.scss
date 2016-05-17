@@ -21,6 +21,10 @@ md-menu-content {
 }
 
 .header {
+	md-toolbar {
+		position: fixed;
+	}
+
 	.menu-image {
 		height: 40px;
 		width: auto;
@@ -40,6 +44,10 @@ md-menu-content {
 
 .padded-content {
 	padding: 10px;
+}
+
+.page-container {
+	padding-top: 64px;
 }
 
 .home-page-container {
