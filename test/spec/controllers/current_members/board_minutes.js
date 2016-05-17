@@ -1,15 +1,15 @@
 'use strict';
 
-describe('Controller: HomeCtrl', function () {
+describe('Controller: BoardMinutesCtrl', function () {
 
   // load the controller's module
   beforeEach(module('itcFrontendApp'));
 
-  var HomeCtrl;
+  var BoardMinutesCtrl;
 
   // Initialize the controller
   beforeEach(inject(function ($controller) {
-    HomeCtrl = $controller('HomeCtrl', {});
+    BoardMinutesCtrl = $controller('BoardMinutesCtrl', {});
   }));
 
   it('contains spec with an expectation', function() {
