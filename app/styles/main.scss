@@ -1,6 +1,9 @@
 // bower:scss
 // endbower
 
+$black: #000;
+$white: #FFF;
+
 * {
 	font-family: 'Roboto';
   margin: 0;
@@ -27,5 +30,39 @@ md-menu-content {
 	.menu-item {
 		padding: 0 10px;
     font-size: 16px;
+	}
+}
+
+.home-page-container {
+	.image-slider-container {
+		height: 400px;
+	}
+
+	.social-bar-container {	
+		text-align: center;
+
+		.social-bar {
+			width: 25%;
+			height: 100px;
+			color: $white;
+			font-size: 50px;
+			line-height: 100px;
+		}
+
+		.facebook-bar {
+			background-color: #3C5A94;
+		}
+
+		.twitter-bar {
+			background-color: #55acee;
+		}
+
+		.instagram-bar {
+			background-color: #405de6;
+		}
+
+		.youtube-bar {
+			background-color: #cd201f;
+		}
 	}
 }
