@@ -34,6 +34,6 @@ This is the frontend of the Illinois Track Club website
 
 4. Clone the repo
 
-5. Run `grunt install` at the root directory
+5. Run `npm install && bower install` at the root directory
 
 6. Run `grunt serve` to load the site into browser. Livereload is enabled, so any changes will automatically reload in the browser.
