@@ -1,1 +1,33 @@
-<div>prospective members</div>
+<div class="centered-content padded-content">
+	<script type="text/ng-template" id="ProspectiveMembersSurvey.html">
+		<md-dialog aria-label="Mailing List Survey"  ng-cloak>
+		  <form>
+		    <md-toolbar>
+		      <div class="md-toolbar-tools">
+		        <h1>Mailing List Survey</h1>
+		        <span flex></span>
+		      </div>
+		    </md-toolbar>
+
+		    <md-dialog-content>
+		      <div class="md-dialog-content">
+		        <h3>What is your name?</h3>
+		        <br>
+   		        <h3>What is your email?</h3>
+   		        <br>
+		        <h3>What year in school are you?</h3>
+		        <br>
+		        <h3>Anything else you'd like to add?</h3>
+		      </div>
+		    </md-dialog-content>
+
+		    <md-dialog-actions layout="row">
+		      <span flex></span>
+		      <md-button ng-click="cancel()" class="md-warn">Cancel</md-button>
+		      <md-button ng-click="submit()" class="md-primary">Submit</md-button>
+		    </md-dialog-actions>
+		  </form>
+		</md-dialog>
+	</script>
+	<md-button class="md-raised md-primary" ng-click="open()">Join our Mailing List</md-button>
+</div>
