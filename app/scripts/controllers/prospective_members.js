@@ -3,7 +3,6 @@
 angular.module('itcFrontendApp')
 
 .controller('ProspectiveMembersCtrl', function($scope, $mdDialog) {
-
 	$scope.open = function(ev){
 	    $mdDialog.show({
 	      controller: 'ProspectiveMembersSurveyCtrl',
@@ -14,10 +13,7 @@ angular.module('itcFrontendApp')
 	      fullscreen: true
 	    })
   };
-
-
 });
-
 angular.module('itcFrontendApp').controller('ProspectiveMembersSurveyCtrl', function($scope, $mdDialog) {
 	$scope.submit = function(){
 		$mdDialog.show( 
@@ -28,8 +24,8 @@ angular.module('itcFrontendApp').controller('ProspectiveMembersSurveyCtrl', func
         .textContent('You will be added to our email list shortly')
         .ariaLabel('Alert Dialog Demo')
         .ok('Got it!')
-    );
-	}
+    	);
+    }
 	$scope.cancel = function(){
 		$mdDialog.hide();
 	}
