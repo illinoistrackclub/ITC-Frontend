@@ -44,7 +44,7 @@ angular
         templateUrl: 'views/current_members/training_resources.html',
         controller: 'TrainingResourcesCtrl'
       })
-      .when('contact', {
+      .when('/contact', {
         templateUrl: 'views/contact.html',
         controller: 'ContactCtrl'
       })
