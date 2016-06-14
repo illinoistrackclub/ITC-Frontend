@@ -155,3 +155,9 @@ md-menu-content {
 		}
 	}
 }
+
+.md-dialog-content {
+  md-input-container {
+    display: block;
+  }
+}
