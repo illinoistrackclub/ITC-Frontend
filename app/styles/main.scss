@@ -34,6 +34,12 @@ md-menu-content {
 	margin: 0 auto;
 }
 
+.md-dialog-content {
+  md-input-container {
+    display: block;
+  }
+}
+
 .padded-content {
 	padding: 10px;
 }
@@ -41,6 +47,10 @@ md-menu-content {
 .page-container {
 	padding-top: 64px;
 	padding-bottom: 200px;
+}
+
+.page-content {
+	padding-top: 10px;
 }
 
 .page-title {
@@ -156,8 +166,15 @@ md-menu-content {
 	}
 }
 
-.md-dialog-content {
-  md-input-container {
-    display: block;
-  }
+.contact-page-container {
+	.coach-card {
+		display: inline-block;
+		max-width: 480px;
+		min-width: 300px;
+		width: calc(50% - 20px);
+	}
+
+	.second-title {
+		padding: 25px 0;
+	}
 }
