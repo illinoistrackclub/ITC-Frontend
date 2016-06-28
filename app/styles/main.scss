@@ -34,6 +34,18 @@ md-menu-content {
 	margin: 0 auto;
 }
 
+.email {
+	color: #55acee;
+}
+
+.emphasis {
+	font-weight: 700;
+}
+
+.extra-vertical-space {
+	padding-top: 20px;
+}
+
 .md-dialog-content {
   md-input-container {
     display: block;
@@ -176,5 +188,13 @@ md-menu-content {
 
 	.second-title {
 		padding: 25px 0;
+	}
+}
+
+.clubrelays-page-container {
+	.map-container {
+		padding: 25px 0;
+		height: 600px;
+		width: 100%;
 	}
 }
