@@ -58,7 +58,7 @@ md-menu-content {
 
 .page-container {
 	padding-top: 64px;
-	padding-bottom: 200px;
+	padding-bottom: 225px;
 }
 
 .page-content {
@@ -102,6 +102,30 @@ md-menu-content {
 	.footer-logo {
 		font-size: 36px;
 		padding: 0 25px;
+	}
+}
+
+.three-column-table {
+	.row {
+		width: 100%;
+	}
+
+	.header {
+		width: 100%;
+	}
+
+	.first-column {
+		width: 40%;
+		float: left;
+	}
+
+	.second-column, .third-column {
+		display: inline-block;
+		width: 30%;
+	}
+
+	.third-column {
+		float: right;
 	}
 }
 
