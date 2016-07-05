@@ -134,7 +134,7 @@ md-menu-content {
 		height: 400px;
 	}
 
-	.social-bar-container {	
+	.social-bar-container {
 		text-align: center;
 
 		.social-bar {
@@ -220,5 +220,27 @@ md-menu-content {
 		padding: 25px 0;
 		height: 600px;
 		width: 100%;
+	}
+}
+
+.prospective-members-page-container {
+	.mailing-list {
+		text-align: center;
+
+		.mailing-list-button {
+			margin: 6px 0px;
+		}
+	}
+
+	.faq-title {
+		margin-bottom: 10px;
+	}
+
+	.faq-question {
+		font-size: 18px;
+	}
+
+	.faq-answer {
+		margin-top: 5px;
 	}
 }
