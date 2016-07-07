@@ -52,6 +52,10 @@ md-menu-content {
   }
 }
 
+.md-autocomplete-suggestions-container li .highlight {
+	color: #F5731B;
+}
+
 .padded-content {
 	padding: 10px;
 }
@@ -308,6 +312,20 @@ md-menu-content {
 			.performance {
 				margin-left: 5px;
 				font-weight: 700;
+			}
+		}
+
+		.two-column-table.results-table {
+			&.extra-vertical-space {
+				padding-top: 10px;
+			}
+
+			.right-column {
+				text-align: right;
+
+				.splits {
+					margin-left: 10px;
+				}
 			}
 		}
 	}
