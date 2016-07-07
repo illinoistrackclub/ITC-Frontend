@@ -34,7 +34,7 @@ md-menu-content {
 	margin: 0 auto;
 }
 
-.email {
+.link {
 	color: #55acee;
 }
 
@@ -50,6 +50,10 @@ md-menu-content {
   md-input-container {
     display: block;
   }
+}
+
+.md-autocomplete-suggestions-container li .highlight {
+	color: #F5731B;
 }
 
 .padded-content {
@@ -308,6 +312,20 @@ md-menu-content {
 			.performance {
 				margin-left: 5px;
 				font-weight: 700;
+			}
+		}
+
+		.two-column-table.results-table {
+			&.extra-vertical-space {
+				padding-top: 10px;
+			}
+
+			.right-column {
+				text-align: right;
+
+				.splits {
+					margin-left: 10px;
+				}
 			}
 		}
 	}

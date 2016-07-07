@@ -2,6 +2,6 @@
 
 angular.module('itcFrontendApp')
 
-.controller('ResultsCtrl', function() {
-
+.controller('ResultsCtrl', function($scope) {
+  $scope.athletes = ['person1', 'person2'];
 });
