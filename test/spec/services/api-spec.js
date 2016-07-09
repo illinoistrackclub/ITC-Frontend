@@ -1,0 +1,186 @@
+'use strict';
+
+describe('service: Api', function() {
+  beforeEach(module('itcFrontendApp'));
+
+  var Api, $http, $q, urlBase;
+  var httpGet;
+
+  beforeEach(inject(function(_Api_, _$http_, _$q_) {
+    Api = _Api_;
+    $http = _$http_;
+    $q = _$q_;
+
+    urlBase = 'localhost:8000/';
+
+    httpGet = $q.defer();
+
+    spyOn($http, 'get').and.returnValue(httpGet.promise);
+  }));
+
+  var itShouldCallGET = function(getOptions) {
+    it('should call GET on the server', function() {
+      var options = getOptions();
+      expect($http.get).toHaveBeenCalledWith(options.url);
+    });
+  };
+
+  var itShouldReturnAPromise = function(getOptions) {
+    it('should return a promise', function() {
+      var options = getOptions();
+      expect(options.funcReturn).toBe(options.promise);
+    });
+  };
+
+  describe('getAllAthletes', function() {
+    itShouldCallGET(function() {
+      return {
+        run: Api.getAllAthletes(),
+        url: urlBase + 'athletes/'
+      };
+    });
+
+    itShouldReturnAPromise(function() {
+      return {
+        funcReturn: Api.getAllAthletes(),
+        promise: httpGet.promise
+      };
+    });
+  });
+
+  describe('getAthlete', function() {
+    var id;
+
+    beforeEach(function() {
+      id = 5;
+    });
+
+    itShouldCallGET(function() {
+      return {
+        run: Api.getAthlete(id),
+        url: urlBase + 'athletes/getAthlete/' +  id + '/'
+      };
+    });
+
+    itShouldReturnAPromise(function() {
+      return {
+        funcReturn: Api.getAthlete(id),
+        promise: httpGet.promise
+      };
+    });
+  });
+
+  describe('getAllEvents', function() {
+    itShouldCallGET(function() {
+      return {
+        run: Api.getAllEvents(),
+        url: urlBase + 'events/'
+      };
+    });
+
+    itShouldReturnAPromise(function() {
+      return {
+        funcReturn: Api.getAllEvents(),
+        promise: httpGet.promise
+      };
+    });
+  });
+
+  describe('getEvent', function() {
+    var id;
+
+    beforeEach(function() {
+      id = 5;
+    });
+
+    itShouldCallGET(function() {
+      return {
+        run: Api.getEvent(id),
+        url: urlBase + 'events/getEvent/' +  id + '/'
+      };
+    });
+
+    itShouldReturnAPromise(function() {
+      return {
+        funcReturn: Api.getEvent(id),
+        promise: httpGet.promise
+      };
+    });
+  });
+
+  describe('getAllMeets', function() {
+    itShouldCallGET(function() {
+      return {
+        run: Api.getAllMeets(),
+        url: urlBase + 'meets/'
+      };
+    });
+
+    itShouldReturnAPromise(function() {
+      return {
+        funcReturn: Api.getAllMeets(),
+        promise: httpGet.promise
+      };
+    });
+  });
+
+  describe('getMeet', function() {
+    var id;
+
+    beforeEach(function() {
+      id = 5;
+    });
+
+    itShouldCallGET(function() {
+      return {
+        run: Api.getMeet(id),
+        url: urlBase + 'meets/getMeet/' +  id + '/'
+      };
+    });
+
+    itShouldReturnAPromise(function() {
+      return {
+        funcReturn: Api.getMeet(id),
+        promise: httpGet.promise
+      };
+    });
+  });
+
+  describe('getAllResults', function() {
+    itShouldCallGET(function() {
+      return {
+        run: Api.getAllResults(),
+        url: urlBase + 'results/'
+      };
+    });
+
+    itShouldReturnAPromise(function() {
+      return {
+        funcReturn: Api.getAllResults(),
+        promise: httpGet.promise
+      };
+    });
+  });
+
+  describe('getResult', function() {
+    var id;
+
+    beforeEach(function() {
+      id = 5;
+    });
+
+    itShouldCallGET(function() {
+      return {
+        run: Api.getResult(id),
+        url: urlBase + 'results/getResult/' +  id + '/'
+      };
+    });
+
+    itShouldReturnAPromise(function() {
+      return {
+        funcReturn: Api.getResult(id),
+        promise: httpGet.promise
+      };
+    });
+  });
+});
