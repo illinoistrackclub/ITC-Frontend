@@ -2,6 +2,46 @@
 
 angular.module('itcFrontendApp')
 
-.controller('ResultsCtrl', function($scope) {
-  $scope.athletes = ['person1', 'person2'];
+.controller('ResultsCtrl', function(Api, $http, $q, $scope) {
+  var sortByDate = function(array) {
+    array.sort(function(a, b) { return new Date(b.date).getTime() - new Date(a.date).getTime(); });
+    array.reverse();
+  };
+
+  var hashMeetsToYear = function(meetsByYear, meets) {
+    angular.forEach(meets, function(meet) {
+      var year = new Date(meet.date).getFullYear();
+      if (meetsByYear[year]) {
+        meetsByYear[year].push(meet);
+      } else {
+        meetsByYear[year] = [ meet ];
+      }
+    });
+  };
+
+  var getMeets = function(season, scopeProperty) {
+    Api.getAllMeetsBy('season=' + season).then(function(response) {
+      var meets = response.data;
+      var meetsByYear = {};
+
+      sortByDate(meets);
+      hashMeetsToYear(meetsByYear, meets);
+
+      $scope[scopeProperty] = meetsByYear;
+    });
+  };
+
+  getMeets('XC', 'crossCountryMeets');
+  getMeets('Indoor', 'indoorMeets');
+  getMeets('Outdoor', 'outdoorMeets');
+
+  $scope.loadAthletes = function() {
+    var deferred = $q.defer();
+
+    Api.getAllAthletesBy('search=' + $scope.athleteText).then(function(response) {
+      deferred.resolve( response.data );
+    });
+
+    return deferred.promise;
+  };
 });

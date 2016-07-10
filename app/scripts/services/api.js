@@ -4,10 +4,14 @@ angular.module('itcFrontendApp')
 
 .service('Api', function($http) {
 
-  var urlBase = 'localhost:8000/';
+  var urlBase = 'http://localhost:8000/';
 
   this.getAllAthletes = function() {
     return $http.get(urlBase + 'athletes/');
+  };
+
+  this.getAllAthletesBy = function(filter) {
+    return $http.get(urlBase + 'athletes/?' + filter);
   };
 
   this.getAthlete = function(id) {
@@ -24,6 +28,10 @@ angular.module('itcFrontendApp')
 
   this.getAllMeets = function() {
     return $http.get(urlBase + 'meets/');
+  };
+
+  this.getAllMeetsBy = function(filter) {
+    return $http.get(urlBase + 'meets/?' + filter);
   };
 
   this.getMeet = function(id) {
