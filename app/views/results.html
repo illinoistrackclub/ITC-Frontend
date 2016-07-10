@@ -183,309 +183,66 @@
       <md-tab label="Meet Results">
         <md-tabs class="tabs" md-dynamic-height>
           <md-tab label="Cross Country">
-            <div class="md-title extra-vertical-space">2016</div>
-            <div class="two-column-table results-table extra-vertical-space">
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
+            <span ng-repeat="meets in crossCountryMeets | orderObjectBy:date:true">
+              <div class="md-title extra-vertical-space">{{ meets[0].date.substring(0, 4) }}</div>
+              <div class="two-column-table results-table extra-vertical-space">
+                <div class="row md-body-1" ng-repeat-start="meet in meets">
+                  <div class="left-column">{{ meet.name }}</div>
+                  <div class="right-column">
+                    <a class="link results" ng-if="meet.resultURL">Results</a>
+                    <a class="link splits" ng-if="meet.splitURL">Splits</a>
+                  </div>
+                </div>
+                <md-divider ng-repeat-end></md-divider>
               </div>
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-            </div>
-            <div class="md-title extra-vertical-space">2015</div>
-            <div class="two-column-table results-table extra-vertical-space">
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-            </div>
-            <div class="md-title extra-vertical-space">2014</div>
-            <div class="two-column-table results-table extra-vertical-space">
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-            </div>
-            <div class="md-title extra-vertical-space">2013</div>
-            <div class="two-column-table results-table extra-vertical-space">
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-            </div>
+            </span>
           </md-tab>
           <md-tab label="Indoor Track">
-            <div class="md-title extra-vertical-space">2016</div>
-            <div class="two-column-table results-table extra-vertical-space">
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
+            <span ng-repeat="meets in indoorMeets | orderObjectBy:date:true">
+              <div class="md-title extra-vertical-space">{{ meets[0].date.substring(0, 4) }}</div>
+              <div class="two-column-table results-table extra-vertical-space">
+                <div class="row md-body-1" ng-repeat-start="meet in meets">
+                  <div class="left-column">{{ meet.name }}</div>
+                  <div class="right-column">
+                    <a class="link results" ng-if="meet.resultURL">Results</a>
+                    <a class="link splits" ng-if="meet.splitURL">Splits</a>
+                  </div>
+                </div>
+                <md-divider ng-repeat-end></md-divider>
               </div>
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-            </div>
-            <div class="md-title extra-vertical-space">2015</div>
-            <div class="two-column-table results-table extra-vertical-space">
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-            </div>
-            <div class="md-title extra-vertical-space">2014</div>
-            <div class="two-column-table results-table extra-vertical-space">
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-            </div>
-            <div class="md-title extra-vertical-space">2013</div>
-            <div class="two-column-table results-table extra-vertical-space">
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-            </div>
+            </span>
           </md-tab>
           <md-tab label="Outdoor Track">
-            <div class="md-title extra-vertical-space">2016</div>
-            <div class="two-column-table results-table extra-vertical-space">
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
+          <span ng-repeat="meets in outdoorMeets | orderObjectBy:date:true">
+              <div class="md-title extra-vertical-space">{{ meets[0].date.substring(0, 4) }}</div>
+              <div class="two-column-table results-table extra-vertical-space">
+                <div class="row md-body-1" ng-repeat-start="meet in meets">
+                  <div class="left-column">{{ meet.name }}</div>
+                  <div class="right-column">
+                    <a class="link results" ng-if="meet.resultURL">Results</a>
+                    <a class="link splits" ng-if="meet.splitURL">Splits</a>
+                  </div>
+                </div>
+                <md-divider ng-repeat-end></md-divider>
               </div>
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-            </div>
-            <div class="md-title extra-vertical-space">2015</div>
-            <div class="two-column-table results-table extra-vertical-space">
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-            </div>
-            <div class="md-title extra-vertical-space">2014</div>
-            <div class="two-column-table results-table extra-vertical-space">
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-            </div>
-            <div class="md-title extra-vertical-space">2013</div>
-            <div class="two-column-table results-table extra-vertical-space">
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-              <div class="row md-body-1">
-                <div class="left-column">Illinois Club Relays</div>
-                <div class="right-column"><a class="link results">Results</a><a class="link splits">Splits</a></div>
-              </div>
-              <md-divider></md-divider>
-            </div>
+            </span>
           </md-tab>
         </md-tabs>
       </md-tab>
-      <md-tab label="Athlete Search">
+      <md-tab label="Athlete Search" md-on-select="loadAthletes()">
         <div class="extra-vertical-space">
           <md-autocomplete
-            md-items="athlete in athletes"
+            md-items="athlete in loadAthletes()"
+            md-item-text="athlete.name"
             md-search-text="athleteText"
             placeholder="Search for an athlete profile"
           >
-            <span md-highlight-text="athleteText">{{athlete}}</span>
+            <md-item-template>
+              <span md-highlight-text="athleteText">{{ athlete.name }}</span>
+            </md-item-template>
+            <md-not-found>
+            No matches found.
+          </md-not-found>
           </md-autocomplete>
         </div>
       </md-tab>
