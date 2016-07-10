@@ -11,7 +11,7 @@ describe('service: Api', function() {
     $http = _$http_;
     $q = _$q_;
 
-    urlBase = 'localhost:8000/';
+    urlBase = 'http://localhost:8000/';
 
     httpGet = $q.defer();
 
@@ -43,6 +43,28 @@ describe('service: Api', function() {
     itShouldReturnAPromise(function() {
       return {
         funcReturn: Api.getAllAthletes(),
+        promise: httpGet.promise
+      };
+    });
+  });
+
+  describe('getAllAthletesBy', function() {
+    var filter;
+
+    beforeEach(function() {
+      filter = 'search=some name';
+    });
+
+    itShouldCallGET(function() {
+      return {
+        run: Api.getAllAthletesBy(filter),
+        url: urlBase + 'athletes/?' +  filter
+      };
+    });
+
+    itShouldReturnAPromise(function() {
+      return {
+        funcReturn: Api.getAllAthletesBy(filter),
         promise: httpGet.promise
       };
     });
@@ -119,6 +141,28 @@ describe('service: Api', function() {
     itShouldReturnAPromise(function() {
       return {
         funcReturn: Api.getAllMeets(),
+        promise: httpGet.promise
+      };
+    });
+  });
+
+  describe('getAllMeetsBy', function() {
+    var filter;
+
+    beforeEach(function() {
+      filter = 'host=some host';
+    });
+
+    itShouldCallGET(function() {
+      return {
+        run: Api.getAllMeetsBy(filter),
+        url: urlBase + 'meets/?' +  filter
+      };
+    });
+
+    itShouldReturnAPromise(function() {
+      return {
+        funcReturn: Api.getAllMeetsBy(filter),
         promise: httpGet.promise
       };
     });
