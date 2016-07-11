@@ -11,7 +11,7 @@ describe('service: Api', function() {
     $http = _$http_;
     $q = _$q_;
 
-    urlBase = 'http://mighty-lowlands-90976.herokuapp.com/';
+    urlBase = 'http://illinoistrackclub.herokuapp.com/';
 
     httpGet = $q.defer();
 
