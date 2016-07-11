@@ -189,8 +189,8 @@
                 <div class="row md-body-1" ng-repeat-start="meet in meets">
                   <div class="left-column">{{ meet.name }}</div>
                   <div class="right-column">
-                    <a class="link results" ng-if="meet.resultURL">Results</a>
-                    <a class="link splits" ng-if="meet.splitURL">Splits</a>
+                    <a class="link results" ng-if="meet.resultURL" href="{{ meet.resultURL }}">Results</a>
+                    <a class="link splits" ng-if="meet.splitURL" href="{{ meet.splitURL }}">Splits</a>
                   </div>
                 </div>
                 <md-divider ng-repeat-end></md-divider>
@@ -204,8 +204,8 @@
                 <div class="row md-body-1" ng-repeat-start="meet in meets">
                   <div class="left-column">{{ meet.name }}</div>
                   <div class="right-column">
-                    <a class="link results" ng-if="meet.resultURL">Results</a>
-                    <a class="link splits" ng-if="meet.splitURL">Splits</a>
+                    <a class="link results" ng-if="meet.resultURL" href="{{ meet.resultURL }}">Results</a>
+                    <a class="link splits" ng-if="meet.splitURL" href="{{ meet.splitURL }}">Splits</a>
                   </div>
                 </div>
                 <md-divider ng-repeat-end></md-divider>
@@ -219,8 +219,8 @@
                 <div class="row md-body-1" ng-repeat-start="meet in meets">
                   <div class="left-column">{{ meet.name }}</div>
                   <div class="right-column">
-                    <a class="link results" ng-if="meet.resultURL">Results</a>
-                    <a class="link splits" ng-if="meet.splitURL">Splits</a>
+                    <a class="link results" ng-if="meet.resultURL" href="{{ meet.resultURL }}">Results</a>
+                    <a class="link splits" ng-if="meet.splitURL" href="{{ meet.splitURL }}">Splits</a>
                   </div>
                 </div>
                 <md-divider ng-repeat-end></md-divider>
