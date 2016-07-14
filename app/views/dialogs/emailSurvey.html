@@ -27,8 +27,8 @@
 
     <md-dialog-actions layout="row">
       <span flex></span>
-      <md-button ng-click="cancelSurvey()" class="md-warn">Cancel</md-button>
-      <md-button ng-click="submitSurvey()" class="md-primary">Submit</md-button>
+      <md-button ng-click="cancelSurvey()" class="md-warn" analytics-on="click" analytics-event="Cancelled email survey">Cancel</md-button>
+      <md-button ng-click="submitSurvey()" class="md-primary" analytics-on="click" analytics-event="Submitted email survey">Submit</md-button>
     </md-dialog-actions>
   </form>
 </md-dialog>

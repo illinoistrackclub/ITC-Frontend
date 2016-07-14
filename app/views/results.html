@@ -1,7 +1,7 @@
 <div class="results-page-container">
   <div class="centered-content padded-content">
     <md-tabs class="tabs" md-dynamic-height>
-      <md-tab label="Records">
+      <md-tab label="Records" analytics-on="click" analytics-event="Viewed club records">
         <div class="md-headline extra-vertical-space">Cross Country</div>
         <div class="three-column-table record-table">
           <div class="header row md-body-2">
@@ -180,8 +180,8 @@
           </md-tab>
         </md-tabs>
       </md-tab>
-      <md-tab label="Meet Results">
-        <md-tabs class="tabs" md-dynamic-height>
+      <md-tab label="Meet Results" analytics-on="click" analytics-event="Viewed meet results">
+        <md-tabs class="tabs" md-dynamic-height analytics-on="click" analytics-event="Viewed XC track meets">
           <md-tab label="Cross Country">
             <span ng-repeat="meets in crossCountryMeets | orderObjectBy:date:true">
               <div class="md-title extra-vertical-space">{{ meets[0].date.substring(0, 4) }}</div>
@@ -197,7 +197,7 @@
               </div>
             </span>
           </md-tab>
-          <md-tab label="Indoor Track">
+          <md-tab label="Indoor Track" analytics-on="click" analytics-event="Viewed indoor track meets">
             <span ng-repeat="meets in indoorMeets | orderObjectBy:date:true">
               <div class="md-title extra-vertical-space">{{ meets[0].date.substring(0, 4) }}</div>
               <div class="two-column-table results-table extra-vertical-space">
@@ -212,7 +212,7 @@
               </div>
             </span>
           </md-tab>
-          <md-tab label="Outdoor Track">
+          <md-tab label="Outdoor Track" analytics-on="click" analytics-event="Viewed outdoor track meets">
           <span ng-repeat="meets in outdoorMeets | orderObjectBy:date:true">
               <div class="md-title extra-vertical-space">{{ meets[0].date.substring(0, 4) }}</div>
               <div class="two-column-table results-table extra-vertical-space">
@@ -229,7 +229,7 @@
           </md-tab>
         </md-tabs>
       </md-tab>
-      <md-tab label="Athlete Search" md-on-select="loadAthletes()">
+      <md-tab label="Athlete Search" md-on-select="loadAthletes()" analytics-on="click" analytics-event="Opened athlete search">
         <div class="extra-vertical-space">
           <md-autocomplete
             md-items="athlete in loadAthletes()"
@@ -238,7 +238,7 @@
             placeholder="Search for an athlete profile"
           >
             <md-item-template>
-              <span md-highlight-text="athleteText">{{ athlete.name }}</span>
+              <span md-highlight-text="athleteText" analytics-on="click" analytics-event="Opened athlete profile for {{ athlete.name }}">{{ athlete.name }}</span>
             </md-item-template>
             <md-not-found>
             No matches found.
