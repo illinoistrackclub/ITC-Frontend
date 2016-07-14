@@ -2,6 +2,8 @@
 
 angular
   .module('itcFrontendApp', [
+    'angulartics',
+    'angulartics.google.analytics',
     'ngAnimate',
     'ngCookies',
     'ngMaterial',
