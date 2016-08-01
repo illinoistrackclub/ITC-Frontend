@@ -26,6 +26,10 @@ angular.module('itcFrontendApp')
     return $http.get(urlBase + 'events/getEvent/' + id + '/');
   };
 
+  this.getAllTopPerformances = function() {
+    return $http.get(urlBase + 'events/getTopPerformances/');
+  };
+
   this.getAllMeets = function() {
     return $http.get(urlBase + 'meets/');
   };

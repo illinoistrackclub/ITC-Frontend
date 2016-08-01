@@ -109,6 +109,42 @@ md-menu-content {
 	}
 }
 
+.top-performance-table {
+	padding-top: 20px;
+	clear: both;
+	height: 100%;
+	width: 100%;
+
+	.left-table {
+		float: left;
+	}
+
+	.left-table, .right-table {
+		width: 49%;
+
+		.row {
+			padding: 3px 0;
+			width: 100%;
+
+			.athlete-name {
+				display: inline-block;
+				float: left;
+				width: 80%;
+			}
+
+			.record {
+				display: inline-block;
+				text-align: right;
+				width: 20%;
+				font-weight: 700;
+			}
+		}
+	}
+
+	.right-table {
+		float: right;
+	}
+}
 
 .two-column-table {
 	.header {
@@ -305,13 +341,6 @@ md-menu-content {
 				.record-time {
 					margin-right: 5px;
 				}
-			}
-		}
-
-		.two-column-table.performance-table {
-			.performance {
-				margin-left: 5px;
-				font-weight: 700;
 			}
 		}
 

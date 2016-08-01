@@ -2,6 +2,15 @@
 
 angular.module('itcFrontendApp')
 
+.filter('xcTime', function() {
+  return function(seconds) {
+    console.log(seconds);
+    var time = moment.duration(seconds, 'seconds').format('m:ss');
+    console.log(time);
+    return time;
+  };
+})
+
 .filter('orderObjectBy', function() {
   return function(items, field, reverse) {
     var filtered = [];
