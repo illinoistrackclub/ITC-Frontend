@@ -126,10 +126,14 @@ md-menu-content {
 			padding: 3px 0;
 			width: 100%;
 
-			.athlete-name {
+			.athlete-names {
 				display: inline-block;
 				float: left;
 				width: 80%;
+
+				.name {
+					margin-right: 5px;
+				}
 			}
 
 			.record {

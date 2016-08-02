@@ -4,9 +4,18 @@ angular.module('itcFrontendApp')
 
 .filter('xcTime', function() {
   return function(seconds) {
-    console.log(seconds);
-    var time = moment.duration(seconds, 'seconds').format('m:ss');
-    console.log(time);
+    return moment.duration(seconds, 'seconds').format('m:ss');
+  };
+})
+
+.filter('trackTime', function() {
+  return function(seconds) {
+    var time = moment.duration(seconds, 'seconds').format('m:ss.SS');
+
+    if (_.last(time.split('.')).length > 2) {
+      time = time.slice(0, -1);
+    }
+
     return time;
   };
 })
