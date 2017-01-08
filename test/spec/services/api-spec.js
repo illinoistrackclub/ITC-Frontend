@@ -11,7 +11,8 @@ describe('service: Api', function() {
     $http = _$http_;
     $q = _$q_;
 
-    urlBase = 'http://illinoistrackclub.herokuapp.com/';
+    // urlBase = 'http://illinoistrackclub.herokuapp.com/';
+    urlBase = 'http://localhost:8000/';
 
     httpGet = $q.defer();
 
@@ -24,6 +25,14 @@ describe('service: Api', function() {
       expect($http.get).toHaveBeenCalledWith(options.url);
     });
   };
+
+  var itShouldCallGETWithCache = function(getOptions) {
+    it('should call GET on the server', function() {
+      var options = getOptions();
+      expect($http.get).toHaveBeenCalledWith(options.url, options.cache);
+    });
+  };
+
 
   var itShouldReturnAPromise = function(getOptions) {
     it('should return a promise', function() {
@@ -125,6 +134,40 @@ describe('service: Api', function() {
     itShouldReturnAPromise(function() {
       return {
         funcReturn: Api.getEvent(id),
+        promise: httpGet.promise
+      };
+    });
+  });
+
+  describe('getAllTopPerformances', function() {
+    itShouldCallGETWithCache(function() {
+      return {
+        run: Api.getAllTopPerformances(),
+        url: urlBase + 'events/getTopPerformances/',
+        cache: {cache:true}
+      };
+    });
+
+    itShouldReturnAPromise(function() {
+      return {
+        funcReturn: Api.getAllTopPerformances(),
+        promise: httpGet.promise
+      };
+    });
+  });
+
+  describe('getAllRecords', function() {
+    itShouldCallGETWithCache(function() {
+      return {
+        run: Api.getAllRecords(),
+        url: urlBase + 'events/getRecords/',
+        cache: {cache:true}
+      };
+    });
+
+    itShouldReturnAPromise(function() {
+      return {
+        funcReturn: Api.getAllRecords(),
         promise: httpGet.promise
       };
     });

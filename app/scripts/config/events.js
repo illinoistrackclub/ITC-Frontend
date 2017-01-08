@@ -40,7 +40,6 @@ angular.module('itcFrontendApp')
     '400m Hurdles',
     '3k Steeplechase',
     '4x100m Relay',
-    '4x200m Relay',
     '4x400m Relay',
     '4x800m Relay',
     'Long Jump',

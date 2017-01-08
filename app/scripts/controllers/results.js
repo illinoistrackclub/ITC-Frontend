@@ -45,10 +45,25 @@ angular.module('itcFrontendApp')
     });
   };
 
+  var getRecords = function() {
+    Api.getAllRecords().then(function(response) {
+      var records = response.data;
+      $scope.records = {};
+
+      _.forEach(EVENTS, function(events, season) {
+        $scope.records[season] = [];
+        _.forEach(events, function(event) {
+          $scope.records[season].push(_.find(records[season], { 'name': event }));
+        });
+      });
+    });
+  };
+
   getMeets('XC', 'crossCountryMeets');
   getMeets('Indoor', 'indoorMeets');
   getMeets('Outdoor', 'outdoorMeets');
   getTopPerformances();
+  getRecords();
 
   $scope.events = EVENTS;
   $scope.loadAthletes = function() {

@@ -6,7 +6,7 @@ describe('Controller: ResultsCtrl', function () {
   beforeEach(module('itcFrontendApp'));
 
   var Api, $http, $q, $scope, $timeout;
-  var getAllMeetsByRequest, loadAthletesRequest;
+  var getAllMeetsByRequest, loadAthletesRequest, getAllTopPerformancesRequest, getAllRecordsRequest;
   var ResultsCtrl;
 
   // Initialize the controller
@@ -19,9 +19,13 @@ describe('Controller: ResultsCtrl', function () {
 
     getAllMeetsByRequest = $q.defer();
     loadAthletesRequest = $q.defer();
+    getAllTopPerformancesRequest = $q.defer();
+    getAllRecordsRequest = $q.defer();
 
     spyOn(Api, 'getAllMeetsBy').and.returnValue(getAllMeetsByRequest.promise);
     spyOn(Api, 'getAllAthletesBy').and.returnValue(loadAthletesRequest.promise);
+    spyOn(Api, 'getAllTopPerformances').and.returnValue(getAllTopPerformancesRequest.promise);
+    spyOn(Api, 'getAllRecords').and.returnValue(getAllRecordsRequest.promise);
 
     ResultsCtrl = $controller('ResultsCtrl', {
       $scope: $scope
@@ -61,11 +65,75 @@ describe('Controller: ResultsCtrl', function () {
     });
   };
 
+  var itShouldLoadTopPerformances = function() {
+    it('should call Api to get all top performances', function() {
+      expect(Api.getAllTopPerformances).toHaveBeenCalled();
+    });
+
+    describe('after promise resolves', function() {
+      var performances, expectedPerformances;
+
+      beforeEach(function() {
+        performances = {
+          "XC": [],
+          "Indoor": [],
+          "Outdoor": []
+        };
+
+        expectedPerformances = {
+          "XC": [],
+          "Indoor": [],
+          "Outdoor": []
+        };
+      });
+
+      it('should load top performances', function() {
+        getAllTopPerformancesRequest.resolve({ data: performances });
+        $scope.$digest();
+
+        expect($scope).toEqual(expectedPerformances);
+      });
+    });
+  };
+
+  var itShouldLoadRecords = function() {
+    it('should call Api to get all records', function() {
+      expect(Api.getAllRecords).toHaveBeenCalled();
+    });
+
+    describe('after promise resolves', function() {
+      var records, expectedRecords;
+
+      beforeEach(function() {
+        records = {
+          "XC": [],
+          "Indoor": [],
+          "Outdoor": []
+        };
+
+        expectedRecords = {
+          "XC": [],
+          "Indoor": [],
+          "Outdoor": []
+        };
+      });
+
+      it('should load records', function() {
+        getAllRecordsRequest.resolve({ data: records });
+        $scope.$digest();
+
+        expect($scope).toEqual(expectedRecords);
+      });
+    });
+  };
+
 
   describe('initialization', function() {
     itShouldLoadMeets('XC', 'crossCountryMeets');
     itShouldLoadMeets('Indoor', 'indoorMeets');
     itShouldLoadMeets('Outdoor', 'outdoorMeets');
+    itShouldLoadTopPerformances();
+    itShouldLoadRecords();
   });
 
   describe('loadAthletes', function() {

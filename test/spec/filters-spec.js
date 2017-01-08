@@ -38,4 +38,34 @@ describe('Filters', function() {
       expect(result).toEqual(expectedResult.reverse());
     });
   });
+
+  describe('xcTime', function() {
+    var given, expectedResult;
+
+    beforeEach(function() {
+      given = 1101;
+
+      expectedResult = '18:21'
+    });
+
+    it('should return a time in m:ss format', function() {
+      var result = $filter('xcTime')(given, 'date');
+      expect(result).toEqual(expectedResult);
+    });
+  });
+
+  describe('trackTime', function() {
+    var given, expectedResult;
+
+    beforeEach(function() {
+      given = 115.45;
+
+      expectedResult = '1:55.45'
+    });
+
+    it('should return a time in m:ss.SS format', function() {
+      var result = $filter('trackTime')(given, 'date');
+      expect(result).toEqual(expectedResult);
+    });
+  });
 });
