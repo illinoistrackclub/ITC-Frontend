@@ -1,0 +1,349 @@
+// bower:scss
+// endbower
+
+$black: #000;
+$white: #FFF;
+
+* {
+	font-family: 'Roboto';
+  margin: 0;
+  padding: 0;
+}
+
+body {
+	height: 100%;
+
+	.wrapper {
+		min-height: 100%;
+		position: relative;
+	}
+}
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a, a:visited, a:hover {
+	cursor: pointer;
+	color: inherit;
+	text-decoration: none;
+}
+
+md-menu-content {
+	min-width: 160px;
+}
+
+.centered-content {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.link, .link:visited, .link:hover {
+	color: #55acee;
+}
+
+.emphasis {
+	font-weight: 700;
+}
+
+.extra-vertical-space {
+	padding-top: 20px;
+}
+
+.md-dialog-content {
+  md-input-container {
+    display: block;
+  }
+}
+
+.md-autocomplete-suggestions-container li .highlight {
+	color: #F5731B;
+}
+
+.padded-content {
+	padding: 10px;
+}
+
+.page-container {
+	padding-top: 64px;
+	padding-bottom: 225px;
+}
+
+.page-content {
+	padding-top: 10px;
+}
+
+.page-title {
+	font-size: 52px;
+	font-weight: 300;
+}
+
+.right-align {
+	text-align: right;
+}
+
+.header {
+	md-toolbar {
+		position: fixed;
+	}
+
+	.menu-image {
+		height: 40px;
+		width: auto;
+		padding-left: 10px;
+	}
+
+	.menu-item {
+		padding: 0 10px;
+    font-size: 16px;
+	}
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background-color: #F5731B;
+	color: $white;
+	height: 125px;
+
+	.footer-logo {
+		font-size: 36px;
+		padding: 0 25px;
+	}
+}
+
+
+.two-column-table {
+	.header {
+		width: 100%;
+	}
+
+	.row {
+		padding: 3px 0;
+		width: 100%;
+	}
+
+	.left-column {
+		float: left;
+		width: 50%;
+	}
+
+	.right-column {
+		display: inline-block;
+		width: 50%;
+	}
+}
+
+.three-column-table {
+	.row {
+		padding: 3px 0;
+		width: 100%;
+	}
+
+	.header {
+		width: 100%;
+	}
+
+	.first-column {
+		width: 40%;
+		float: left;
+	}
+
+	.second-column, .third-column {
+		display: inline-block;
+		width: 30%;
+	}
+
+	.third-column {
+		float: right;
+	}
+}
+
+.home-page-container {
+	.image-slider-container {
+		height: 400px;
+		height: 20vw;
+	}
+	.image-slider-container-placeholder {
+		background-color: #012751;
+		height: 400px;
+		height: 20vw;
+		line-height:400px;
+		line-height: 20vw;
+		text-align: center;
+		text-shadow: 2px 2px #ffffff;
+		font-size:42px;
+		font-size:10vw;
+		color:#F5731B;
+	}
+
+	.social-bar-container {
+		text-align: center;
+
+		.social-bar {
+			width: 25%;
+			height: 100px;
+			color: $white;
+			font-size: 50px;
+			line-height: 100px;
+		}
+
+		.facebook-bar {
+			background-color: #3C5A94;
+		}
+
+		.twitter-bar {
+			background-color: #55acee;
+		}
+
+		.instagram-bar {
+			background-color: #405de6;
+		}
+
+		.youtube-bar {
+			background-color: #cd201f;
+		}
+	}
+
+	.about-title {
+		font-size: 60px;
+		font-weight: 300;
+		margin: 25px 0;
+	}
+
+	.about-text {
+		font-size: 18px;
+		line-height: 1.3;
+		margin-bottom: 20px;
+	}
+}
+
+.news-page-container {
+	.title-container {
+		margin-bottom: 25px;
+
+		.news-year-selector {
+			float: right;
+		}
+	}
+
+	.post-container {
+		.post {
+			.post-title {
+				font-size: 24px;
+			}
+
+			.post-metadata {
+				font-size: 14px;
+				margin-bottom: 10px;
+			}
+
+			.post-content p {
+				margin-bottom: 7px;
+			}
+		}
+	}
+}
+
+.contact-page-container {
+	.coach-card {
+		display: inline-block;
+		max-width: 480px;
+		min-width: 300px;
+		width: calc(50% - 20px);
+	}
+
+	.second-title {
+		padding: 25px 0;
+	}
+}
+
+.clubrelays-page-container {
+	.map-container {
+		padding: 25px 0;
+		height: 600px;
+		width: 100%;
+	}
+}
+
+.prospective-members-page-container {
+	.mailing-list {
+		text-align: center;
+
+		.mailing-list-button {
+			margin: 6px 0px;
+		}
+	}
+
+	.faq-title {
+		margin-bottom: 10px;
+	}
+
+	.faq-question {
+		font-size: 18px;
+	}
+
+	.faq-answer {
+		margin-top: 5px;
+	}
+}
+
+.results-page-container {
+	.tabs {
+		max-width: 100%;
+		width: 100%;
+
+		.three-column-table.record-table {
+			.record-time {
+				font-weight: 700;
+			}
+
+			.first-column, .third-column {
+				width: 40%;
+			}
+
+			.first-column {
+				text-align: right;
+
+				.record-time {
+					margin-left: 5px;
+				}
+			}
+
+			.second-column {
+				text-align: center;
+				width: 20%;
+			}
+
+			.third-column {
+				text-align: left;
+
+				.record-time {
+					margin-right: 5px;
+				}
+			}
+		}
+
+		.two-column-table.performance-table {
+			.performance {
+				margin-left: 5px;
+				font-weight: 700;
+			}
+		}
+
+		.two-column-table.results-table {
+			&.extra-vertical-space {
+				padding-top: 10px;
+			}
+
+			.right-column {
+				text-align: right;
+
+				.splits {
+					margin-left: 10px;
+				}
+			}
+		}
+	}
+}

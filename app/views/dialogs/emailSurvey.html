@@ -1,0 +1,34 @@
+<md-dialog>
+  <form>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h1>Mailing List Survey</h1>
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content class="md-dialog-content">
+        <md-input-container>
+          <label>Name</label>
+          <input ng-model="survey.name">
+        </md-input-container>
+        <md-input-container>
+          <label>Email</label>
+          <input ng-model="survey.email">
+        </md-input-container>
+        <md-input-container>
+          <label>Year in School</label>
+          <input ng-model="survey.year">
+        </md-input-container>
+        <md-input-container>
+          <label>Additional Comments</label>
+          <input ng-model="survey.comments">
+        </md-input-container>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+      <span flex></span>
+      <md-button ng-click="cancelSurvey()" class="md-warn" analytics-on="click" analytics-event="Cancelled email survey">Cancel</md-button>
+      <md-button ng-click="submitSurvey()" class="md-primary" analytics-on="click" analytics-event="Submitted email survey">Submit</md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>
