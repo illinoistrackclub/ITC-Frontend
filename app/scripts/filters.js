@@ -38,4 +38,11 @@ angular.module('itcFrontendApp')
 
     return filtered;
   };
-});
+})
+
+.filter('n12br', function($filter){
+  return function(data) {
+    if (!data) return data;
+    return data.replace(/\r\n?/g, '<br />');
+  }
+})

@@ -45,11 +45,11 @@ describe('Filters', function() {
     beforeEach(function() {
       given = 1101;
 
-      expectedResult = '18:21'
+      expectedResult = '18:21';
     });
 
     it('should return a time in m:ss format', function() {
-      var result = $filter('xcTime')(given, 'date');
+      var result = $filter('xcTime')(given);
       expect(result).toEqual(expectedResult);
     });
   });
@@ -60,12 +60,27 @@ describe('Filters', function() {
     beforeEach(function() {
       given = 115.45;
 
-      expectedResult = '1:55.45'
+      expectedResult = '1:55.45';
     });
 
     it('should return a time in m:ss.SS format', function() {
-      var result = $filter('trackTime')(given, 'date');
+      var result = $filter('trackTime')(given);
       expect(result).toEqual(expectedResult);
     });
   });
+  describe('n12br', function() {
+    var given, expectedResult;
+
+    beforeEach(function() {
+      given = 'Hello.\r\nHow are you?\r\n\r\nFine thanks.';
+
+      expectedResult = 'Hello.<br />How are you?<br /><br />Fine thanks.';
+    });
+
+    it('should return text with new lines replaced with breaks', function() {
+      var result = $filter('n12br')(given);
+      expect(result).toEqual(expectedResult);
+    });
+  });
+
 });

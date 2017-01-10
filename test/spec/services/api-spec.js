@@ -270,4 +270,64 @@ describe('service: Api', function() {
       };
     });
   });
+
+    describe('getAllNews', function() {
+    itShouldCallGET(function() {
+      return {
+        run: Api.getAllNews(),
+        url: urlBase + 'news/'
+      };
+    });
+
+    itShouldReturnAPromise(function() {
+      return {
+        funcReturn: Api.getAllNews(),
+        promise: httpGet.promise
+      };
+    });
+  });
+
+  describe('getAllNewsBy', function() {
+    var filter;
+
+    beforeEach(function() {
+      filter = 'host=some host';
+    });
+
+    itShouldCallGET(function() {
+      return {
+        run: Api.getAllNewsBy(filter),
+        url: urlBase + 'news/?' +  filter
+      };
+    });
+
+    itShouldReturnAPromise(function() {
+      return {
+        funcReturn: Api.getAllNewsBy(filter),
+        promise: httpGet.promise
+      };
+    });
+  });
+
+  describe('getNews', function() {
+    var id;
+
+    beforeEach(function() {
+      id = 5;
+    });
+
+    itShouldCallGET(function() {
+      return {
+        run: Api.getNews(id),
+        url: urlBase + 'news/getNews/' +  id + '/'
+      };
+    });
+
+    itShouldReturnAPromise(function() {
+      return {
+        funcReturn: Api.getNews(id),
+        promise: httpGet.promise
+      };
+    });
+  });
 });

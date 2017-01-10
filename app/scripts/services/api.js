@@ -54,4 +54,16 @@ angular.module('itcFrontendApp')
   this.getResult = function(id) {
     return $http.get(urlBase + 'results/getResult/' + id + '/');
   };
+
+  this.getAllNews = function() {
+    return $http.get(urlBase + 'news/');
+  };
+
+  this.getAllNewsBy = function(filter) {
+    return $http.get(urlBase + 'news/?' + filter);
+  };
+
+  this.getNews = function(id) {
+    return $http.get(urlBase + 'news/getNews/' + id + '/');
+  };
 });

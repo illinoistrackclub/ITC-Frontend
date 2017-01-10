@@ -61,7 +61,7 @@ md-menu-content {
 }
 
 .page-container {
-	padding-top: 64px;
+	padding-top: 72px;
 	padding-bottom: 225px;
 }
 
@@ -264,7 +264,12 @@ md-menu-content {
 
 			.post-content p {
 				margin-bottom: 7px;
+
+				a[href]{
+					color: blue;
+				}
 			}
+			margin-bottom: 10px;
 		}
 	}
 }
