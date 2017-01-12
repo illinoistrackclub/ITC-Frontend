@@ -18,6 +18,10 @@ body {
 		position: relative;
 	}
 }
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
 
 a, a:visited, a:hover {
 	cursor: pointer;
@@ -91,7 +95,7 @@ md-menu-content {
 
 	.menu-item {
 		padding: 0 10px;
-    font-size: 16px;
+    	font-size: 16px;
 	}
 }
 
@@ -199,6 +203,19 @@ md-menu-content {
 .home-page-container {
 	.image-slider-container {
 		height: 400px;
+		height: 20vw;
+	}
+	.image-slider-container-placeholder {
+		background-color: #012751;
+		height: 400px;
+		height: 20vw;
+		line-height:400px;
+		line-height: 20vw;
+		text-align: center;
+		text-shadow: 2px 2px #ffffff;
+		font-size:42px;
+		font-size:10vw;
+		color:#F5731B;
 	}
 
 	.social-bar-container {
@@ -310,6 +327,7 @@ md-menu-content {
 
 	.faq-question {
 		font-size: 18px;
+		margin-bottom: 10px;
 	}
 
 	.faq-answer {
@@ -354,6 +372,13 @@ md-menu-content {
 				.record-time {
 					margin-right: 5px;
 				}
+			}
+		}
+
+		.two-column-table.performance-table {
+			.performance {
+				margin-left: 5px;
+				font-weight: 700;
 			}
 		}
 

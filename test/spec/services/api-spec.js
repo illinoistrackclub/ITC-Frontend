@@ -33,7 +33,6 @@ describe('service: Api', function() {
     });
   };
 
-
   var itShouldReturnAPromise = function(getOptions) {
     it('should return a promise', function() {
       var options = getOptions();

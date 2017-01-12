@@ -45,4 +45,4 @@ angular.module('itcFrontendApp')
     if (!data) return data;
     return data.replace(/\r\n?/g, '<br />');
   }
-})
+});

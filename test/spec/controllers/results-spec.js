@@ -6,7 +6,11 @@ describe('Controller: ResultsCtrl', function () {
   beforeEach(module('itcFrontendApp'));
 
   var Api, $http, $q, $scope, $timeout;
+<<<<<<< HEAD
   var getAllMeetsByRequest, loadAthletesRequest, getAllTopPerformancesRequest, getAllRecordsRequest;
+=======
+  var getAllMeetsByRequest, loadAthletesRequest;
+>>>>>>> ryan
   var ResultsCtrl;
 
   // Initialize the controller
@@ -19,6 +23,7 @@ describe('Controller: ResultsCtrl', function () {
 
     getAllMeetsByRequest = $q.defer();
     loadAthletesRequest = $q.defer();
+<<<<<<< HEAD
     getAllTopPerformancesRequest = $q.defer();
     getAllRecordsRequest = $q.defer();
 
@@ -26,6 +31,11 @@ describe('Controller: ResultsCtrl', function () {
     spyOn(Api, 'getAllAthletesBy').and.returnValue(loadAthletesRequest.promise);
     spyOn(Api, 'getAllTopPerformances').and.returnValue(getAllTopPerformancesRequest.promise);
     spyOn(Api, 'getAllRecords').and.returnValue(getAllRecordsRequest.promise);
+=======
+
+    spyOn(Api, 'getAllMeetsBy').and.returnValue(getAllMeetsByRequest.promise);
+    spyOn(Api, 'getAllAthletesBy').and.returnValue(loadAthletesRequest.promise);
+>>>>>>> ryan
 
     ResultsCtrl = $controller('ResultsCtrl', {
       $scope: $scope
@@ -1326,7 +1336,6 @@ describe('Controller: ResultsCtrl', function () {
       });
     });
   };
-
 
   describe('initialization', function() {
     itShouldLoadMeets('XC', 'crossCountryMeets');
