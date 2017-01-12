@@ -2,6 +2,24 @@
 
 angular.module('itcFrontendApp')
 
+.filter('xcTime', function() {
+  return function(seconds) {
+    return moment.duration(seconds, 'seconds').format('m:ss');
+  };
+})
+
+.filter('trackTime', function() {
+  return function(seconds) {
+    var time = moment.duration(seconds, 'seconds').format('m:ss.SS');
+
+    if (_.last(time.split('.')).length > 2) {
+      time = time.slice(0, -1);
+    }
+
+    return time;
+  };
+})
+
 .filter('orderObjectBy', function() {
   return function(items, field, reverse) {
     var filtered = [];
@@ -20,4 +38,11 @@ angular.module('itcFrontendApp')
 
     return filtered;
   };
-});
+})
+
+.filter('n12br', function($filter){
+  return function(data) {
+    if (!data) return data;
+    return data.replace(/\r\n?/g, '<br />');
+  }
+})

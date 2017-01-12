@@ -11,6 +11,7 @@ angular
     'ngRoute',
     'ngSanitize'
   ])
+.constant('_', window._)
 .config(function($mdThemingProvider) {
 
   var lightText = $mdThemingProvider.extendPalette('orange', {

@@ -7,6 +7,9 @@
   "latedef": true,
   "noarg": true,
   "node": true,
+  "predef": [
+    "moment"
+  ],
   "strict": true,
   "undef": true,
   "unused": true,

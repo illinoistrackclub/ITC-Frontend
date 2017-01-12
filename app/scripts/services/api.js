@@ -4,7 +4,8 @@ angular.module('itcFrontendApp')
 
 .service('Api', function($http) {
 
-  var urlBase = 'http://illinoistrackclub.herokuapp.com/';
+  // var urlBase = 'http://illinoistrackclub.herokuapp.com/';
+  var urlBase = 'http://localhost:8000/';
 
   this.getAllAthletes = function() {
     return $http.get(urlBase + 'athletes/');
@@ -26,6 +27,14 @@ angular.module('itcFrontendApp')
     return $http.get(urlBase + 'events/getEvent/' + id + '/');
   };
 
+  this.getAllTopPerformances = function() {
+    return $http.get(urlBase + 'events/getTopPerformances/', {cache: true});
+  };
+
+  this.getAllRecords = function() {
+    return $http.get(urlBase + 'events/getRecords/', {cache: true});
+  };
+
   this.getAllMeets = function() {
     return $http.get(urlBase + 'meets/');
   };
@@ -44,5 +53,17 @@ angular.module('itcFrontendApp')
 
   this.getResult = function(id) {
     return $http.get(urlBase + 'results/getResult/' + id + '/');
+  };
+
+  this.getAllNews = function() {
+    return $http.get(urlBase + 'news/');
+  };
+
+  this.getAllNewsBy = function(filter) {
+    return $http.get(urlBase + 'news/?' + filter);
+  };
+
+  this.getNews = function(id) {
+    return $http.get(urlBase + 'news/getNews/' + id + '/');
   };
 });
