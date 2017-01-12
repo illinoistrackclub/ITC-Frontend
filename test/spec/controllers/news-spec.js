@@ -5,6 +5,7 @@ describe('Controller: NewsCtrl', function () {
   // load the controller's module
   beforeEach(module('itcFrontendApp'));
 
+<<<<<<< HEAD
   var Api, $http, $q, $scope, $timeout;
   var getAllNewsRequest;
   var NewsCtrl;
@@ -77,5 +78,16 @@ describe('Controller: NewsCtrl', function () {
 
   describe('initialization', function() {
     itShouldLoadNews();
+=======
+  var NewsCtrl;
+
+  // Initialize the controller
+  beforeEach(inject(function ($controller) {
+    NewsCtrl = $controller('NewsCtrl', {});
+  }));
+
+  it('contains spec with an expectation', function() {
+    expect(true).toBe(true);
+>>>>>>> ryan
   });
 });

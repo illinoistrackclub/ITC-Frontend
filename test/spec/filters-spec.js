@@ -82,5 +82,4 @@ describe('Filters', function() {
       expect(result).toEqual(expectedResult);
     });
   });
-
 });
