@@ -295,6 +295,28 @@ md-menu-content {
 	}
 }
 
+.board-minutes-page-container {
+	.season {
+		font-weight: 1000;
+		font-size: 24px;
+	}
+
+	.year-container {
+		width: 100%;
+		text-align: left;
+		margin-top: 10px;
+
+		.year {
+			font-weight: 700;
+			font-size: 18px;
+		}
+
+		.link {
+
+		}
+	}
+}
+
 .prospective-members-page-container {
 	.mailing-list {
 		text-align: center;
