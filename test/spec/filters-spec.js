@@ -129,17 +129,34 @@ describe('Filters', function() {
   });
 
   describe('trackDist', function() {
-    var given, expectedResult;
+    var givenOneDigit, givenTwoDigit, givenThreeDigit;
+    var expectedResultOneDigit, expectedResultTwoDigit, expectedResultThreeDigit;
 
     beforeEach(function() {
-      given = 9;
+      givenOneDigit = 9;
+      givenTwoDigit = 9.9;
+      givenThreeDigit = 9.99;
 
-      expectedResult = '9.00 m';
+      expectedResultOneDigit = '9.00 m';
+      expectedResultTwoDigit = '9.90 m';
+      expectedResultThreeDigit = '9.99 m';
+
+
     });
 
-    it('should return a distance with m appended format', function() {
-      var result = $filter('trackDist')(given);
-      expect(result).toEqual(expectedResult);
+    it('should return a distance with .00 m appended', function() {
+      var result = $filter('trackDist')(givenOneDigit);
+      expect(result).toEqual(expectedResultOneDigit);
+    });
+
+    it('should return a distance with 0 m appended', function() {
+      var result = $filter('trackDist')(givenTwoDigit);
+      expect(result).toEqual(expectedResultTwoDigit);
+    });
+
+    it('should return a distance with m appended', function() {
+      var result = $filter('trackDist')(givenThreeDigit);
+      expect(result).toEqual(expectedResultThreeDigit);
     });
   });
 
