@@ -39,6 +39,65 @@ describe('Filters', function() {
     });
   });
 
+  describe('results', function() {
+    var given, expectedResult;
+
+    beforeEach(function() {
+      given = [
+        {
+          'event':{
+          'name':"60m",
+          'season':"Indoor"
+          },
+          'performance':12
+        }, {
+          'event':{
+          'name':"200m",
+          'season':"Indoor"
+          },
+          'performance':22
+        }, {
+          'event':{
+          'name':"200m",
+          'season':"Indoor"
+          },
+          'performance':32
+        }
+
+      ];
+      expectedResult = {
+        'Indoor': {
+          '60m': [{
+            'event':{
+            'name':"60m",
+            'season':"Indoor"
+            },
+            'performance':12
+          }],
+          '200m': [{
+            'event':{
+            'name':"200m",
+            'season':"Indoor"
+            },
+            'performance':22
+          },{
+            'event':{
+            'name':"200m",
+            'season':"Indoor"
+            },
+            'performance':32
+          }]
+        }
+      };
+    });
+
+    it('should return results as an array organized by event', function() {
+      var result = $filter('results')(given);
+      expect(result).toEqual(expectedResult);
+    });
+
+  });
+
   describe('xcTime', function() {
     var given, expectedResult;
 
@@ -68,6 +127,22 @@ describe('Filters', function() {
       expect(result).toEqual(expectedResult);
     });
   });
+
+  describe('trackDist', function() {
+    var given, expectedResult;
+
+    beforeEach(function() {
+      given = 9;
+
+      expectedResult = '9.00 m';
+    });
+
+    it('should return a distance with m appended format', function() {
+      var result = $filter('trackDist')(given);
+      expect(result).toEqual(expectedResult);
+    });
+  });
+
   describe('n12br', function() {
     var given, expectedResult;
 

@@ -8,7 +8,7 @@ angular.module('itcFrontendApp')
   };
 })
 
-.filter('trackTime', function() {
+.filter('trackTime', function(_) {
   return function(seconds) {
     var time = moment.duration(seconds, 'seconds').format('m:ss.SS');
 
@@ -17,6 +17,19 @@ angular.module('itcFrontendApp')
     }
 
     return time;
+  };
+})
+
+.filter('trackDist', function() {
+  return function(distance) {
+    var distStr = distance.toString();
+    if(distStr.length === 1){
+      distStr = distStr.concat('.00');
+    }
+    if(distStr.length === 3){
+      distStr = distStr.concat('0');
+    }
+    return distStr.concat(' m');
   };
 })
 
@@ -40,9 +53,48 @@ angular.module('itcFrontendApp')
   };
 })
 
-.filter('n12br', function($filter){
+.filter('n12br', function(){
   return function(data) {
-    if (!data) return data;
+    if (!data) {
+      return data;
+    }
     return data.replace(/\r\n?/g, '<br />');
-  }
+  };
 })
+
+.filter('results', function(_) {
+  return _.memoize(function(items) {
+    var preFiltered = [];
+
+    angular.forEach(items, function(item) {
+      preFiltered.push(item);
+    });
+
+    var filtered = {};
+
+    angular.forEach(preFiltered, function(result) {
+      filtered[result.event.season] = {};
+    });
+
+    angular.forEach(preFiltered, function(result) {
+      filtered[result.event.season][result.event.name] = [];
+    });
+
+    angular.forEach(preFiltered, function(result) {
+      filtered[result.event.season][result.event.name].push(result);
+    });
+
+    angular.forEach(filtered, function(seasons) {
+      angular.forEach(seasons, function(results) {
+        results.sort(function (a, b) {
+          return (a.performance > b.performance ? 1 : -1);
+        });
+        if(results[0].distanceResult){
+          results.reverse();
+        }
+      });
+    });
+
+    return filtered;
+  });
+});
