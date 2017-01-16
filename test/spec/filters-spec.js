@@ -39,6 +39,94 @@ describe('Filters', function() {
     });
   });
 
+  describe('results', function() {
+    var given, expectedResult;
+
+    beforeEach(function() {
+      given = [
+        {
+          'event':{
+            'name':"60m",
+            'season':"Indoor"
+          },
+          'performance':12
+        }, {
+          'event':{
+            'name':"200m",
+            'season':"Indoor"
+          },
+          'performance':22
+        }, {
+          'event':{
+            'name':"200m",
+            'season':"Indoor"
+          },
+          'performance':32
+        }, {
+          'event':{
+            'name':"Triple Jump",
+            'season':"Indoor"
+          },
+          'performance':42,
+          'distanceResult':true
+        }, {
+          'event':{
+            'name':"Triple Jump",
+            'season':"Indoor"
+          },
+          'performance':52,
+          'distanceResult':true
+        }
+
+      ];
+      expectedResult = {
+        'Indoor': {
+          '60m': [{
+            'event':{
+              'name':"60m",
+              'season':"Indoor"
+            },
+            'performance':12
+          }],
+          '200m': [{
+            'event':{
+              'name':"200m",
+              'season':"Indoor"
+            },
+            'performance':22
+          },{
+            'event':{
+              'name':"200m",
+              'season':"Indoor"
+            },
+            'performance':32
+          }],
+          'Triple Jump': [{
+            'event':{
+              'name':"Triple Jump",
+              'season':"Indoor"
+            },
+            'performance':52,
+            'distanceResult':true
+          },{
+            'event':{
+              'name':"Triple Jump",
+              'season':"Indoor"
+            },
+            'performance':42,
+            'distanceResult':true
+          }]
+        }
+      };
+    });
+
+    it('should return results as an array organized by event', function() {
+      var result = $filter('results')(given);
+      expect(result).toEqual(expectedResult);
+    });
+
+  });
+
   describe('xcTime', function() {
     var given, expectedResult;
 
@@ -68,6 +156,39 @@ describe('Filters', function() {
       expect(result).toEqual(expectedResult);
     });
   });
+
+  describe('trackDist', function() {
+    var givenOneDigit, givenTwoDigit, givenThreeDigit;
+    var expectedResultOneDigit, expectedResultTwoDigit, expectedResultThreeDigit;
+
+    beforeEach(function() {
+      givenOneDigit = 9;
+      givenTwoDigit = 9.9;
+      givenThreeDigit = 9.99;
+
+      expectedResultOneDigit = '9.00 m';
+      expectedResultTwoDigit = '9.90 m';
+      expectedResultThreeDigit = '9.99 m';
+
+
+    });
+
+    it('should return a distance with .00 m appended', function() {
+      var result = $filter('trackDist')(givenOneDigit);
+      expect(result).toEqual(expectedResultOneDigit);
+    });
+
+    it('should return a distance with 0 m appended', function() {
+      var result = $filter('trackDist')(givenTwoDigit);
+      expect(result).toEqual(expectedResultTwoDigit);
+    });
+
+    it('should return a distance with m appended', function() {
+      var result = $filter('trackDist')(givenThreeDigit);
+      expect(result).toEqual(expectedResultThreeDigit);
+    });
+  });
+
   describe('n12br', function() {
     var given, expectedResult;
 

@@ -150,6 +150,68 @@ md-menu-content {
 	}
 }
 
+.athlete-result-table {
+	padding-top: 20px;
+	clear: both;
+	height: 100%;
+	width: 100%;
+
+	.left-table {
+		float: left;
+	}
+
+	.left-table, .right-table {
+		width: 49%;
+
+		.season {
+			margin-bottom: 10px;
+			text-align: center;
+
+			.season-name {
+				font-weight: 700;
+				font-size: 24px;
+				color: #F5731B;
+				text-decoration: underline;
+			}
+		}
+
+		.event {
+			margin-top: 8px;
+			margin-bottom: 20px;
+
+			.event-name {
+				font-weight: 500;
+			}
+
+			.row {
+				padding: 3px 0;
+				width: 100%;
+
+				.meet {
+					display: inline-block;
+					float: left;
+					width: 80%;
+
+					.meet-span {
+						margin-right: 5px;
+					}
+				}
+
+				.record {
+					display: inline-block;
+					text-align: right;
+					width: 20%;
+					font-weight: 700;
+				}
+			}
+		}
+	}
+
+	.right-table {
+		float: right;
+	}
+}
+
 .two-column-table {
 	.header {
 		width: 100%;

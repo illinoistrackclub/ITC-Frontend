@@ -2,7 +2,7 @@
 
 angular.module('itcFrontendApp')
 
-.controller('NewsCtrl', function(Api, $http, $q, $scope, _) {
+.controller('NewsCtrl', function(Api, $http, $q, $scope) {
   var sortByDate = function(array) {
     array.sort(function(a, b) { return new Date(b.post_datetime).getTime() - new Date(a.post_datetime).getTime(); });
     array.reverse();

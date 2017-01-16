@@ -213,6 +213,7 @@
             md-item-text="athlete.name"
             md-search-text="athleteText"
             placeholder="Search for an athlete profile"
+            md-selected-item="selectedAthlete"
           >
             <md-item-template>
               <span md-highlight-text="athleteText" analytics-on="click" analytics-event="Opened athlete profile for {{ athlete.name }}">{{ athlete.name }}</span>
@@ -221,6 +222,25 @@
             No matches found.
           </md-not-found>
           </md-autocomplete>
+        </div>
+        <div class="athlete-search-results">
+        <div class="athlete-result-table" ng-repeat="(season, seasons) in selectedAthlete.results | results" >
+          <div class="left-table">
+            <div class="season" ng-if="seasons"><span class="season-name">{{ season }}</span></div>
+              <div class="event" ng-repeat-start="(event, results) in seasons"><span class="event-name">{{ event }}</span>
+              <md-divider></md-divider>
+                <div class="row md-body-1" ng-repeat-start="result in results">
+                  <!-- <div class="athlete-names"><span class="name" ng-repeat="athlete in performance.athlete">{{ ::athlete.name }}</span></div> -->
+                  <div class="meet"><span class="meet-span">{{ result.meet.date.substring(0,4) }} {{ result.meet.name }}</span></div>
+                  <div class="record" ng-if="result.event.season == 'XC'"><span class="record-span">{{ result.performance | xcTime }}</span></div>
+                   <div class="record" ng-if="!(result.event.season == 'XC')"><span class="record-span" ng-if="result.distanceResult">{{ result.performance | trackDist }}</span><span class="record-span" ng-if="!result.distanceResult">{{ result.performance | trackTime }}</span></div>
+                </div>
+                <md-divider ng-repeat-end></md-divider>
+              </div>
+              <a ng-repeat-end></a>
+            </div>
+          </div>
+        </div>
         </div>
       </md-tab>
     </md-tabs>
