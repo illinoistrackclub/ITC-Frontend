@@ -55,9 +55,6 @@ angular.module('itcFrontendApp')
 
 .filter('n12br', function(){
   return function(data) {
-    if (!data) {
-      return data;
-    }
     return data.replace(/\r\n?/g, '<br />');
   };
 })

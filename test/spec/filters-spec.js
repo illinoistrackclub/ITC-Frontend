@@ -46,22 +46,36 @@ describe('Filters', function() {
       given = [
         {
           'event':{
-          'name':"60m",
-          'season':"Indoor"
+            'name':"60m",
+            'season':"Indoor"
           },
           'performance':12
         }, {
           'event':{
-          'name':"200m",
-          'season':"Indoor"
+            'name':"200m",
+            'season':"Indoor"
           },
           'performance':22
         }, {
           'event':{
-          'name':"200m",
-          'season':"Indoor"
+            'name':"200m",
+            'season':"Indoor"
           },
           'performance':32
+        }, {
+          'event':{
+            'name':"Triple Jump",
+            'season':"Indoor"
+          },
+          'performance':42,
+          'distanceResult':true
+        }, {
+          'event':{
+            'name':"Triple Jump",
+            'season':"Indoor"
+          },
+          'performance':52,
+          'distanceResult':true
         }
 
       ];
@@ -69,23 +83,38 @@ describe('Filters', function() {
         'Indoor': {
           '60m': [{
             'event':{
-            'name':"60m",
-            'season':"Indoor"
+              'name':"60m",
+              'season':"Indoor"
             },
             'performance':12
           }],
           '200m': [{
             'event':{
-            'name':"200m",
-            'season':"Indoor"
+              'name':"200m",
+              'season':"Indoor"
             },
             'performance':22
           },{
             'event':{
-            'name':"200m",
-            'season':"Indoor"
+              'name':"200m",
+              'season':"Indoor"
             },
             'performance':32
+          }],
+          'Triple Jump': [{
+            'event':{
+              'name':"Triple Jump",
+              'season':"Indoor"
+            },
+            'performance':52,
+            'distanceResult':true
+          },{
+            'event':{
+              'name':"Triple Jump",
+              'season':"Indoor"
+            },
+            'performance':42,
+            'distanceResult':true
           }]
         }
       };
