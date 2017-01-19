@@ -10,6 +10,9 @@
             <div class="third-column">Women</div>
           </div>
           <md-divider></md-divider>
+          <div layout="row" layout-sm="column" layout-align="space-around">
+            <md-progress-circular class="loading" md-mode="indeterminate" md-diameter="100px" ng-show="isLoadingRec"></md-progress-circular>
+          </div>
           <div class="row md-body-1" ng-repeat="performanceList in records['XC']">
             <div class="first-column" ng-if="!performanceList.record.maleRecord">Event not contested</div>
             <div class="first-column" ng-if="performanceList.record.maleRecord"><span class="name" ng-repeat="athleteName in performanceList.record.maleRecord[0].athlete | relayNames">{{ ::athleteName }}</span> <span class="record-time">{{ ::performanceList.record.maleRecord[0].performance | xcTime }}</span></div>
@@ -28,6 +31,9 @@
             <div class="third-column">Women</div>
           </div>
           <md-divider></md-divider>
+          <div layout="row" layout-sm="column" layout-align="space-around">
+            <md-progress-circular class="loading" md-mode="indeterminate" md-diameter="100px" ng-show="isLoadingRec"></md-progress-circular>
+          </div>
           <div class="row md-body-1" ng-repeat="performanceList in records['Indoor']">
             <div class="first-column" ng-if="!performanceList.record.maleRecord">Event not contested</div>
             <div class="first-column" ng-if="performanceList.record.maleRecord"><span class="name" ng-repeat="athleteName in performanceList.record.maleRecord[0].athlete | relayNames">{{ ::athleteName }}</span> <span class="record-time">{{ ::performanceList.record.maleRecord[0].performance | trackTime }}</span></div>
@@ -45,6 +51,9 @@
             <div class="third-column">Women</div>
           </div>
           <md-divider></md-divider>
+          <div layout="row" layout-sm="column" layout-align="space-around">
+            <md-progress-circular class="loading" md-mode="indeterminate" md-diameter="100px" ng-show="isLoadingRec"></md-progress-circular>
+          </div>
           <div class="row md-body-1" ng-repeat="performanceList in records['Outdoor']">
             <div class="first-column" ng-if="!performanceList.record.maleRecord">Event not contested</div>
             <div class="first-column" ng-if="performanceList.record.maleRecord"><span class="name" ng-repeat="athleteName in performanceList.record.maleRecord[0].athlete | relayNames">{{ ::athleteName }}</span> <span class="record-time">{{ ::performanceList.record.maleRecord[0].performance | trackTime }}</span></div>
@@ -57,6 +66,9 @@
       <md-tab label="Top Performances">
         <md-tabs class="tabs" md-dynamic-height>
           <md-tab label="Cross Country">
+              <div layout="row" layout-sm="column" layout-align="space-around">
+                <md-progress-circular class="loading" md-mode="indeterminate" md-diameter="100px" ng-show="isLoadingTP"></md-progress-circular>
+              </div>
             <div class="top-performance-table" ng-repeat="performanceList in topPerformances['XC']">
               <div class="md-body-2 event-title">{{ ::performanceList.name }}</div>
               <div class="left-table">
@@ -90,6 +102,9 @@
             </div>
           </md-tab>
           <md-tab label="Indoor Track">
+            <div layout="row" layout-sm="column" layout-align="space-around">
+                <md-progress-circular class="loading" md-mode="indeterminate" md-diameter="100px" ng-show="isLoadingTP"></md-progress-circular>
+              </div>
             <div class="top-performance-table" ng-repeat="performanceList in topPerformances['Indoor']">
               <div class="md-body-2">{{ ::performanceList.name }}</div>
               <div class="left-table">
@@ -123,6 +138,9 @@
             </div>
           </md-tab>
           <md-tab label="Outdoor Track">
+            <div layout="row" layout-sm="column" layout-align="space-around">
+                <md-progress-circular class="loading" md-mode="indeterminate" md-diameter="100px" ng-show="isLoadingTP"></md-progress-circular>
+            </div>
             <div class="top-performance-table" ng-repeat="performanceList in topPerformances['Outdoor']">
               <div class="md-body-2">{{ ::performanceList.name }}</div>
               <div class="left-table">
