@@ -51,6 +51,10 @@ md-menu-content {
 	padding-top: 20px;
 }
 
+.searchbar {
+	background: $white;
+}
+
 .md-dialog-content {
   md-input-container {
     display: block;
@@ -123,6 +127,10 @@ md-menu-content {
 
 	.left-table {
 		float: left;
+	}
+
+	.event-title {
+		font-size: 20px;
 	}
 
 	.left-table, .right-table {

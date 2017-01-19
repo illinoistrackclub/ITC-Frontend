@@ -58,7 +58,7 @@
         <md-tabs class="tabs" md-dynamic-height>
           <md-tab label="Cross Country">
             <div class="top-performance-table" ng-repeat="performanceList in topPerformances['XC']">
-              <div class="md-body-2">{{ ::performanceList.name }}</div>
+              <div class="md-body-2 event-title">{{ ::performanceList.name }}</div>
               <div class="left-table">
                 <div class="row md-body-2">Men</div>
                 <md-divider></md-divider>
@@ -214,6 +214,7 @@
             md-search-text="athleteText"
             placeholder="Search for an athlete profile"
             md-selected-item="selectedAthlete"
+            class="searchbar"
           >
             <md-item-template>
               <span md-highlight-text="athleteText" analytics-on="click" analytics-event="Opened athlete profile for {{ athlete.name }}">{{ athlete.name }}</span>
