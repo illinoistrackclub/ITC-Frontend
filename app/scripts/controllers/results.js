@@ -42,6 +42,7 @@ angular.module('itcFrontendApp')
           $scope.topPerformances[season].push(_.find(topPerformances[season], { 'name': event }));
         });
       });
+      $scope.isLoadingTP = false;
     });
   };
 
@@ -56,6 +57,7 @@ angular.module('itcFrontendApp')
           $scope.records[season].push(_.find(records[season], { 'name': event }));
         });
       });
+      $scope.isLoadingRec = false;
     });
   };
 
@@ -64,6 +66,8 @@ angular.module('itcFrontendApp')
   getMeets('Outdoor', 'outdoorMeets');
   getTopPerformances();
   getRecords();
+  $scope.isLoadingRec = true;
+  $scope.isLoadingTP = true;
 
   $scope.events = EVENTS;
   $scope.loadAthletes = function() {
