@@ -94,4 +94,21 @@ angular.module('itcFrontendApp')
 
     return filtered;
   });
+})
+
+.filter('relayNames', function(_) {
+  return function(items) {
+    if(items.length === 1){
+      return [items[0].name];
+    }
+    var filtered = [];
+
+    angular.forEach(items, function(item) {
+      filtered.push(_.last(item.name.split(' ')));
+    });
+
+    var stringFilt = filtered.join(', ');
+
+    return [stringFilt];
+  };
 });

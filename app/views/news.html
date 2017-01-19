@@ -11,9 +11,9 @@
     </div>
     <div class="post-container">
     	<div class="post" ng-repeat="news in news[selectedYear] | orderObjectBy:'post_datetime':true">
-    		<div class="post-title">{{ ::news.post_subject }}</div>
+    		<div class="post-title"><em>{{ ::news.post_subject }}</em></div>
     		<div class="post-metadata">
-    			<span class="post-author">Posted by {{ ::news.author }}</span> - <span class="post-date">{{ ::news.post_datetime.substring(0,10) }}</span>
+    			<span class="post-author">Posted by <span class="author-name">{{ ::news.author }}</span></span> - <span class="post-date">{{ ::news.post_datetime.substring(0,10) }}</span>
     		</div>
     		<div class="post-content">
     			<p ng-bind-html="news.post_text | n12br"></p>

@@ -47,11 +47,12 @@ angular.module('itcFrontendApp')
   }, {
     event: 'Illinois Club Relays',
     date: 'February 25, 2017',
-    location: 'Champaign, IL'
+    location: 'Champaign, IL',
+    important: true
   }];
-  $scope.outdoorMeets = [{
-    event: 'NIRCA Track & Field Nationals',
-    date: 'April 8-9, 2017',
-    location: 'Bloomington, IN'
-  }];
+  // $scope.outdoorMeets = [{
+  //   event: 'NIRCA Track & Field Nationals',
+  //   date: 'April 8-9, 2017',
+  //   location: 'Bloomington, IN'
+  // }];
 });

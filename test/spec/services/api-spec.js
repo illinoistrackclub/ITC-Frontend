@@ -11,8 +11,8 @@ describe('service: Api', function() {
     $http = _$http_;
     $q = _$q_;
 
-    // urlBase = 'http://illinoistrackclub.herokuapp.com/';
-    urlBase = 'http://localhost:8000/';
+    urlBase = 'http://illinoistrackclub.herokuapp.com/';
+    //urlBase = 'http://localhost:8000/';
 
     httpGet = $q.defer();
 

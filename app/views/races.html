@@ -5,7 +5,7 @@
     </div>
 
     <div class="page-content">
-      <div class="md-headline">2016 Cross Country Season</div>
+      <div class="md-headline"><strong>2016 Cross Country Season</strong></div>
       <div class="three-column-table">
         <div class="header row md-body-2">
           <div class="first-column">Meet</div>
@@ -19,7 +19,7 @@
           <div class="third-column">{{meet.location}}</div>
         </div>
       </div>
-      <div class="md-headline extra-vertical-space">2017 Indoor Season</div>
+      <div class="md-headline extra-vertical-space"><strong>2017 Indoor Season</strong></div>
       <div class="three-column-table">
         <div class="header row md-body-2">
           <div class="first-column">Meet</div>
@@ -28,12 +28,19 @@
         </div>
         <md-divider></md-divider>
         <div class="row md-body-1" ng-repeat="meet in indoorMeets">
-          <div class="first-column">{{meet.event}}</div>
-          <div class="second-column">{{meet.date}}</div>
-          <div class="third-column">{{meet.location}}</div>
+          <div ng-if="meet.important">
+            <div class="first-column-important">{{meet.event}}</div>
+            <div class="second-column">{{meet.date}}</div>
+            <div class="third-column">{{meet.location}}</div>
+          </div>
+          <div ng-if="!meet.important">
+            <div class="first-column">{{meet.event}}</div>
+            <div class="second-column">{{meet.date}}</div>
+            <div class="third-column">{{meet.location}}</div>
+          </div>
         </div>
       </div>
-      <div class="md-headline extra-vertical-space">2017 Outdoor Season</div>
+      <!-- <div class="md-headline extra-vertical-space"><strong>2017 Outdoor Season</strong></div>
       <div class="three-column-table">
         <div class="header row md-body-2">
           <div class="first-column">Meet</div>
@@ -46,7 +53,7 @@
           <div class="second-column">{{meet.date}}</div>
           <div class="third-column">{{meet.location}}</div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
