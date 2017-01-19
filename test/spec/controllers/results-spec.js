@@ -691,7 +691,7 @@ describe('Controller: ResultsCtrl', function () {
         getAllTopPerformancesRequest.resolve({ data: performances });
         $scope.$digest();
 
-        expect($scope["topPerformances"]).toEqual(expectedPerformances);
+        expect($scope.topPerformances).toEqual(expectedPerformances);
       });
     });
   };
@@ -1322,11 +1322,10 @@ describe('Controller: ResultsCtrl', function () {
         getAllRecordsRequest.resolve({ data: records });
         $scope.$digest();
 
-        expect($scope["records"]).toEqual(expectedRecords);
+        expect($scope.records).toEqual(expectedRecords);
       });
     });
   };
-
 
   describe('initialization', function() {
     itShouldLoadMeets('XC', 'crossCountryMeets');

@@ -4,9 +4,8 @@ angular.module('itcFrontendApp')
 
 .service('Api', function($http) {
 
-  // var urlBase = 'http://illinoistrackclub.herokuapp.com/';
-  var urlBase = 'http://localhost:8000/';
-
+  var urlBase = 'http://illinoistrackclub.herokuapp.com/';
+  
   this.getAllAthletes = function() {
     return $http.get(urlBase + 'athletes/');
   };

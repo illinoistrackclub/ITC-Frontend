@@ -3,6 +3,10 @@
 
 $black: #000;
 $white: #FFF;
+$orange: #F5731B;
+$gray: #FAFAFA;
+
+$link: #55acee;
 
 * {
 	font-family: 'Roboto';
@@ -16,6 +20,7 @@ body {
 	.wrapper {
 		min-height: 100%;
 		position: relative;
+		background: $gray;
 	}
 }
 
@@ -35,7 +40,7 @@ md-menu-content {
 }
 
 .link, .link:visited, .link:hover {
-	color: #55acee;
+	color: $link;
 }
 
 .emphasis {
@@ -53,7 +58,7 @@ md-menu-content {
 }
 
 .md-autocomplete-suggestions-container li .highlight {
-	color: #F5731B;
+	color: $orange;
 }
 
 .padded-content {
@@ -61,8 +66,9 @@ md-menu-content {
 }
 
 .page-container {
-	padding-top: 72px;
+	padding-top: 64px;
 	padding-bottom: 225px;
+	background: $gray;
 }
 
 .page-content {
@@ -99,7 +105,7 @@ md-menu-content {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	background-color: #F5731B;
+	background-color: $orange;
 	color: $white;
 	height: 125px;
 
@@ -170,7 +176,7 @@ md-menu-content {
 			.season-name {
 				font-weight: 700;
 				font-size: 24px;
-				color: #F5731B;
+				color: $orange;
 				text-decoration: underline;
 			}
 		}
@@ -248,6 +254,12 @@ md-menu-content {
 		float: left;
 	}
 
+	.first-column-important {
+		width: 40%;
+		float: left;
+		color: $orange;
+	}
+
 	.second-column, .third-column {
 		display: inline-block;
 		width: 30%;
@@ -258,9 +270,22 @@ md-menu-content {
 	}
 }
 
+.races-page-container {
+	.title-container .page-title {
+		color: $orange;
+		font-weight: 700;
+	}
+}
+
 .home-page-container {
 	.image-slider-container {
-		height: 400px;
+		max-height: 495px;
+
+		.image {
+			//min-width: 100%;
+			max-width: 100%;
+			max-height: 100%;
+		}
 	}
 
 	.social-bar-container {
@@ -305,59 +330,177 @@ md-menu-content {
 }
 
 .news-page-container {
+	background: $gray;
+
 	.title-container {
 		margin-bottom: 25px;
 
+		.page-title {
+			color: $orange;
+			font-weight: 700;
+		}
+
 		.news-year-selector {
+			margin-top: 45px;
 			float: right;
 		}
 	}
 
 	.post-container {
+
 		.post {
+			padding: 5px;
+			margin-bottom: 20px;
+			border-style: solid;
+			border-width: thin;
+			border-color: $orange;
+			box-shadow: inset 0 0 5px $black;
+
 			.post-title {
+				color: $orange;
 				font-size: 24px;
 			}
 
 			.post-metadata {
 				font-size: 14px;
 				margin-bottom: 10px;
+
+				.post-author .author-name {
+					color: $orange;
+				}
 			}
 
 			.post-content p {
 				margin-bottom: 7px;
 
 				a[href]{
-					color: blue;
+					color: $link;
 				}
 			}
-			margin-bottom: 10px;
 		}
 	}
 }
 
 .contact-page-container {
-	.coach-card {
-		display: inline-block;
-		max-width: 480px;
-		min-width: 300px;
-		width: calc(50% - 20px);
+	.title-container .page-title {
+		color: $orange;
+		font-weight: 700;
 	}
+	.contact-cards {
+		margin-bottom: 10px;
 
-	.second-title {
-		padding: 25px 0;
+		.md-headline {
+				font-weight: 700;
+			}
+
+		.coach-card {
+			border-style: solid;
+			border-color: $orange;
+
+			display: inline-block;
+			max-width: 480px;
+			min-width: 300px;
+			width: calc(50% - 20px);
+
+			.header {
+				color: $orange;
+				padding: 2px 5px 2px 5px;
+
+				.md-headline {
+					font-weight: 700;
+				}
+				
+			}
+
+			.title {
+				background: $white;
+				color: $black;
+				border-style: solid;
+				border-color: $orange;
+				border-width: thin;
+				box-shadow: inset 0 0 3px $black;
+
+				.md-headline {
+					font-weight: 400;
+				}	
+			}
+
+
+			.button {
+				color: $white;
+				background: $orange;
+			}
+		}
 	}
 }
 
 .clubrelays-page-container {
+	background: $gray;
+	width: 100%;
+
+	.title-container .page-title {
+		color: $orange;
+		font-weight: 700;
+	}
+
 	.map-container {
 		padding: 25px 0;
 		height: 600px;
 		width: 100%;
 	}
+
+	.info {
+		width: 100%;
+		margin-bottom: 15px;
+
+		.info-header {
+			font-size: 20px;
+			font-weight: 700;
+			margin-bottom: 5px;
+			//font-style: italic;
+		}
+	}
+	.meet-schedule {
+		width: 100%;
+		margin-bottom: 15px;
+
+		.two-column-table {
+			.header {
+				width: 100%;
+			}
+
+			.row {
+				padding: 3px 0;
+				width: 100%;
+			}
+
+			.left-column {
+				float: left;
+				width: 50%;
+			}
+
+			.right-column {
+				display: inline-block;
+				width: 50%;
+			}
+
+			.left-column, .right-column {
+				height: 100%;
+
+				.column-header {
+					font-weight: 700;
+				}
+			}
+		}
+	}
 }
 
 .board-minutes-page-container {
+	.title-container .page-title {
+		color: $orange;
+		font-weight: 700;
+	}
+
 	.season {
 		font-weight: 1000;
 		font-size: 24px;
@@ -380,6 +523,10 @@ md-menu-content {
 }
 
 .prospective-members-page-container {
+	.title-container .page-title {
+		color: $orange;
+		font-weight: 700;
+	}
 	.mailing-list {
 		text-align: center;
 
@@ -394,6 +541,7 @@ md-menu-content {
 
 	.faq-question {
 		font-size: 18px;
+		margin-bottom: 10px;
 	}
 
 	.faq-answer {

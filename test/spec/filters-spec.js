@@ -204,4 +204,33 @@ describe('Filters', function() {
     });
   });
 
+  describe('relayNames', function() {
+    var givenIndividual, givenRelay;
+    var expectedResultIndividual, expectedResultRelay;
+
+    beforeEach(function() {
+      givenIndividual = [{'name': "Tyler Splitt"}];
+
+      givenRelay = [
+        {'name': "Tyler Splitt"},
+        {'name': "Mike Kreiser"},
+        {'name': "Ryan Somerfield"},
+        {'name': "Michael Frintner"}
+      ];
+
+      expectedResultIndividual = ["Tyler Splitt"];
+
+      expectedResultRelay = ["Splitt, Kreiser, Somerfield, Frintner"];
+    });
+
+    it('should return a string of the athletes name for individual events', function() {
+      var result = $filter('relayNames')(givenIndividual);
+      expect(result).toEqual(expectedResultIndividual);
+    });
+
+    it('should return a string of comma separated last names for relay events', function() {
+      var result = $filter('relayNames')(givenRelay);
+      expect(result).toEqual(expectedResultRelay);
+    });
+  });
 });
