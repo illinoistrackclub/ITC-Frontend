@@ -10,8 +10,6 @@ angular.module('itcFrontendApp')
 
 .filter('trackTime', function(_) {
   return function(seconds) {
-    if(!seconds)
-      return seconds;
     var timeList = seconds.toString().split('.');
     var time = moment.duration(parseInt(timeList[0],10), 'seconds').format('m:ss');
     if(timeList.length > 1){
@@ -105,8 +103,6 @@ angular.module('itcFrontendApp')
 
 .filter('relayNames', function(_) {
   return function(items) {
-    if(!items)
-      return items;
     if(items.length === 1){
       return [items[0].name];
     }
