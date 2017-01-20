@@ -146,9 +146,9 @@ describe('Filters', function() {
     var given, expectedResult;
 
     beforeEach(function() {
-      given = 115.45;
+      given = 115.05;
 
-      expectedResult = '1:55.45';
+      expectedResult = '1:55.05';
     });
 
     it('should return a time in m:ss.SS format', function() {

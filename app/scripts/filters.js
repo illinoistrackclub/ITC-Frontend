@@ -10,7 +10,14 @@ angular.module('itcFrontendApp')
 
 .filter('trackTime', function(_) {
   return function(seconds) {
-    var time = moment.duration(seconds, 'seconds').format('m:ss.SS');
+    if(!seconds)
+      return seconds;
+    var timeList = seconds.toString().split('.');
+    var time = moment.duration(parseInt(timeList[0],10), 'seconds').format('m:ss');
+    if(timeList.length > 1){
+      time = time.concat('.');
+      time = time.concat(timeList[1]);
+    }
 
     if (_.last(time.split('.')).length > 2) {
       time = time.slice(0, -1);
@@ -98,6 +105,8 @@ angular.module('itcFrontendApp')
 
 .filter('relayNames', function(_) {
   return function(items) {
+    if(!items)
+      return items;
     if(items.length === 1){
       return [items[0].name];
     }
