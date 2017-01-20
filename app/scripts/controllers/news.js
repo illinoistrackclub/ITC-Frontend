@@ -28,8 +28,10 @@ angular.module('itcFrontendApp')
       hashNewsToYear(newsByYear, news);
       $scope.news = newsByYear;
     });
-	$scope.curYear = ''+new Date().getFullYear();
+	  $scope.curYear = ''+new Date().getFullYear();
+    $scope.isLoadingNews = false;
   };
 
   getNews();
+  $scope.isLoadingNews = true;
 });

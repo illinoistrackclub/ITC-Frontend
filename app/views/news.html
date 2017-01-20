@@ -10,6 +10,9 @@
       </md-input-container>
     </div>
     <div class="post-container">
+        <div layout="row" layout-sm="column" layout-align="space-around">
+                <md-progress-circular class="loading" md-mode="indeterminate" md-diameter="100px" ng-show="isLoadingTP"></md-progress-circular>
+        </div>
     	<div class="post" ng-repeat="news in news[selectedYear] | orderObjectBy:'post_datetime':true">
     		<div class="post-title"><em>{{ ::news.post_subject }}</em></div>
     		<div class="post-metadata">
