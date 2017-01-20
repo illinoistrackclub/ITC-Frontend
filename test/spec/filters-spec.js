@@ -143,17 +143,26 @@ describe('Filters', function() {
   });
 
   describe('trackTime', function() {
-    var given, expectedResult;
+    var given, otherGiven, otherExpectedResult, expectedResult;
 
     beforeEach(function() {
-      given = 115.45;
+      given = 115.05;
 
-      expectedResult = '1:55.45';
+      otherGiven = 12.003;
+
+      expectedResult = '1:55.05';
+
+      otherExpectedResult  = '12.00';
     });
 
     it('should return a time in m:ss.SS format', function() {
       var result = $filter('trackTime')(given);
       expect(result).toEqual(expectedResult);
+    });
+
+    it('should return a time that is spliced', function() {
+      var result = $filter('trackTime')(otherGiven);
+      expect(result).toEqual(otherExpectedResult);
     });
   });
 
