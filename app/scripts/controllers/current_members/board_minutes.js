@@ -100,6 +100,13 @@ angular.module('itcFrontendApp')
       link: 'https://drive.google.com/open?id=0B9IJ7PBOO1nSS0RraGdCcF9NQlE',
       date: 'December 4, 2016',
 	}],
+  2017: [{
+    link: 'https://drive.google.com/open?id=0B9IJ7PBOO1nSNk5DY0poenNfZlE',
+    date: 'January 16, 2017',
+  }, {
+    link: 'https://drive.google.com/open?id=0B9IJ7PBOO1nSZndzS2toa0hvYnc',
+    date: 'January 22, 2017',
+  }]
   };
   $scope.crossMinutes = {
 	2015: [{

@@ -2,7 +2,7 @@
 
 angular.module('itcFrontendApp')
 
-.config(function ($routeProvider) {
+.config(function ($routeProvider, $locationProvider) {
   $routeProvider
     .when('/', {
       templateUrl: 'views/home.html',
@@ -43,4 +43,6 @@ angular.module('itcFrontendApp')
     .otherwise({
       redirectTo: '/'
     });
+
+  $locationProvider.html5Mode(false).hashPrefix('');
 });
