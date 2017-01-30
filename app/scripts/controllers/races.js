@@ -33,9 +33,9 @@ angular.module('itcFrontendApp')
     date: 'January 28, 2017',
     location: 'Bloomington, IL'
   }, {
-    event: 'Jim Green Invite',
+    event: 'ONU Invite',
     date: 'February 4, 2017',
-    location: 'Jacksonville, IL'
+    location: 'Bourbonnais, IL'
   }, {
     event: 'GVSU Big Meet',
     date: 'February 11, 2017',
