@@ -3,7 +3,8 @@ $white: #FFF;
 $orange: #F5731B;
 $gray: #FAFAFA;
 
-$link: #55acee;
+// $link: #55acee; <-- blue
+$link: $orange;
 
 $break-xs: 599px;
 $break-sm: 959px;

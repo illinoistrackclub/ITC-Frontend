@@ -18,19 +18,8 @@ body {
 	}
 }
 
-// Link styles
-a, a:visited, a:hover {
-	cursor: pointer;
-	color: inherit;
-	text-decoration: none;
-}
-
 md-menu-content {
 	min-width: 160px;
-}
-
-.link, .link:visited, .link:hover {
-	color: $link;
 }
 
 .emphasis {
@@ -69,15 +58,6 @@ md-menu-content {
 
 .page-content {
 	padding-top: 10px;
-}
-
-.page-title {
-	font-size: 52px;
-	font-weight: 300;
-}
-
-.right-align {
-	text-align: right;
 }
 
 .header {
@@ -201,123 +181,5 @@ md-menu-content {
 
 	.right-table {
 		float: right;
-	}
-}
-
-
-.clubrelays-page-container {
-	background: $gray;
-	width: 100%;
-
-	.title-container .page-title {
-		color: $orange;
-		font-weight: 700;
-	}
-
-	.map-container {
-		padding: 25px 0;
-		height: 600px;
-		width: 100%;
-	}
-
-	.info {
-		width: 100%;
-		margin-bottom: 15px;
-
-		.info-header {
-			font-size: 20px;
-			font-weight: 700;
-			margin-bottom: 5px;
-			//font-style: italic;
-		}
-	}
-	.meet-schedule {
-		width: 100%;
-		margin-bottom: 15px;
-
-		.two-column-table {
-			.header {
-				width: 100%;
-			}
-
-			.row {
-				padding: 3px 0;
-				width: 100%;
-			}
-
-			.left-column {
-				float: left;
-				width: 50%;
-			}
-
-			.right-column {
-				display: inline-block;
-				width: 50%;
-			}
-
-			.left-column, .right-column {
-				height: 100%;
-
-				.column-header {
-					font-weight: 700;
-				}
-			}
-		}
-	}
-}
-
-.results-page-container {
-	.tabs {
-		max-width: 100%;
-		width: 100%;
-
-		.three-column-table.record-table {
-			.record-time {
-				font-weight: 700;
-			}
-
-			.first-column, .third-column {
-				width: 40%;
-
-				.name{
-					margin-right: 5px;
-				}
-			}
-
-			.first-column {
-				text-align: right;
-
-				.record-time {
-					margin-left: 5px;
-				}
-			}
-
-			.second-column {
-				text-align: center;
-				width: 20%;
-			}
-
-			.third-column {
-				text-align: left;
-
-				.record-time {
-					margin-right: 5px;
-				}
-			}
-		}
-
-		.two-column-table.results-table {
-			&.extra-vertical-space {
-				padding-top: 10px;
-			}
-
-			.right-column {
-				text-align: right;
-
-				.splits {
-					margin-left: 10px;
-				}
-			}
-		}
 	}
 }

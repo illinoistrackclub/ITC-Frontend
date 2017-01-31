@@ -1,0 +1,47 @@
+@import 'base';
+
+.results-page-container {
+  .tabs {
+    width: 100%;
+
+    .itc-h5 {
+      margin-top: 20px;
+    }
+
+    .table {
+      padding: 10px 0;
+
+      .spinner {
+        margin-top: 25px;
+      }
+
+      .left {
+        text-align: left;
+
+        .name {
+          padding-left: 8px;
+        }
+      }
+
+      .center {
+        text-align: center;
+      }
+
+      .right {
+        text-align: right;
+
+        .name {
+          padding-right: 8px;
+        }
+      }
+
+      .record-time {
+        font-weight: 700;
+      }
+
+      .splits {
+        padding-left: 10px;
+      }
+    }
+  }
+}

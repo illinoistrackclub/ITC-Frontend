@@ -1,0 +1,25 @@
+@import 'base';
+
+.clubrelays-page-container {
+  background: $gray;
+  width: 100%;
+
+  .map-container {
+    padding: 25px 0;
+    height: 600px;
+    width: 100%;
+  }
+
+  .info {
+    margin-bottom: 15px;
+
+    .itc-h5 {
+      font-weight: 400;
+      margin-bottom: 5px;
+    }
+  }
+
+  .meet-schedule {
+    margin-bottom: 15px;
+  }
+}
