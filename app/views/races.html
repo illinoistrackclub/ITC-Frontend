@@ -1,12 +1,12 @@
 <div class="races-page-container">
-  <div class="centered-content padded-content">
+  <div class="centered-content container">
     <div class="title-container">
-      <div class="page-title">Race Schedule</div>
+      <div class="itc-h1">Race Schedule</div>
     </div>
 
     <div class="page-content">
-      <div class="md-headline"><strong>2016 Cross Country Season</strong></div>
-      <div class="three-column-table">
+      <div class="itc-h5">2016 Cross Country Season</div>
+      <div class="three-column-table race-table">
         <div class="header row md-body-2">
           <div class="first-column">Meet</div>
           <div class="second-column">Date</div>
@@ -19,8 +19,8 @@
           <div class="third-column">{{meet.location}}</div>
         </div>
       </div>
-      <div class="md-headline extra-vertical-space"><strong>2017 Indoor Season</strong></div>
-      <div class="three-column-table">
+      <div class="itc-h5">2017 Indoor Season</div>
+      <div class="three-column-table race-table">
         <div class="header row md-body-2">
           <div class="first-column">Meet</div>
           <div class="second-column">Date</div>
@@ -28,12 +28,7 @@
         </div>
         <md-divider></md-divider>
         <div class="row md-body-1" ng-repeat="meet in indoorMeets">
-          <div ng-if="meet.important">
-            <div class="first-column-important">{{meet.event}}</div>
-            <div class="second-column">{{meet.date}}</div>
-            <div class="third-column">{{meet.location}}</div>
-          </div>
-          <div ng-if="!meet.important">
+          <div ng-class="{ 'highlighted-meet': meet.important }">
             <div class="first-column">{{meet.event}}</div>
             <div class="second-column">{{meet.date}}</div>
             <div class="third-column">{{meet.location}}</div>

@@ -1,0 +1,77 @@
+@mixin body-text {
+  font-size: 20px;
+  line-height: 1.4;
+  padding: 5px 0;
+
+  @media (max-width: $break-sm) {
+    font-size: 18px;
+  }
+
+  @media (max-width: $break-xs) {
+    font-size: 14px;
+  }
+}
+
+.itc-h1 {
+  font-size: 60px;
+  font-weight: 300;
+
+  @media (max-width: $break-sm) {
+    font-size: 45px;
+  }
+
+  @media (max-width: $break-xs) {
+    font-size: 30px;
+  }
+}
+
+.itc-h2 {
+  font-size: 50px;
+  font-weight: 300;
+
+  @media (max-width: $break-sm) {
+    font-size: 35px;
+  }
+
+  @media (max-width: $break-xs) {
+    font-size: 25px;
+  }
+}
+
+.itc-h4 {
+  font-size: 32px;
+  font-weight: 300;
+
+  @media (max-width: $break-sm) {
+    font-size: 24px;
+  }
+
+  @media (max-width: $break-xs) {
+    font-size: 20px;
+  }
+}
+
+.itc-h5 {
+  font-size: 26px;
+  font-weight: 300;
+
+  @media (max-width: $break-sm) {
+    font-size: 20px;
+  }
+
+  @media (max-width: $break-xs) {
+    font-size: 18px;
+  }
+}
+
+.featured-icon {
+  font-size: 50px;
+
+  @media (max-width: $break-sm) {
+    font-size: 35px;
+  }
+
+  @media (max-width: $break-xs) {
+    font-size: 24px;
+  }
+}
