@@ -1,0 +1,19 @@
+@import 'base';
+
+.prospective-members-page-container {
+  .itc-h1 {
+    margin-bottom: 20px;
+  }
+
+  .faq-question {
+    .itc-h5 {
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+
+    div:not(.itc-h5) {
+      @include body-text;
+      margin-bottom: 15px;
+    }
+  }
+}

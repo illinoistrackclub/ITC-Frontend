@@ -1,0 +1,27 @@
+@import 'base';
+
+.contact-page-container {
+  .contact-cards {
+    margin-bottom: 10px;
+
+    .coach-card {
+      display: inline-block;
+      max-width: 480px;
+      min-width: 300px;
+      width: calc(50% - 20px);
+
+      .title-container {
+        padding-right: 20px;
+
+        .position {
+          @include body-text;
+          color: lighten($black, 40%);
+        }
+      }
+    }
+  }
+
+  .divider {
+    margin: 40px 0;
+  }
+}

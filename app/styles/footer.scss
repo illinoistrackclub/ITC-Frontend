@@ -1,0 +1,18 @@
+@import 'base';
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: $orange;
+  color: $white;
+
+  .footer-logo {
+    font-size: 36px;
+    padding: 0 25px;
+  }
+
+  .masthead {
+    margin-top: 40px;
+  }
+}

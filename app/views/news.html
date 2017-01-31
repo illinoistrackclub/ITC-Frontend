@@ -1,8 +1,9 @@
 <div class="news-page-container">
-	<div class="centered-content container">
-		<div class="title-container">
+	<div class="container">
+		<div layout="row">
 			<span class="itc-h1">News</span>
-			<md-input-container class="news-year-selector">
+            <span flex></span>
+			<md-input-container class="year-selector">
                 <label>Filter By Year</label>
                 <md-select ng-model="selectedYear">
                     <md-option ng-repeat="(key, value) in news" ng-value="key" ng-selected="key === curYear">{{ key }}</md-option>

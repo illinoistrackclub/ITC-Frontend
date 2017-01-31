@@ -1,0 +1,50 @@
+@import 'base';
+
+.news-page-container {
+  background: $gray;
+
+  .title-container {
+    margin-bottom: 25px;
+
+    .year-selector {
+      @media (max-width: $break-sm) {
+        margin: 0;
+      }
+    }
+  }
+
+  .spinner {
+    margin: 0 auto;
+  }
+
+  .post-container {
+    .divider {
+      margin: 20px 0;
+    }
+
+    .post {
+      padding-bottom: 20px;
+
+      .post-metadata {
+        font-size: 16px;
+        margin: 5px 0;
+
+        @media (max-width: $break-xs) {
+          font-size: 12px;
+        }
+
+        .post-author .author-name {
+          color: $orange;
+        }
+      }
+
+      .post-content p {
+        @include body-text;
+
+        a {
+          color: $link !important;
+        }
+      }
+    }
+  }
+}

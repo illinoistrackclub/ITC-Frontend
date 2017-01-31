@@ -1,29 +1,27 @@
 <div class="board-minutes-page-container">
-  <div class="centered-content padded-content">
-    <div class="title-container">
-      <div class="page-title">Board Minutes</div>
-    </div>
+  <div class="container">
+    <div class="itc-h1">Board Minutes</div>
     <div class="page-content">
       <md-tabs class="tabs" md-dynamic-height>
       <md-tab label="Track">
-        <div class="year-container" ng-repeat="(year, value) in trackMinutes">
-          <div class="header row md-body-2">
-            <div class="year">{{ year }}</div>
+        <div class="table" ng-repeat="(year, value) in trackMinutes">
+          <div class="table-header" layout="row">
+            <div flex="100">{{ year }}</div>
           </div>
           <md-divider></md-divider>
-          <div class="row md-body-1" ng-repeat="minutes in value">
-            <div class="link"><a target="_blank" href="{{ minutes.link }}">{{ minutes.date }}</a></div>
+          <div class="table-row" layout="row" ng-repeat="minutes in value">
+            <div flex="100"><a class="link" target="_blank" href="{{ minutes.link }}">{{ minutes.date }}</a></div>
           </div>
         </div>
 	  </md-tab>
 	  <md-tab label="Cross Country">
-        <div class="year-container" ng-repeat="(year, value) in crossMinutes">
-          <div class="header row md-body-2">
-            <div class="year">{{ year }}</div>
+        <div class="table" ng-repeat="(year, value) in crossMinutes">
+          <div class="table-header" layout="row">
+            <div flex="100">{{ year }}</div>
           </div>
           <md-divider></md-divider>
-          <div class="row md-body-1" ng-repeat="minutes in value">
-            <div class="link"><a href="{{ minutes.link }}">{{ minutes.date }}</a></div>
+          <div class="table-row" layout="row" ng-repeat="minutes in value">
+            <div flex="100"><a class="link" target="_blank" href="{{ minutes.link }}">{{ minutes.date }}</a></div>
           </div>
         </div>
 	  </md-tab>

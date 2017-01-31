@@ -1,0 +1,12 @@
+.table {
+  @include table-text;
+
+  .table-header {
+    font-weight: 700;
+  }
+
+  .table-header div, .table-row div {
+    padding: 8px 10px 8px 0;
+  }
+}
+

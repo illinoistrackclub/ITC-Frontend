@@ -1,22 +1,15 @@
 <div class="contact-page-container">
-  <div class="centered-content padded-content">
-      <div class="title-container">
-        <span class="page-title">Contact</span>
-      </div>
+  <div class="container">
+      <div class="itc-h1">Contact</div>
 
       <div class="page-content">
         <div class="contact-cards">
-          <div class="md-headline title">Track and Field Board &amp; Coaches</div>
+          <div class="itc-h4">Track and Field Board &amp; Coaches</div>
           <md-card class="coach-card" ng-repeat="coach in tfCoaches">
-          <md-card-header class="header">
-              <md-card-header-text>
-                <span class="md-headline">{{coach.position}}</span>
-              </md-card-title-text>
-            </md-card-title>
-            <md-card-title class="title">
-              <md-card-title-text>
+            <md-card-title>
+              <md-card-title-text class="title-container">
                 <span class="md-headline">{{coach.name}}</span>
-                <span class="md-subhead">{{coach.email}}</span>
+                <span class="position">{{coach.position}}</span>
               </md-card-title-text>
               <md-card-title-media>
                 <div class="md-media-md card-media">
@@ -25,23 +18,18 @@
               </md-card-title-media>
             </md-card-title>
             <md-card-actions layout="row" layout-align="end center">
-              <md-button class="button" ng-click="emailCoach(coach.email)">Email</md-button>
+              <md-button class="md-raised md-primary" ng-click="emailCoach(coach.email)">Email</md-button>
             </md-card-actions>
           </md-card>
         </div>
-        <md-divider></md-divider>
+        <md-divider class="divider"></md-divider>
         <div class="contact-cards">
-          <div class="md-headline title">Cross Country Board &amp; Coaches</div>
+          <div class="itc-h4">Cross Country Board &amp; Coaches</div>
           <md-card class="coach-card" ng-repeat="coach in xcCoaches">
-          <md-card-header class="header">
-              <md-card-header-text>
-                <span class="md-headline">{{coach.position}}</span>
-              </md-card-title-text>
-            </md-card-title>
-            <md-card-title class="title">
-              <md-card-title-text>
+            <md-card-title>
+              <md-card-title-text class="title-container">
                 <span class="md-headline">{{coach.name}}</span>
-                <span class="md-subhead">{{coach.email}}</span>
+                <span class="position">{{coach.position}}</span>
               </md-card-title-text>
               <md-card-title-media>
                 <div class="md-media-md card-media">
@@ -50,7 +38,7 @@
               </md-card-title-media>
             </md-card-title>
             <md-card-actions layout="row" layout-align="end center">
-              <md-button class="button" ng-click="emailCoach(coach.email)">Email</md-button>
+              <md-button class="md-raised md-primary" ng-click="emailCoach(coach.email)">Email</md-button>
             </md-card-actions>
           </md-card>
         </div>

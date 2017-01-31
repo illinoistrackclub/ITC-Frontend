@@ -1,6 +1,7 @@
-@import '_variables';
+@import 'base';
 
 .race-table {
+  @include table-text;
   padding: 10px 0;
 
   .highlighted-meet {

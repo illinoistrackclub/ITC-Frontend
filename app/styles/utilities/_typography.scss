@@ -12,6 +12,14 @@
   }
 }
 
+@mixin table-text {
+  font-size: 14px;
+
+  @media (max-width: $break-xs) {
+    font-size: 10px;
+  }
+}
+
 .itc-h1 {
   font-size: 60px;
   font-weight: 300;

@@ -1,54 +1,36 @@
 <div class="races-page-container">
-  <div class="centered-content container">
-    <div class="title-container">
-      <div class="itc-h1">Race Schedule</div>
-    </div>
+  <div class="container">
+    <div class="itc-h1">Race Schedule</div>
 
     <div class="page-content">
       <div class="itc-h5">2016 Cross Country Season</div>
-      <div class="three-column-table race-table">
-        <div class="header row md-body-2">
-          <div class="first-column">Meet</div>
-          <div class="second-column">Date</div>
-          <div class="third-column">Location</div>
+      <div class="table race-table">
+        <div class="table-header" layout="row">
+          <div flex="40">Meet</div>
+          <div flex="30">Date</div>
+          <div flex="30">Location</div>
         </div>
         <md-divider></md-divider>
-        <div class="row md-body-1" ng-repeat="meet in crossMeets">
-          <div class="first-column">{{meet.event}}</div>
-          <div class="second-column">{{meet.date}}</div>
-          <div class="third-column">{{meet.location}}</div>
+        <div class="table-row" layout="row" ng-repeat="meet in crossMeets">
+          <div flex="40">{{meet.event}}</div>
+          <div flex="30">{{meet.date}}</div>
+          <div flex="30">{{meet.location}}</div>
         </div>
       </div>
       <div class="itc-h5">2017 Indoor Season</div>
-      <div class="three-column-table race-table">
-        <div class="header row md-body-2">
-          <div class="first-column">Meet</div>
-          <div class="second-column">Date</div>
-          <div class="third-column">Location</div>
+      <div class="table race-table">
+        <div class="table-header" layout="row">
+          <div flex="40">Meet</div>
+          <div flex="30">Date</div>
+          <div flex="30">Location</div>
         </div>
         <md-divider></md-divider>
-        <div class="row md-body-1" ng-repeat="meet in indoorMeets">
-          <div ng-class="{ 'highlighted-meet': meet.important }">
-            <div class="first-column">{{meet.event}}</div>
-            <div class="second-column">{{meet.date}}</div>
-            <div class="third-column">{{meet.location}}</div>
-          </div>
+        <div class="table-row" ng-class="{ 'highlighted-meet': meet.important }" layout="row" ng-repeat="meet in indoorMeets">
+          <div flex="40">{{meet.event}}</div>
+          <div flex="30">{{meet.date}}</div>
+          <div flex="30">{{meet.location}}</div>
         </div>
       </div>
-      <!-- <div class="md-headline extra-vertical-space"><strong>2017 Outdoor Season</strong></div>
-      <div class="three-column-table">
-        <div class="header row md-body-2">
-          <div class="first-column">Meet</div>
-          <div class="second-column">Date</div>
-          <div class="third-column">Location</div>
-        </div>
-        <md-divider></md-divider>
-        <div class="row md-body-1" ng-repeat="meet in outdoorMeets">
-          <div class="first-column">{{meet.event}}</div>
-          <div class="second-column">{{meet.date}}</div>
-          <div class="third-column">{{meet.location}}</div>
-        </div>
-      </div> -->
     </div>
   </div>
 </div>

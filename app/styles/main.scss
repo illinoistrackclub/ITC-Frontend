@@ -1,9 +1,6 @@
 // bower:scss
 // endbower
-
-@import '_variables';
-@import '_typography';
-@import 'races';
+@import 'base';
 
 * {
 	font-family: 'Roboto';
@@ -30,11 +27,6 @@ a, a:visited, a:hover {
 
 md-menu-content {
 	min-width: 160px;
-}
-
-.centered-content {
-	max-width: $break-sm;
-	margin: 0 auto;
 }
 
 .link, .link:visited, .link:hover {
@@ -64,6 +56,8 @@ md-menu-content {
 }
 
 .container {
+	max-width: $break-sm;
+	margin: 0 auto;
 	padding: 25px;
 }
 
@@ -100,20 +94,6 @@ md-menu-content {
 	.menu-item {
 		padding: 0 10px;
     font-size: 16px;
-	}
-}
-
-.footer {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	background-color: $orange;
-	color: $white;
-	height: 125px;
-
-	.footer-logo {
-		font-size: 36px;
-		padding: 0 25px;
 	}
 }
 
@@ -224,201 +204,6 @@ md-menu-content {
 	}
 }
 
-.two-column-table {
-	.header {
-		width: 100%;
-	}
-
-	.row {
-		padding: 3px 0;
-		width: 100%;
-	}
-
-	.left-column {
-		float: left;
-		width: 50%;
-	}
-
-	.right-column {
-		display: inline-block;
-		width: 50%;
-	}
-}
-
-.three-column-table {
-	.row {
-		padding: 3px 0;
-		width: 100%;
-	}
-
-	.header {
-		width: 100%;
-	}
-
-	.first-column {
-		width: 40%;
-		float: left;
-	}
-
-	.second-column, .third-column {
-		display: inline-block;
-		width: 30%;
-	}
-
-	.third-column {
-		float: right;
-	}
-}
-
-.home-page-container {
-	.home-image {
-		//min-width: 100%;
-		max-width: 100%;
-		max-height: 100%;
-	}
-
-	.social-bar-container {
-		margin-top: -5px;
-		text-align: center;
-
-		.social-bar {
-			width: 25%;
-			height: 100px;
-			color: $white;
-			line-height: 100px;
-
-			@media (max-width: $break-xs) {
-				height: 60px;
-				line-height: 60px;
-			}
-		}
-
-		.facebook-bar {
-			background-color: #3C5A94;
-		}
-
-		.twitter-bar {
-			background-color: #55acee;
-		}
-
-		.instagram-bar {
-			background-color: #405de6;
-		}
-
-		.youtube-bar {
-			background-color: #cd201f;
-		}
-	}
-
-	.about-title {
-		margin-bottom: 15px;
-	}
-
-	.about-container div:not(.about-title) {
-		@include body-text;
-	}
-}
-
-.news-page-container {
-	background: $gray;
-
-	.title-container {
-		margin-bottom: 25px;
-
-		.news-year-selector {
-			margin-top: 45px;
-			float: right;
-		}
-	}
-
-	.spinner {
-		margin: 0 auto;
-	}
-
-	.post-container {
-		.divider {
-			margin: 20px 0;
-		}
-
-		.post {
-			padding-bottom: 20px;
-
-			.post-metadata {
-				font-size: 16px;
-				margin: 5px 0;
-
-				@media (max-width: $break-xs) {
-					font-size: 12px;
-				}
-
-				.post-author .author-name {
-					color: $orange;
-				}
-			}
-
-			.post-content p {
-				@include body-text;
-
-				a {
-					color: $link !important;
-				}
-			}
-		}
-	}
-}
-
-.contact-page-container {
-	.title-container .page-title {
-		color: $orange;
-		font-weight: 700;
-	}
-	.contact-cards {
-		margin-bottom: 10px;
-
-		.md-headline {
-				font-weight: 700;
-			}
-
-		.coach-card {
-			border-style: solid;
-			border-color: $orange;
-
-			display: inline-block;
-			max-width: 480px;
-			min-width: 300px;
-			width: calc(50% - 20px);
-
-			.header {
-				color: $orange;
-				padding: 2px 5px 2px 5px;
-
-				.md-headline {
-					font-weight: 700;
-				}
-
-			}
-
-			.title {
-				background: $white;
-				color: $black;
-				border-style: solid;
-				border-color: $orange;
-				border-width: thin;
-				box-shadow: inset 0 0 3px $black;
-
-				.md-headline {
-					font-weight: 400;
-				}
-			}
-
-
-			.button {
-				color: $white;
-				background: $orange;
-			}
-		}
-	}
-}
 
 .clubrelays-page-container {
 	background: $gray;
@@ -478,60 +263,6 @@ md-menu-content {
 				}
 			}
 		}
-	}
-}
-
-.board-minutes-page-container {
-	.title-container .page-title {
-		color: $orange;
-		font-weight: 700;
-	}
-
-	.season {
-		font-weight: 1000;
-		font-size: 24px;
-	}
-
-	.year-container {
-		width: 100%;
-		text-align: left;
-		margin-top: 10px;
-
-		.year {
-			font-weight: 700;
-			font-size: 18px;
-		}
-
-		.link {
-
-		}
-	}
-}
-
-.prospective-members-page-container {
-	.title-container .page-title {
-		color: $orange;
-		font-weight: 700;
-	}
-	.mailing-list {
-		text-align: center;
-
-		.mailing-list-button {
-			margin: 6px 0px;
-		}
-	}
-
-	.faq-title {
-		margin-bottom: 10px;
-	}
-
-	.faq-question {
-		font-size: 18px;
-		margin-bottom: 10px;
-	}
-
-	.faq-answer {
-		margin-top: 5px;
 	}
 }
 

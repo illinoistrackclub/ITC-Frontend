@@ -1,0 +1,49 @@
+@import 'base';
+
+.home-page-container {
+  .home-image {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .social-bar-container {
+    margin-top: -5px;
+    text-align: center;
+
+    .social-bar {
+      width: 25%;
+      height: 100px;
+      color: $white;
+      line-height: 100px;
+
+      @media (max-width: $break-xs) {
+        height: 60px;
+        line-height: 60px;
+      }
+    }
+
+    .facebook-bar {
+      background-color: #3C5A94;
+    }
+
+    .twitter-bar {
+      background-color: #55acee;
+    }
+
+    .instagram-bar {
+      background-color: #405de6;
+    }
+
+    .youtube-bar {
+      background-color: #cd201f;
+    }
+  }
+
+  .itc-h1 {
+    margin-bottom: 15px;
+  }
+
+  .about-container div:not(.itc-h1) {
+    @include body-text;
+  }
+}
