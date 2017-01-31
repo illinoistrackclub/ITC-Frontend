@@ -1,27 +1,26 @@
 <div class="news-page-container">
-	<div class="centered-content padded-content">
+	<div class="centered-content container">
 		<div class="title-container">
-			<span class="page-title">News</span>
+			<span class="itc-h1">News</span>
 			<md-input-container class="news-year-selector">
-        <label>Filter By Year</label>
-        <md-select ng-model="selectedYear">
-          <md-option ng-repeat="(key, value) in news" ng-value="key" ng-selected="key === curYear">{{ key }}</md-option> 
-        </md-select >
-      </md-input-container>
-    </div>
-    <div class="post-container">
-        <div layout="row" layout-sm="column" layout-align="space-around">
-            <md-progress-circular class="loading" md-mode="indeterminate" md-diameter="100px" ng-show="isLoadingNews"></md-progress-circular>
+                <label>Filter By Year</label>
+                <md-select ng-model="selectedYear">
+                    <md-option ng-repeat="(key, value) in news" ng-value="key" ng-selected="key === curYear">{{ key }}</md-option>
+                </md-select>
+            </md-input-container>
         </div>
-    	<div class="post" ng-repeat="news in news[selectedYear] | orderObjectBy:'post_datetime':true">
-    		<div class="post-title"><em>{{ ::news.post_subject }}</em></div>
-    		<div class="post-metadata">
-    			<span class="post-author">Posted by <span class="author-name">{{ ::news.author }}</span></span> - <span class="post-date">{{ ::news.post_datetime.substring(0,10) }}</span>
-    		</div>
-    		<div class="post-content">
-    			<p ng-bind-html="news.post_text | n12br"></p>
-    		</div>
-    	</div>
-    </div>
+        <md-progress-circular class="spinner" md-mode="indeterminate" md-diameter="40px" ng-if="isLoadingNews"></md-progress-circular>
+        <div class="post-container">
+        	<div class="post" ng-repeat-start="news in news[selectedYear] | orderObjectBy:'post_datetime':true">
+        		<div class="itc-h4">{{ ::news.post_subject }}</div>
+        		<div class="post-metadata">
+        			<span class="post-author">Posted by <span class="author-name">{{ ::news.author }}</span></span> - <span class="post-date">{{ ::news.post_datetime | date : 'MM/dd/yyyy' }}</span>
+        		</div>
+        		<div class="post-content">
+        			<p ng-bind-html="news.post_text | n12br"></p>
+        		</div>
+        	</div>
+            <md-divider class="divider" ng-if="!$last" ng-repeat-end></md-divider>
+        </div>
 	</div>
 </div>

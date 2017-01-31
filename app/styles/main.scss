@@ -1,12 +1,9 @@
 // bower:scss
 // endbower
 
-$black: #000;
-$white: #FFF;
-$orange: #F5731B;
-$gray: #FAFAFA;
-
-$link: #55acee;
+@import '_variables';
+@import '_typography';
+@import 'races';
 
 * {
 	font-family: 'Roboto';
@@ -24,6 +21,7 @@ body {
 	}
 }
 
+// Link styles
 a, a:visited, a:hover {
 	cursor: pointer;
 	color: inherit;
@@ -35,7 +33,7 @@ md-menu-content {
 }
 
 .centered-content {
-	max-width: 1000px;
+	max-width: $break-sm;
 	margin: 0 auto;
 }
 
@@ -65,8 +63,8 @@ md-menu-content {
 	color: $orange;
 }
 
-.padded-content {
-	padding: 10px;
+.container {
+	padding: 25px;
 }
 
 .page-container {
@@ -262,12 +260,6 @@ md-menu-content {
 		float: left;
 	}
 
-	.first-column-important {
-		width: 40%;
-		float: left;
-		color: $orange;
-	}
-
 	.second-column, .third-column {
 		display: inline-block;
 		width: 30%;
@@ -278,33 +270,27 @@ md-menu-content {
 	}
 }
 
-.races-page-container {
-	.title-container .page-title {
-		color: $orange;
-		font-weight: 700;
-	}
-}
-
 .home-page-container {
-	.image-slider-container {
-		max-height: 495px;
-
-		.image {
-			//min-width: 100%;
-			max-width: 100%;
-			max-height: 100%;
-		}
+	.home-image {
+		//min-width: 100%;
+		max-width: 100%;
+		max-height: 100%;
 	}
 
 	.social-bar-container {
+		margin-top: -5px;
 		text-align: center;
 
 		.social-bar {
 			width: 25%;
 			height: 100px;
 			color: $white;
-			font-size: 50px;
 			line-height: 100px;
+
+			@media (max-width: $break-xs) {
+				height: 60px;
+				line-height: 60px;
+			}
 		}
 
 		.facebook-bar {
@@ -325,15 +311,11 @@ md-menu-content {
 	}
 
 	.about-title {
-		font-size: 60px;
-		font-weight: 300;
-		margin: 25px 0;
+		margin-bottom: 15px;
 	}
 
-	.about-text {
-		font-size: 18px;
-		line-height: 1.3;
-		margin-bottom: 20px;
+	.about-container div:not(.about-title) {
+		@include body-text;
 	}
 }
 
@@ -343,35 +325,31 @@ md-menu-content {
 	.title-container {
 		margin-bottom: 25px;
 
-		.page-title {
-			color: $orange;
-			font-weight: 700;
-		}
-
 		.news-year-selector {
 			margin-top: 45px;
 			float: right;
 		}
 	}
 
+	.spinner {
+		margin: 0 auto;
+	}
+
 	.post-container {
+		.divider {
+			margin: 20px 0;
+		}
 
 		.post {
-			padding: 5px;
-			margin-bottom: 20px;
-			border-style: solid;
-			border-width: thin;
-			border-color: $orange;
-			box-shadow: inset 0 0 5px $black;
-
-			.post-title {
-				color: $black;
-				font-size: 24px;
-			}
+			padding-bottom: 20px;
 
 			.post-metadata {
-				font-size: 14px;
-				margin-bottom: 10px;
+				font-size: 16px;
+				margin: 5px 0;
+
+				@media (max-width: $break-xs) {
+					font-size: 12px;
+				}
 
 				.post-author .author-name {
 					color: $orange;
@@ -379,10 +357,10 @@ md-menu-content {
 			}
 
 			.post-content p {
-				margin-bottom: 7px;
+				@include body-text;
 
-				a[href]{
-					color: $link;
+				a {
+					color: $link !important;
 				}
 			}
 		}
@@ -417,7 +395,7 @@ md-menu-content {
 				.md-headline {
 					font-weight: 700;
 				}
-				
+
 			}
 
 			.title {
@@ -430,7 +408,7 @@ md-menu-content {
 
 				.md-headline {
 					font-weight: 400;
-				}	
+				}
 			}
 
 
