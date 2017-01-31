@@ -23,6 +23,11 @@ angular.module('itcFrontendApp')
     email: 'illinoisxcclub+treasurer@gmail.com',
     image: '/images/contacts/xc_treasurer.jpg'
   }, {
+    name: 'Anneliese Schulz',
+    position: 'Gender Minority Captain',
+    email: 'illinoisxcclub+genderminority@gmail.com',
+    image: '/images/contacts/tf_secretary.jpg'
+  }, {
     name: 'Cody Lund',
     position: 'Secretary',
     email: 'illinoisxcclub+secretary@gmail.com',
@@ -65,7 +70,7 @@ angular.module('itcFrontendApp')
     email: 'illinoistfclub+treasurer@gmail.com',
     image: '/images/contacts/tf_treasurer.jpg'
   }, {
-    name: 'Anneliese Schultz',
+    name: 'Anneliese Schulz',
     position: 'Secretary',
     email: 'illinoistfclub+secretary@gmail.com',
     image: '/images/contacts/tf_secretary.jpg'
