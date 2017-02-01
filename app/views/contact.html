@@ -8,8 +8,8 @@
           <md-card class="coach-card" ng-repeat="coach in tfCoaches">
             <md-card-title>
               <md-card-title-text class="title-container">
-                <span class="md-headline">{{coach.name}}</span>
-                <span class="position">{{coach.position}}</span>
+                <span class="md-headline">{{coach.position}}</span>
+                <span class="position">{{coach.name}}</span>
               </md-card-title-text>
               <md-card-title-media>
                 <div class="md-media-md card-media">
@@ -30,8 +30,8 @@
           <md-card class="coach-card" ng-repeat="coach in xcCoaches">
             <md-card-title>
               <md-card-title-text class="title-container">
-                <span class="md-headline">{{coach.name}}</span>
-                <span class="position">{{coach.position}}</span>
+                <span class="md-headline">{{coach.position}}</span>
+                <span class="position">{{coach.name}}</span>
               </md-card-title-text>
               <md-card-title-media>
                 <div class="md-media-md card-media">
@@ -39,7 +39,7 @@
                 </div>
               </md-card-title-media>
             </md-card-title>
-            <md-card-actions layclass="card-actions" out="row" layout-align="end center">
+            <md-card-actions class="card-actions" layout="row" layout-align="end center">
               <span class="email">{{coach.email}}</span>
               <span flex></span>
               <md-button class="md-raised md-primary" ng-click="emailCoach(coach.email)">Email</md-button>
