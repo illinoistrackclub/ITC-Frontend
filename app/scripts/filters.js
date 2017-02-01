@@ -10,12 +10,7 @@ angular.module('itcFrontendApp')
 
 .filter('trackTime', function(_) {
   return function(seconds) {
-    var timeList = seconds.toString().split('.');
-    var time = moment.duration(parseInt(timeList[0],10), 'seconds').format('m:ss');
-    if(timeList.length > 1){
-      time = time.concat('.');
-      time = time.concat(timeList[1]);
-    }
+    var time = moment.duration(seconds, 'seconds').format('m:ss.SS');
 
     if (_.last(time.split('.')).length > 2) {
       time = time.slice(0, -1);
