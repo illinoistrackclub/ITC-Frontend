@@ -4,7 +4,7 @@
 			<span class="itc-h1">News</span>
             <span flex></span>
 			<md-input-container class="year-selector">
-                <label>Filter By Year</label>
+                <label>Year</label>
                 <md-select ng-model="selectedYear">
                     <md-option ng-repeat="(key, value) in news" ng-value="key" ng-selected="key === curYear">{{ key }}</md-option>
                 </md-select>
