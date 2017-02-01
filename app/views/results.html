@@ -221,7 +221,7 @@
           </md-tab>
           <md-tab label="Indoor Track" analytics-on="click" analytics-event="Viewed indoor track meets">
             <span ng-repeat="meets in indoorMeets | orderObjectBy:date:true">
-              <div class="table results-table">
+              <div class="table meet-table">
                 <div class="table-header" layout="row">
                   <div flex="100">{{ meets[0].date.substring(0,4) }}</div>
                 </div>
@@ -238,7 +238,7 @@
           </md-tab>
           <md-tab label="Outdoor Track" analytics-on="click" analytics-event="Viewed outdoor track meets">
           <span ng-repeat="meets in outdoorMeets | orderObjectBy:date:true">
-              <div class="table results-table extra-vertical-space">
+              <div class="table meet-table">
                 <div class="table-header" layout="row">
                   <div flex="100">{{ meets[0].date.substring(0,4) }}</div>
                 </div>
