@@ -203,6 +203,9 @@
       <md-tab label="Meet Results" analytics-on="click" analytics-event="Viewed meet results">
         <md-tabs class="tabs" md-dynamic-height analytics-on="click" analytics-event="Viewed XC track meets">
           <md-tab label="Cross Country">
+            <div layout="row" layout-align="space-around">
+              <md-progress-circular class="spinner" md-mode="indeterminate" md-diameter="40px" ng-show="isLoadingMeets"></md-progress-circular>
+            </div>
             <span ng-repeat="meets in crossCountryMeets | orderObjectBy:date:true">
               <div class="table meet-table">
                 <div class="table-header" layout="row">
@@ -220,6 +223,9 @@
             </span>
           </md-tab>
           <md-tab label="Indoor Track" analytics-on="click" analytics-event="Viewed indoor track meets">
+            <div layout="row" layout-align="space-around">
+              <md-progress-circular class="spinner" md-mode="indeterminate" md-diameter="40px" ng-show="isLoadingMeets"></md-progress-circular>
+            </div>
             <span ng-repeat="meets in indoorMeets | orderObjectBy:date:true">
               <div class="table meet-table">
                 <div class="table-header" layout="row">
@@ -237,7 +243,10 @@
             </span>
           </md-tab>
           <md-tab label="Outdoor Track" analytics-on="click" analytics-event="Viewed outdoor track meets">
-          <span ng-repeat="meets in outdoorMeets | orderObjectBy:date:true">
+            <div layout="row" layout-align="space-around">
+              <md-progress-circular class="spinner" md-mode="indeterminate" md-diameter="40px" ng-show="isLoadingMeets"></md-progress-circular>
+            </div>
+            <span ng-repeat="meets in outdoorMeets | orderObjectBy:date:true">
               <div class="table meet-table">
                 <div class="table-header" layout="row">
                   <div flex="100">{{ meets[0].date.substring(0,4) }}</div>
@@ -256,7 +265,7 @@
         </md-tabs>
       </md-tab>
       <md-tab label="Athlete Search" md-on-select="loadAthletes()" analytics-on="click" analytics-event="Opened athlete search">
-        <div class="extra-vertical-space">
+        <div class="searchbar-container">
           <md-autocomplete
             md-items="athlete in loadAthletes()"
             md-item-text="athlete.name"

@@ -71,5 +71,17 @@
         float: right;
       }
     }
+
+    .searchbar-container {
+      padding-top: 20px;
+
+      .searchbar {
+        background: $white;
+      }
+    }
+
+    .md-autocomplete-suggestions-container li .highlight {
+      color: $orange;
+    }
   }
 }

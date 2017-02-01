@@ -25,7 +25,7 @@
           <div flex="30">Location</div>
         </div>
         <md-divider></md-divider>
-        <div class="table-row" ng-class="{ 'highlighted-meet': meet.important }" layout="row" ng-repeat="meet in indoorMeets">
+        <div class="table-row" ng-repeat="meet in indoorMeets" ng-class="{ 'highlighted-meet': meet.important, 'link': meet.link }" ng-click="openMeet(meet.link)" layout="row" >
           <div flex="40">{{meet.event}}</div>
           <div flex="30">{{meet.date}}</div>
           <div flex="30">{{meet.location}}</div>

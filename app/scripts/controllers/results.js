@@ -28,6 +28,7 @@ angular.module('itcFrontendApp')
       hashMeetsToYear(meetsByYear, meets);
 
       $scope[scopeProperty] = meetsByYear;
+      $scope.isLoadingMeets = false;
     });
   };
 
@@ -68,6 +69,7 @@ angular.module('itcFrontendApp')
   getRecords();
   $scope.isLoadingRec = true;
   $scope.isLoadingTP = true;
+  $scope.isLoadingMeets = true;
 
   $scope.events = EVENTS;
   $scope.loadAthletes = function() {

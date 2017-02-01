@@ -2,7 +2,13 @@
 
 angular.module('itcFrontendApp')
 
-.controller('RacesCtrl', function($scope) {
+.controller('RacesCtrl', function($location, $scope) {
+  $scope.openMeet = function(view) {
+    if (view) {
+      $location.path(view);
+    }
+  };
+
   $scope.crossMeets = [{
     event: 'EIU Walt Crawford Invite',
     date: 'August 28, 2016',
@@ -48,7 +54,8 @@ angular.module('itcFrontendApp')
     event: 'Illinois Club Relays',
     date: 'February 25, 2017',
     location: 'Champaign, IL',
-    important: true
+    important: true,
+    link: 'clubrelays'
   }];
   // $scope.outdoorMeets = [{
   //   event: 'NIRCA Track & Field Nationals',

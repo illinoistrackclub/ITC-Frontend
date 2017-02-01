@@ -1,0 +1,18 @@
+@import 'base';
+
+.header {
+  md-toolbar {
+    position: fixed;
+  }
+
+  .menu-image {
+    height: 40px;
+    width: auto;
+    padding-left: 10px;
+  }
+
+  .icon {
+    font-size: 32px;
+    vertical-align: middle;
+  }
+}

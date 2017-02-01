@@ -16,10 +16,11 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/board_minutes.css">
     <link rel="stylesheet" href="styles/club_relays.css">
     <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/home.css">
     <link rel="stylesheet" href="styles/news.css">
@@ -35,32 +36,52 @@
       <md-toolbar class="md-menu-toolbar md-whiteframe-4dp" layout="row" layout-align="end center">
         <a href="#/"><img class="menu-image" src="images/itc_wings.png"></a>
         <span flex></span>
-        <a href="#/news"><div class="menu-item">News</div></a>
-        <a href="#/races"><div class="menu-item">Races</div></a>
-        <a href="#/clubrelays"><div class="menu-item">Club Relays</div></a>
-        <a href="#/results"><div class="menu-item">Results</div></a>
-        <a href="#/prospective_members"><div class="menu-item">Prospective Members</div></a>
-        <a><div class="menu-item">
-          <md-menu>
-            <span ng-click="$mdOpenMenu()">
-              Current Members
-            </span>
-            <md-menu-content>
-              <md-menu-item><md-button href="https://www.facebook.com/illinoisxctrackclub/photos">Photos</md-button></md-menu-item>
-              <md-menu-item><md-button href="https://www.youtube.com/channel/UCcZRTX-FYPADoTpgc1jAcow">Videos</md-button></md-menu-item>
-              <md-menu-item><md-button href="#/current_members/board_minutes">Board Minutes</md-button></md-menu-item>
-              <!-- <md-menu-item><md-button href="#/current_members/training_resources">Training Resources</md-button></md-menu-item> -->
-              <md-menu-item><md-button target="_blank" href="https://drive.google.com/open?id=0B9IJ7PBOO1nSWFlMcVZULVdwUkk">IXC Constitution</md-button></md-menu-item>
-              <md-menu-item><md-button target="_blank" href="https://drive.google.com/open?id=0B9IJ7PBOO1nSbFd2QXZWVER3RDQ">ITC Constitution</md-button></md-menu-item>
-            </md-menu-content>
-          </md-menu>
-        </div></a>
-        <a href="#/contact"><div class="menu-item">Contact</div></a>
+        <md-menu>
+          <md-button ng-click="$mdOpenMenu()">
+            <i class="icon ion-navicon"></i>
+          </md-button>
+          <md-menu-content width="4">
+            <md-menu-item>
+              <md-button ng-href="#/news">News</md-button>
+            </md-menu-item>
+            <md-menu-item>
+              <md-button ng-href="#/races">Races</md-button>
+            </md-menu-item>
+            <md-menu-item>
+              <md-button ng-href="#/clubrelays">Club Relays</md-button>
+            </md-menu-item>
+            <md-menu-item>
+              <md-button ng-href="#/results">Results</md-button>
+            </md-menu-item>
+            <md-menu-item>
+              <md-button ng-href="#/prospective_members">Prospective Members</md-button>
+            </md-menu-item>
+            <md-menu-item>
+              <md-button>
+                <md-menu>
+                  <span ng-click="$mdOpenMenu()">
+                    Current Members
+                  </span>
+                  <md-menu-content>
+                    <md-menu-item><md-button ng-href="https://www.facebook.com/illinoisxctrackclub/photos">Photos</md-button></md-menu-item>
+                    <md-menu-item><md-button ng-href="https://www.youtube.com/channel/UCcZRTX-FYPADoTpgc1jAcow">Videos</md-button></md-menu-item>
+                    <md-menu-item><md-button ng-href="#/current_members/board_minutes">Board Minutes</md-button></md-menu-item>
+                    <md-menu-item><md-button target="_blank" ng-href="https://drive.google.com/open?id=0B9IJ7PBOO1nSWFlMcVZULVdwUkk">IXC Constitution</md-button></md-menu-item>
+                    <md-menu-item><md-button target="_blank" ng-href="https://drive.google.com/open?id=0B9IJ7PBOO1nSbFd2QXZWVER3RDQ">ITC Constitution</md-button></md-menu-item>
+                  </md-menu-content>
+                </md-menu>
+              </md-button>
+            </md-menu-item>
+            <md-menu-item>
+              <md-button ng-href="#/contact">Contact</md-button>
+            </md-menu-item>
+          </md-menu-content>
+        </md-menu>
       </md-toolbar>
     </div>
 
     <div class="page-container">
-      <div ng-view></div>
+      <div ng-view autoscroll="true"></div>
     </div>
 
     <div class="footer">

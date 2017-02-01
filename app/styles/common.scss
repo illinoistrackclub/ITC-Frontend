@@ -26,22 +26,12 @@ md-menu-content {
 	font-weight: 700;
 }
 
-.extra-vertical-space {
-	padding-top: 20px;
-}
 
-.searchbar {
-	background: $white;
-}
 
 .md-dialog-content {
   md-input-container {
     display: block;
   }
-}
-
-.md-autocomplete-suggestions-container li .highlight {
-	color: $orange;
 }
 
 .container {
@@ -59,26 +49,3 @@ md-menu-content {
 .page-content {
 	padding-top: 10px;
 }
-
-.header {
-	md-toolbar {
-		position: fixed;
-	}
-
-	.menu-image {
-		height: 40px;
-		width: auto;
-		padding-left: 10px;
-	}
-
-	.menu-item {
-		padding: 0 10px;
-    font-size: 16px;
-
-    @media (max-width: $break-sm) {
-    	font-size: 10px;
-    }
-	}
-}
-
-
