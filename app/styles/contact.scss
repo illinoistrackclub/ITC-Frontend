@@ -22,6 +22,14 @@
       .card-actions {
         margin-left: 16px;
         margin-right: 16px;
+
+        .email {
+          font-size: 14px;
+
+          @media (max-width: $break-sm) {
+            font-size: 11px;
+          }
+        }
       }
     }
   }

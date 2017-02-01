@@ -16,7 +16,7 @@
       padding: 10px 0;
 
       .table-row div {
-        padding-right: 0;
+        padding: 0;
       }
 
       .left {
@@ -26,6 +26,12 @@
       .center {
         text-align: center;
         padding-right: 0;
+      }
+
+      .center-xs {
+        @media (max-width: $break-xs) {
+          text-align: center !important;
+        }
       }
 
       .right {
