@@ -4,6 +4,8 @@
   .contact-cards {
     margin-bottom: 10px;
 
+    // Defines width of each card.
+    // inlinne-block allows cards to go to one column on mobile
     .coach-card {
       display: inline-block;
       max-width: 480px;

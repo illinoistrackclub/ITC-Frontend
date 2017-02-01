@@ -10,7 +10,9 @@
                 </md-select>
             </md-input-container>
         </div>
-        <md-progress-circular class="spinner" md-mode="indeterminate" md-diameter="40px" ng-if="isLoadingNews"></md-progress-circular>
+        <div layout="row" layout-align="space-around">
+            <md-progress-circular md-mode="indeterminate" md-diameter="40px" ng-if="isLoadingNews"></md-progress-circular>
+        </div>
         <div class="post-container">
         	<div class="post" ng-repeat-start="news in news[selectedYear] | orderObjectBy:'post_datetime':true">
         		<div class="itc-h4">{{ ::news.post_subject }}</div>

@@ -2,6 +2,7 @@
 
 angular.module('itcFrontendApp')
 
+// Defines event order to be displayed on results view
 .constant('EVENTS', {
   Indoor: [
     '55m Dash',

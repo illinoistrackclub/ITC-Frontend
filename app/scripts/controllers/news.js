@@ -3,12 +3,17 @@
 angular.module('itcFrontendApp')
 
 .controller('NewsCtrl', function(Api, $http, $q, $scope) {
+  // Sort news such that most recent articles are on top
   var sortByDate = function(array) {
-    array.sort(function(a, b) { return new Date(b.post_datetime).getTime() - new Date(a.post_datetime).getTime(); });
-    array.reverse();
+
+    array.sort(function(a, b) { return new Date(a.post_datetime).getTime() - new Date(b.post_datetime).getTime(); });
+
 	};
 
-  var hashNewsToYear = function(newsByYear, news) {
+  // Organize news by year
+  var hashNewsToYear = function(news) {
+    var newsByYear = {};
+
     angular.forEach(news, function(post) {
       var year = new Date(post.post_datetime).getFullYear();
       if (newsByYear[year]) {
@@ -17,22 +22,28 @@ angular.module('itcFrontendApp')
         newsByYear[year] = [ post ];
       }
     });
+
+    return newsByYear;
   };
 
   var getNews = function() {
     Api.getAllNews().then(function(response) {
+      //Grab the news from response
       var news = response.data;
-      var newsByYear = {};
 
+      // Sort it
       sortByDate(news);
-      hashNewsToYear(newsByYear, news);
+      // Hash it by year
+      $scope.news = hashNewsToYear(news);
 
-      $scope.news = newsByYear;
+      // Loading is done, let view know
       $scope.isLoadingNews = false;
     });
-	  $scope.curYear = ''+new Date().getFullYear();
   };
 
+  // Get news immediately when page is loaded.
   getNews();
+  // Set current year to be default year?
+  $scope.curYear = '' + new Date().getFullYear();
   $scope.isLoadingNews = true;
 });

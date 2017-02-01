@@ -3,85 +3,96 @@
 .results-page-container {
   .tabs {
     width: 100%;
+  }
 
-    .itc-h5 {
-      margin-top: 20px;
+  .itc-h5 {
+    margin-top: 20px;
+  }
+
+  // Give spinner a little space from table header
+  .spinner {
+    margin-top: 25px;
+  }
+
+  // General table settings for all tables on the results page
+  .table {
+    padding: 10px 0;
+
+    .left {
+      text-align: left;
     }
 
-    .spinner {
-      margin-top: 25px;
+    .center {
+      text-align: center;
+      padding-right: 0;
     }
 
-    .table {
-      padding: 10px 0;
-
-      .left {
-        text-align: left;
-      }
-
-      .center {
-        text-align: center;
-        padding-right: 0;
-      }
-
-      .center-xs {
-        @media (max-width: $break-xs) {
-          text-align: center !important;
-        }
-      }
-
-      .right {
-        text-align: right;
-      }
-
-      .record-time {
-        font-weight: 700;
-      }
-
-      .splits {
-        padding-left: 10px;
+    // Center aligns text only on xs screens
+    .center-xs {
+      @media (max-width: $break-xs) {
+        text-align: center !important;
       }
     }
 
-    .results-table {
-      .table-header div, .table-row div {
+    .right {
+      text-align: right;
+    }
+
+    .splits {
+      padding-left: 10px;
+    }
+  }
+
+  // Records page table
+  .record-table {
+    .table-header div, .table-row div {
+      @media (max-width: $break-sm) {
+        font-size: 12px;
+      }
+
+      @media (max-width: $break-xs) {
         font-size: 8px;
       }
-
-      .table-row div {
-        padding: 0;
-      }
     }
 
-    .top-performance-table {
-      padding-top: 20px;
-      clear: both;
-      height: 100%;
-      width: 100%;
+    // No padding on records table as there is not enough room on small screens
+    .table-row div {
+      padding: 0;
+    }
+  }
 
-      .left-table {
-        float: left;
-      }
+  // Top Performances table
+  // Clear ensures only one event per 'slice'
+  .top-performance-table {
+    padding-top: 20px;
+    clear: both;
+    height: 100%;
+    width: 100%;
 
-      .left-table, .right-table {
-        width: 49%;
-      }
-
-      .right-table {
-        float: right;
-      }
+    .left-table {
+      float: left;
     }
 
-    .searchbar-container {
-      padding-top: 20px;
-
-      .searchbar {
-        background: $white;
-      }
+    .left-table, .right-table {
+      width: 49%;
     }
 
-    .md-autocomplete-suggestions-container li .highlight {
-      color: $orange;
+    .right-table {
+      float: right;
     }
+  }
+
+  // Athlete search page searchbar
+  .searchbar-container {
+    padding-top: 20px;
+
+    .searchbar {
+      background: $white;
+    }
+  }
+
+  // Highlight for text completion is color orange
+  .md-autocomplete-suggestions-container li .highlight {
+    color: $orange;
   }
 }

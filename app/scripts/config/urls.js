@@ -2,6 +2,9 @@
 
 angular.module('itcFrontendApp')
 
+// Routing for the site. Each view is defined in each 'when' object
+// templateUrl = the HTML file
+// controller = the JS file
 .config(function ($routeProvider, $locationProvider) {
   $routeProvider
     .when('/', {

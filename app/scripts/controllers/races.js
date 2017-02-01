@@ -3,6 +3,7 @@
 angular.module('itcFrontendApp')
 
 .controller('RacesCtrl', function($location, $scope) {
+  // Opens club relays view when you click on club relays
   $scope.openMeet = function(view) {
     if (view) {
       $location.path(view);
@@ -30,6 +31,7 @@ angular.module('itcFrontendApp')
     date: 'November 11, 2016',
     location: 'Hershey, PA'
   }];
+
   $scope.indoorMeets = [{
     event: 'John Craft Invite',
     date: 'January 21, 2017',
@@ -57,6 +59,7 @@ angular.module('itcFrontendApp')
     important: true,
     link: 'clubrelays'
   }];
+
   // $scope.outdoorMeets = [{
   //   event: 'NIRCA Track & Field Nationals',
   //   date: 'April 8-9, 2017',

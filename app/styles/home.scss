@@ -1,6 +1,7 @@
 @import 'base';
 
 .home-page-container {
+  // Align image
   .home-image-container {
     text-align: center;
 
@@ -10,15 +11,23 @@
     }
   }
 
+  // THe four social icons below the header image
   .social-bar-container {
+    // Has to move up bc bug
     margin-top: -5px;
     text-align: center;
 
+    // Defines the rules for each social bar slice
     .social-bar {
       width: 25%;
       height: 100px;
       color: $white;
       line-height: 100px;
+
+      @media (max-width: $break-sm) {
+        height: 80px;
+        line-height: 80px;
+      }
 
       @media (max-width: $break-xs) {
         height: 60px;
@@ -26,6 +35,7 @@
       }
     }
 
+    // Colors for each bar slice
     .facebook-bar {
       background-color: #3C5A94;
     }
@@ -47,6 +57,7 @@
     margin-bottom: 15px;
   }
 
+  // All text that is not the section header
   .about-container div:not(.itc-h1) {
     @include body-text;
   }

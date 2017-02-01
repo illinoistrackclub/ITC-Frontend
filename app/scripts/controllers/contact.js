@@ -3,6 +3,8 @@
 angular.module('itcFrontendApp')
 
 .controller('ContactCtrl', function($scope, $window) {
+  // Opens mailto link in new tab/window
+  // BUG: Chrome hates mailto links. Not our fault. Works on mobile and other browsers
   $scope.emailCoach = function(email) {
     $window.open('mailto:' + email);
   };
@@ -99,7 +101,7 @@ angular.module('itcFrontendApp')
     position: 'Sprints Coach',
     email: 'mkreise2@illinois.edu',
     image: '/images/contacts/tf_sprints.jpg'
-  }, 
+  },
   // {
   //   name: 'Tyler Splitt',
   //   position: 'Mid-D Coach',
@@ -111,7 +113,7 @@ angular.module('itcFrontendApp')
     position: 'Distance & Steeplechase Coach',
     email: 'illinoisxcclub+coach@gmail.com',
     image: '/images/contacts/tf_distance.jpg'
-  }, 
+  },
   // {
   //   name: 'Mateusz Lopez',
   //   position: 'Jumps Coach',

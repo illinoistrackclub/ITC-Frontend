@@ -7,17 +7,15 @@
     margin-bottom: 25px;
 
     .year-selector {
+      // Aligns the year select on small screens
       @media (max-width: $break-sm) {
         margin: 0;
       }
     }
   }
 
-  .spinner {
-    margin: 0 auto;
-  }
-
   .post-container {
+    // Provide space between each news story
     .divider {
       margin: 20px 0;
     }
@@ -33,11 +31,12 @@
           font-size: 12px;
         }
 
-        .post-author .author-name {
+        .author-name {
           color: $orange;
         }
       }
 
+      // Style every paragraph in each news post
       .post-content p {
         @include body-text;
 

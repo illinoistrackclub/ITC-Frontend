@@ -4,10 +4,12 @@
   background: $gray;
   width: 100%;
 
+  // Gives top text a large font-size for emphasis
   .club-large {
     @include large-body-text;
   }
 
+  // Height (or width) must be defined explictly by px in order to work bc Google
   .map-container {
     padding: 25px 0;
     height: 600px;
@@ -16,6 +18,11 @@
 
   .info {
     margin-bottom: 15px;
+
+    // All child divs that aren't headers or large text
+    div:not(.itc-h5):not(.club-large) {
+      @include body-text;
+    }
 
     .itc-h5 {
       font-weight: 400;

@@ -1,8 +1,11 @@
 @import 'base';
 
+// CSS for header bar
 .header {
-  md-toolbar {
+  // Keep header at top of page when scrolling
+  .header-toolbar {
     position: fixed;
+    top: 0;
   }
 
   .menu-image {
@@ -11,6 +14,7 @@
     padding-left: 10px;
   }
 
+  // Controls hamburger menu icon
   .icon {
     font-size: 32px;
     vertical-align: middle;
@@ -18,6 +22,7 @@
 }
 
 // Must sit outside header class due to how Angular material builds the menu
+// This CSS makes the nested 'Current Members' menu look like the other menu items
 .current-members-button {
   text-align: left;
   display: inline-block;

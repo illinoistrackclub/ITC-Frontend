@@ -1,5 +1,6 @@
 @import 'base';
 
+// Positions footer at bottom of the page when content is small
 .footer {
   position: absolute;
   bottom: 0;
@@ -7,6 +8,7 @@
   background-color: $orange;
   color: $white;
 
+  // Font sizes for footer icons
   .footer-logo {
     font-size: 36px;
     padding: 0 25px;
@@ -16,6 +18,7 @@
     }
   }
 
+  // Font sies for masthead
   .masthead {
     font-size: 16px;
     margin-top: 40px;

@@ -2,48 +2,40 @@
 // endbower
 @import 'base';
 
+// Resets every element before CSS in these files are applied.
+// Eliminates random margins and paddings being introduced by browsers.
 * {
 	font-family: 'Roboto';
   margin: 0;
   padding: 0;
 }
 
-body {
-	height: 100%;
-
-	.wrapper {
-		min-height: 100%;
-		position: relative;
-		background: $gray;
-	}
+// Ensures page is always at minimum screen size
+.wrapper {
+	min-height: 100%;
+	position: relative;
+	background: $gray;
 }
 
-md-menu-content {
-	min-width: 160px;
-}
-
-.emphasis {
-	font-weight: 700;
-}
-
-
-
-.md-dialog-content {
-  md-input-container {
-    display: block;
-  }
-}
-
+// Container for every page. Keeps things nice and centered on large screens
+// Also provides padding for content so text is not on the edge of screen
 .container {
 	max-width: $break-sm;
 	margin: 0 auto;
 	padding: 25px;
 }
 
+// Container for ng-view AKA everything between the header and footer
+// Provides space at bottom between content and footer
+// Padding-top = height of header bar. This makes content start at the end of header
 .page-container {
 	padding-top: 64px;
-	padding-bottom: 225px;
+	padding-bottom: 175px;
 	background: $gray;
+
+  @media (max-width: $break-sm) {
+    padding-top: 48px;
+  }
 }
 
 .page-content {
