@@ -57,20 +57,18 @@
               <md-button ng-href="#/prospective_members">Prospective Members</md-button>
             </md-menu-item>
             <md-menu-item>
-              <md-button>
-                <md-menu>
-                  <span ng-click="$mdOpenMenu()">
-                    Current Members
-                  </span>
-                  <md-menu-content>
-                    <md-menu-item><md-button ng-href="https://www.facebook.com/illinoisxctrackclub/photos">Photos</md-button></md-menu-item>
-                    <md-menu-item><md-button ng-href="https://www.youtube.com/channel/UCcZRTX-FYPADoTpgc1jAcow">Videos</md-button></md-menu-item>
-                    <md-menu-item><md-button ng-href="#/current_members/board_minutes">Board Minutes</md-button></md-menu-item>
-                    <md-menu-item><md-button target="_blank" ng-href="https://drive.google.com/open?id=0B9IJ7PBOO1nSWFlMcVZULVdwUkk">IXC Constitution</md-button></md-menu-item>
-                    <md-menu-item><md-button target="_blank" ng-href="https://drive.google.com/open?id=0B9IJ7PBOO1nSbFd2QXZWVER3RDQ">ITC Constitution</md-button></md-menu-item>
-                  </md-menu-content>
-                </md-menu>
-              </md-button>
+              <md-menu>
+                <md-button class="current-members-button" ng-click="$mdOpenMenu()">
+                  Current Members
+                </md-button>
+                <md-menu-content>
+                  <md-menu-item><md-button ng-href="https://www.facebook.com/illinoisxctrackclub/photos">Photos</md-button></md-menu-item>
+                  <md-menu-item><md-button ng-href="https://www.youtube.com/channel/UCcZRTX-FYPADoTpgc1jAcow">Videos</md-button></md-menu-item>
+                  <md-menu-item><md-button ng-href="#/current_members/board_minutes">Board Minutes</md-button></md-menu-item>
+                  <md-menu-item><md-button target="_blank" ng-href="https://drive.google.com/open?id=0B9IJ7PBOO1nSWFlMcVZULVdwUkk">IXC Constitution</md-button></md-menu-item>
+                  <md-menu-item><md-button target="_blank" ng-href="https://drive.google.com/open?id=0B9IJ7PBOO1nSbFd2QXZWVER3RDQ">ITC Constitution</md-button></md-menu-item>
+                </md-menu-content>
+              </md-menu>
             </md-menu-item>
             <md-menu-item>
               <md-button ng-href="#/contact">Contact</md-button>

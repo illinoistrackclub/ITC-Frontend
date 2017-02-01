@@ -16,3 +16,22 @@
     vertical-align: middle;
   }
 }
+
+// Must sit outside header class due to how Angular material builds the menu
+.current-members-button {
+  text-align: left;
+  display: inline-block;
+  border-radius: 0;
+  margin: auto 0;
+  font-size: 15px;
+  text-transform: none;
+  font-weight: 400;
+  padding-left: 0;
+  padding-right: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.md-open .current-members-button {
+  background-color: $white !important;
+}
