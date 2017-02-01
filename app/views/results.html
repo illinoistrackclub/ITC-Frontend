@@ -14,13 +14,15 @@
             <md-progress-circular class="spinner" md-mode="indeterminate" md-diameter="40px" ng-show="isLoadingRec"></md-progress-circular>
           </div>
           <div class="table-row" layout="row" layout-padding ng-repeat-start="performanceList in records['XC']">
-            <div class="right" flex="40" ng-if="!performanceList.record.maleRecord">Event not contested</div>
-            <div class="right" flex ng-if="performanceList.record.maleRecord"><span class="name" ng-repeat="athleteName in performanceList.record.maleRecord[0].athlete | relayNames">{{ ::athleteName }}</span></div>
+            <div class="right" flex="30" flex-xs="20" ng-if="!performanceList.record.maleRecord">Event not contested</div>
+            <div class="right" flex="10" flex-xs="20" ng-if="!performanceList.record.maleRecord"></div>
+            <div class="right" flex="30" flex-xs="20" ng-if="performanceList.record.maleRecord"><span class="name" ng-repeat="athleteName in performanceList.record.maleRecord[0].athlete | relayNames">{{ ::athleteName }}</span></div>
             <div class="right center-xs" flex="10" flex-xs="20" ng-if="performanceList.record.maleRecord"><span class="record-time">{{ ::performanceList.record.maleRecord[0].performance | xcTime }}</span></div>
             <div class="center" flex="20">{{ ::performanceList.name }}</div>
-            <div class="left" flex="40" ng-if="!performanceList.record.femaleRecord">Event not contested</div>
+            <div class="right" flex="10" flex-xs="20" ng-if="!performanceList.record.femaleRecord"></div>
+            <div class="left" flex="30" flex-xs="20" ng-if="!performanceList.record.femaleRecord">Event not contested</div>
             <div class="left center-xs" flex="10" flex-xs="20" ng-if="performanceList.record.femaleRecord"><span class="record-time">{{ ::performanceList.record.femaleRecord[0].performance | xcTime }}</span></div>
-            <div class="left" flex ng-if="performanceList.record.femaleRecord"><span class="name" ng-repeat="athleteName in performanceList.record.femaleRecord[0].athlete | relayNames">{{ ::athleteName }}</span></div>
+            <div class="left" flex="30" flex-xs="20" ng-if="performanceList.record.femaleRecord"><span class="name" ng-repeat="athleteName in performanceList.record.femaleRecord[0].athlete | relayNames">{{ ::athleteName }}</span></div>
           </div>
           <md-divider ng-if="!$last" ng-repeat-end></md-divider>
         </div>
@@ -37,13 +39,15 @@
             <md-progress-circular class="spinner" md-mode="indeterminate" md-diameter="40px" ng-show="isLoadingRec"></md-progress-circular>
           </div>
           <div class="table-row" layout="row" layout-padding ng-repeat-start="performanceList in records['Indoor']">
-            <div class="right" flex="40" ng-if="!performanceList.record.maleRecord">Event not contested</div>
-            <div class="right" flex ng-if="performanceList.record.maleRecord"><span class="name" ng-repeat="athleteName in performanceList.record.maleRecord[0].athlete | relayNames">{{ ::athleteName }}</span></div>
+            <div class="right" flex="30" flex-xs="20" ng-if="!performanceList.record.maleRecord">Event not contested</div>
+            <div class="right" flex="10" flex-xs="20" ng-if="!performanceList.record.maleRecord"></div>
+            <div class="right" flex="30" flex-xs="20" ng-if="performanceList.record.maleRecord"><span class="name" ng-repeat="athleteName in performanceList.record.maleRecord[0].athlete | relayNames">{{ ::athleteName }}</span></div>
             <div class="right center-xs" flex="10" flex-xs="20" ng-if="performanceList.record.maleRecord"><span class="record-time">{{ ::performanceList.record.maleRecord[0].performance | trackTime }}</span></div>
             <div class="center" flex="20">{{ ::performanceList.name }}</div>
-            <div class="left" flex="40" ng-if="!performanceList.record.femaleRecord">Event not contested</div>
+            <div class="right" flex="10" flex-xs="20" ng-if="!performanceList.record.femaleRecord"></div>
+            <div class="left" flex="30" flex-xs="20" ng-if="!performanceList.record.femaleRecord">Event not contested</div>
             <div class="left center-xs" flex="10" flex-xs="20" ng-if="performanceList.record.femaleRecord"><span class="record-time">{{ ::performanceList.record.femaleRecord[0].performance | trackTime }}</span></div>
-            <div class="left" flex ng-if="performanceList.record.femaleRecord"><span class="name" ng-repeat="athleteName in performanceList.record.femaleRecord[0].athlete | relayNames">{{ ::athleteName }}</span></div>
+            <div class="left" flex="30" flex-xs="20" ng-if="performanceList.record.femaleRecord"><span class="name" ng-repeat="athleteName in performanceList.record.femaleRecord[0].athlete | relayNames">{{ ::athleteName }}</span></div>
           </div>
           <md-divider ng-if="!$last" ng-repeat-end></md-divider>
         </div>
@@ -60,13 +64,15 @@
             <md-progress-circular class="spinner" md-mode="indeterminate" md-diameter="40px" ng-show="isLoadingRec"></md-progress-circular>
           </div>
           <div class="table-row" layout="row" layout-padding ng-repeat-start="performanceList in records['Outdoor']">
-            <div class="right" flex="40" ng-if="!performanceList.record.maleRecord">Event not contested</div>
-            <div class="right" flex ng-if="performanceList.record.maleRecord"><span class="name" ng-repeat="athleteName in performanceList.record.maleRecord[0].athlete | relayNames">{{ ::athleteName }}</span></div>
+            <div class="right" flex="30" flex-xs="20" ng-if="!performanceList.record.maleRecord">Event not contested</div>
+            <div class="right" flex="10" flex-xs="20" ng-if="!performanceList.record.maleRecord"></div>
+            <div class="right" flex="30" flex-xs="20" ng-if="performanceList.record.maleRecord"><span class="name" ng-repeat="athleteName in performanceList.record.maleRecord[0].athlete | relayNames">{{ ::athleteName }}</span></div>
             <div class="right center-xs" flex="10" flex-xs="20" ng-if="performanceList.record.maleRecord"><span class="record-time">{{ ::performanceList.record.maleRecord[0].performance | trackTime }}</span></div>
             <div class="center" flex="20">{{ ::performanceList.name }}</div>
-            <div class="left" flex="40" ng-if="!performanceList.record.femaleRecord">Event not contested</div>
+            <div class="right" flex="10" flex-xs="20" ng-if="!performanceList.record.femaleRecord"></div>
+            <div class="left" flex="30" flex-xs="20" ng-if="!performanceList.record.femaleRecord">Event not contested</div>
             <div class="left center-xs" flex="10" flex-xs="20" ng-if="performanceList.record.femaleRecord"><span class="record-time">{{ ::performanceList.record.femaleRecord[0].performance | trackTime }}</span></div>
-            <div class="left" flex ng-if="performanceList.record.femaleRecord"><span class="name" ng-repeat="athleteName in performanceList.record.femaleRecord[0].athlete | relayNames">{{ ::athleteName }}</span></div>
+            <div class="left" flex="30" flex-xs="20" ng-if="performanceList.record.femaleRecord"><span class="name" ng-repeat="athleteName in performanceList.record.femaleRecord[0].athlete | relayNames">{{ ::athleteName }}</span></div>
           </div>
           <md-divider ng-if="!$last" ng-repeat-end></md-divider>
       </md-tab>
