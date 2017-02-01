@@ -1,10 +1,15 @@
 @import 'base';
 
 .home-page-container {
-  .home-image {
-    max-width: 100%;
-    max-height: 100%;
+  .home-image-container {
+    text-align: center;
+
+    .home-image {
+      max-width: 100%;
+      max-height: 100%;
+    }
   }
+
 
   .social-bar-container {
     margin-top: -5px;

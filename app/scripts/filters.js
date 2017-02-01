@@ -34,7 +34,7 @@ angular.module('itcFrontendApp')
     if(distStr.length === 3){
       distStr = distStr.concat('0');
     }
-    return distStr.concat(' m');
+    return distStr.concat('m');
   };
 })
 
