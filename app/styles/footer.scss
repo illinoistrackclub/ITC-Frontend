@@ -10,9 +10,22 @@
   .footer-logo {
     font-size: 36px;
     padding: 0 25px;
+
+    @media (max-width: $break-sm) {
+      font-size: 24px;
+    }
   }
 
   .masthead {
+    font-size: 16px;
     margin-top: 40px;
+
+    @media (max-width: $break-sm) {
+      font-size: 12px;
+    }
+
+    .right {
+      text-align: right;
+    }
   }
 }

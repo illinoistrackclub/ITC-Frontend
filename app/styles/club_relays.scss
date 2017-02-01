@@ -4,6 +4,10 @@
   background: $gray;
   width: 100%;
 
+  .club-large {
+    @include large-body-text;
+  }
+
   .map-container {
     padding: 25px 0;
     height: 600px;
