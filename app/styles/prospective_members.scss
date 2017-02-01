@@ -6,6 +6,8 @@
   }
 
   .faq-question {
+    margin-bottom: 40px;
+
     .itc-h5 {
       font-weight: 400;
       margin-bottom: 10px;
@@ -14,7 +16,7 @@
     // Every div thats not the header
     div:not(.itc-h5) {
       @include body-text;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
   }
 }
