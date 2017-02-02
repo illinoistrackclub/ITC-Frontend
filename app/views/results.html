@@ -80,9 +80,9 @@
           </div>
           <md-divider ng-if="!$last" ng-repeat-end></md-divider>
       </md-tab>
-      <md-tab label="Top Performances">
+      <md-tab label="Top Performances" analytics-on="click" analytics-event="Viewed top performances">
         <md-tabs class="tabs" md-dynamic-height>
-          <md-tab label="Cross Country">
+          <md-tab label="Cross Country" analytics-on="click" analytics-event="Viewed XC top performances">
               <div layout="row" layout-align="space-around">
                 <md-progress-circular class="spinner" md-mode="indeterminate" md-diameter="40px" ng-show="isLoadingTP"></md-progress-circular>
               </div>
@@ -126,7 +126,7 @@
               </div>
             </div>
           </md-tab>
-          <md-tab label="Indoor Track">
+          <md-tab label="Indoor Track" analytics-on="click" analytics-event="Viewed Indoor track top performances">
             <div layout="row" layout-align="space-around">
                 <md-progress-circular class="spinner" md-mode="indeterminate" md-diameter="40px" ng-show="isLoadingTP"></md-progress-circular>
               </div>
@@ -176,7 +176,7 @@
               </div>
             </div>
           </md-tab>
-          <md-tab label="Outdoor Track">
+          <md-tab label="Outdoor Track" analytics-on="click" analytics-event="Viewed Outdoor track top performances">
             <div layout="row" layout-align="space-around">
                 <md-progress-circular class="spinner" md-mode="indeterminate" md-diameter="40px" ng-show="isLoadingTP"></md-progress-circular>
             </div>
@@ -229,7 +229,7 @@
         </md-tabs>
       </md-tab>
       <md-tab label="Meet Results" analytics-on="click" analytics-event="Viewed meet results">
-        <md-tabs class="tabs" md-dynamic-height analytics-on="click" analytics-event="Viewed XC track meets">
+        <md-tabs class="tabs" md-dynamic-height analytics-on="click" analytics-event="Viewed XC track meet results">
           <md-tab label="Cross Country">
             <div layout="row" layout-align="space-around">
               <md-progress-circular class="spinner" md-mode="indeterminate" md-diameter="40px" ng-show="isLoadingMeets"></md-progress-circular>
@@ -250,7 +250,7 @@
               </div>
             </span>
           </md-tab>
-          <md-tab label="Indoor Track" analytics-on="click" analytics-event="Viewed indoor track meets">
+          <md-tab label="Indoor Track" analytics-on="click" analytics-event="Viewed indoor track meet results">
             <div layout="row" layout-align="space-around">
               <md-progress-circular class="spinner" md-mode="indeterminate" md-diameter="40px" ng-show="isLoadingMeets"></md-progress-circular>
             </div>
@@ -270,7 +270,7 @@
               </div>
             </span>
           </md-tab>
-          <md-tab label="Outdoor Track" analytics-on="click" analytics-event="Viewed outdoor track meets">
+          <md-tab label="Outdoor Track" analytics-on="click" analytics-event="Viewed outdoor track meet results">
             <div layout="row" layout-align="space-around">
               <md-progress-circular class="spinner" md-mode="indeterminate" md-diameter="40px" ng-show="isLoadingMeets"></md-progress-circular>
             </div>
