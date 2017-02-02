@@ -5,9 +5,9 @@ angular.module('itcFrontendApp')
 .service('Api', function($http) {
 
   // Use for production. Dont forget to re-enable when building!
-  var urlBase = 'http://illinoistrackclub.herokuapp.com/';
+  // var urlBase = 'http://illinoistrackclub.herokuapp.com/';
   // Use for local dev
-  // var urlBase = 'http://localhost:8000/';
+  var urlBase = 'http://localhost:8000/';
 
   this.getAllAthletes = function() {
     return $http.get(urlBase + 'athletes/');
