@@ -36,6 +36,10 @@
   @media (max-width: $break-sm) {
     padding-top: 48px;
   }
+
+  @media (max-width: $break-xs) {
+    padding-top: 56px;
+  }
 }
 
 .page-content {

@@ -44,7 +44,6 @@ angular.module('itcFrontendApp')
       var topPerformances = response.data;
       $scope.topPerformances = {};
 
-
       // Map the top performances by season in the order provided by EVENTS
       _.forEach(EVENTS, function(events, season) {
         $scope.topPerformances[season] = [];

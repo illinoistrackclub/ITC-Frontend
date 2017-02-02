@@ -5,13 +5,13 @@
     <div class="page-content">
       <div class="itc-h5">2016 Cross Country Season</div>
       <div class="table race-table">
-        <div class="table-header" layout="row">
+        <div class="table-header" layout="row" layout-align="start center">
           <div flex="40">Meet</div>
           <div flex="30">Date</div>
           <div flex="30">Location</div>
         </div>
         <md-divider></md-divider>
-        <div class="table-row" layout="row" ng-repeat="meet in crossMeets">
+        <div class="table-row" layout="row" layout-align="start center" ng-repeat="meet in crossMeets">
           <div flex="40">{{meet.event}}</div>
           <div flex="30">{{meet.date}}</div>
           <div flex="30">{{meet.location}}</div>
@@ -19,13 +19,13 @@
       </div>
       <div class="itc-h5">2017 Indoor Season</div>
       <div class="table race-table">
-        <div class="table-header" layout="row">
+        <div class="table-header" layout="row" layout-align="start center">
           <div flex="40">Meet</div>
           <div flex="30">Date</div>
           <div flex="30">Location</div>
         </div>
         <md-divider></md-divider>
-        <div class="table-row" ng-repeat="meet in indoorMeets" ng-class="{ 'highlighted-meet': meet.important, 'link': meet.link }" ng-click="openMeet(meet.link)" layout="row" >
+        <div class="table-row" ng-class="{ 'highlighted-meet': meet.important, 'link': meet.link }" layout="row" layout-align="start center" ng-repeat="meet in indoorMeets" ng-click="openMeet(meet.link)">
           <div flex="40">{{meet.event}}</div>
           <div flex="30">{{meet.date}}</div>
           <div flex="30">{{meet.location}}</div>

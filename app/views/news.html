@@ -3,7 +3,7 @@
 		<div layout="row">
 			<span class="itc-h1">News</span>
             <span flex></span>
-			<md-input-container class="year-selector">
+			<md-input-container class="year-selector" analytics-on="click" analytics-event="Changed news year">
                 <label>Year</label>
                 <md-select ng-model="selectedYear">
                     <md-option ng-repeat="(key, value) in news" ng-value="key" ng-selected="key === curYear">{{ key }}</md-option>

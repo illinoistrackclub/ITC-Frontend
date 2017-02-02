@@ -47,5 +47,5 @@ angular.module('itcFrontendApp')
       redirectTo: '/'
     });
 
-  $locationProvider.html5Mode(false).hashPrefix('');
+  $locationProvider.html5Mode(true).hashPrefix('');
 });

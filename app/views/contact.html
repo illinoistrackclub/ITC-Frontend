@@ -20,7 +20,7 @@
             <md-card-actions class="card-actions" layout="row" layout-align="end center">
               <span class="email">{{coach.email}}</span>
               <span flex></span>
-              <md-button class="md-raised md-primary" ng-click="emailCoach(coach.email)">Email</md-button>
+              <md-button class="md-raised md-primary" ng-click="emailCoach(coach.email)" analytics-on="click" analytics-event="Clicked to email {{coach.email}}">Email</md-button>
             </md-card-actions>
           </md-card>
         </div>
@@ -42,7 +42,7 @@
             <md-card-actions class="card-actions" layout="row" layout-align="end center">
               <span class="email">{{coach.email}}</span>
               <span flex></span>
-              <md-button class="md-raised md-primary" ng-click="emailCoach(coach.email)">Email</md-button>
+              <md-button class="md-raised md-primary" ng-click="emailCoach(coach.email)" analytics-on="click" analytics-event="Clicked to email {{coach.email}}">Email</md-button>
             </md-card-actions>
           </md-card>
         </div>

@@ -6,24 +6,39 @@
   .header-toolbar {
     position: fixed;
     top: 0;
-  }
 
-  .menu-image {
-    height: 40px;
-    width: auto;
-    padding-left: 10px;
-  }
+    // Styles for menu bar when screen is large
+    .large-header-item {
+      font-size: 16px;
+      padding-right: 15px;
+    }
 
-  // Controls hamburger menu icon
-  .icon {
-    font-size: 32px;
-    vertical-align: middle;
+    .large-menu-selector:hover {
+      cursor: pointer;
+    }
+
+    // Aligns menu button in center vertically
+    .menu-button {
+      vertical-align: super;
+    }
+
+    .menu-image {
+      height: 40px;
+      width: auto;
+      padding-left: 10px;
+      vertical-align: middle;
+    }
+
+    // Controls hamburger menu icon
+    .icon {
+      font-size: 32px;
+    }
   }
 }
 
 // Must sit outside header class due to how Angular material builds the menu
 // This CSS makes the nested 'Current Members' menu look like the other menu items
-.current-members-button {
+.small-menu-button {
   text-align: left;
   display: inline-block;
   border-radius: 0;
@@ -37,6 +52,6 @@
   width: 100%;
 }
 
-.md-open .current-members-button {
+.md-open .small-menu-button {
   background-color: $white !important;
 }
