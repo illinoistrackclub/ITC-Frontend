@@ -175,19 +175,19 @@ describe('Filters', function() {
       givenTwoDigit = 9.9;
       givenThreeDigit = 9.99;
 
-      expectedResultOneDigit = '9.00 m';
-      expectedResultTwoDigit = '9.90 m';
-      expectedResultThreeDigit = '9.99 m';
+      expectedResultOneDigit = '9.00m';
+      expectedResultTwoDigit = '9.90m';
+      expectedResultThreeDigit = '9.99m';
 
 
     });
 
-    it('should return a distance with .00 m appended', function() {
+    it('should return a distance with .00m appended', function() {
       var result = $filter('trackDist')(givenOneDigit);
       expect(result).toEqual(expectedResultOneDigit);
     });
 
-    it('should return a distance with 0 m appended', function() {
+    it('should return a distance with 0m appended', function() {
       var result = $filter('trackDist')(givenTwoDigit);
       expect(result).toEqual(expectedResultTwoDigit);
     });
