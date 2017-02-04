@@ -1,0 +1,12 @@
+@import 'base';
+
+.not-found-page-container .container {
+  div:not(.itc-h1) {
+    @include body-text;
+  }
+
+  .matsuoka-shuzo {
+    margin: 25px auto 0 auto;
+    display: block;
+  }
+}

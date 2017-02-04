@@ -43,9 +43,12 @@ angular.module('itcFrontendApp')
       templateUrl: 'views/contact.html',
       controller: 'ContactCtrl'
     })
+    .when('/404', {
+      templateUrl: 'views/404.html'
+    })
     .otherwise({
-      redirectTo: '/'
+      redirectTo: '/404'
     });
 
-  $locationProvider.html5Mode(true).hashPrefix('');
+  $locationProvider.hashPrefix('');
 });
