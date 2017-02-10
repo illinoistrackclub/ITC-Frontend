@@ -65,7 +65,7 @@
           <div layout="row" layout-align="space-around">
             <md-progress-circular class="spinner" md-mode="indeterminate" md-diameter="40px" ng-show="isLoadingRec"></md-progress-circular>
           </div>
-          <div class="table-row" layout="row" layout-padding layout-align="start center" ng-repeat-start="performanceList in records['Indoor']">
+          <div class="table-row" layout="row" layout-padding layout-align="start center" ng-repeat-start="performanceList in records['Outdoor']">
             <div class="right" flex="30" flex-xs="20" ng-if="!performanceList.record.maleRecord">Event not contested</div>
             <div class="right" flex="10" flex-xs="20" ng-if="!performanceList.record.maleRecord"></div>
             <div class="right" flex="30" flex-xs="20" ng-if="performanceList.record.maleRecord"><span class="name" ng-repeat="athleteName in performanceList.record.maleRecord[0].athlete | relayNames">{{ ::athleteName }}</span></div>
