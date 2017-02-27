@@ -5,12 +5,27 @@ angular.module('itcFrontendApp')
 .controller('BoardMinutesCtrl', function($scope) {
   $scope.trackMinutes = {
     2017: [{
-      link: 'https://drive.google.com/open?id=0B9IJ7PBOO1nSNk5DY0poenNfZlE',
-      date: 'January 16, 2017',
-    }, {
-      link: 'https://drive.google.com/open?id=0B9IJ7PBOO1nSZndzS2toa0hvYnc',
-      date: 'January 22, 2017',
-    }],
+        link: 'https://drive.google.com/open?id=0B9IJ7PBOO1nSNk5DY0poenNfZlE',
+        date: 'January 16, 2017',
+      }, {
+        link: 'https://drive.google.com/open?id=0B9IJ7PBOO1nSZndzS2toa0hvYnc',
+        date: 'January 22, 2017',
+      }, {
+        link: 'https://drive.google.com/open?id=0B9IJ7PBOO1nSakdoQmRKS2lCZVk',
+        date: 'January 29, 2017',
+      }, {
+        link: 'https://drive.google.com/open?id=0B9IJ7PBOO1nScHE4UXJHNHVvV0U',
+        date: 'February 5, 2017',
+      }, {
+        link: 'https://drive.google.com/open?id=0B9IJ7PBOO1nSbHdCRzV4a25fcm8',
+        date: 'February 12, 2017',
+      }, {
+        link: 'https://drive.google.com/open?id=0B9IJ7PBOO1nSdWh6TGtFb1huWUk',
+        date: 'February 19, 2017',
+      }, {
+        link: 'https://drive.google.com/open?id=0B9IJ7PBOO1nSU0ZzY29JVGNWbTg',
+        date: 'February 26, 2017',
+      }],
     2016: [{
         link: 'https://drive.google.com/open?id=0B9IJ7PBOO1nSU3N0NHNnVURRY0k',
         date: 'January 24, 2016',
