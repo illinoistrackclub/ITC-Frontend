@@ -31,6 +31,20 @@
           <div flex="30">{{meet.location}}</div>
         </div>
       </div>
+      <div class="itc-h5">2017 Outdoor Season</div>
+      <div class="table race-table">
+        <div class="table-header" layout="row" layout-align="start center">
+          <div flex="40">Meet</div>
+          <div flex="30">Date</div>
+          <div flex="30">Location</div>
+        </div>
+        <md-divider></md-divider>
+        <div class="table-row" ng-class="{ 'highlighted-meet': meet.important, 'link': meet.link }" layout="row" layout-align="start center" ng-repeat="meet in outdoorMeets" ng-click="openMeet(meet.link)">
+          <div flex="40">{{meet.event}}</div>
+          <div flex="30">{{meet.date}}</div>
+          <div flex="30">{{meet.location}}</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

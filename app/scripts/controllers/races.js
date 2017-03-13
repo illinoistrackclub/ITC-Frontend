@@ -60,9 +60,39 @@ angular.module('itcFrontendApp')
     link: 'clubrelays'
   }];
 
-  // $scope.outdoorMeets = [{
-  //   event: 'NIRCA Track & Field Nationals',
-  //   date: 'April 8-9, 2017',
-  //   location: 'Bloomington, IN'
-  // }];
+  $scope.outdoorMeets = [{
+    event: 'Rose Hulman',
+    date: 'March 18, 2017',
+    location: 'Terre Haute, IN'
+  }, {
+    event: 'WashU Invite',
+    date: 'March 31, 2017',
+    location: 'St. Louis, MO'
+  }, {
+    event: 'Lindenwood John Creer Invitational',
+    date: 'April 1, 2017',
+    location: 'St. Charles, MO'
+  }, {
+    event: 'NIRCA Track & Field Nationals',
+    date: 'April 8-9, 2017',
+    location: 'Bloomington, IN',
+    important: true,
+    //link: 'http://www.clubrunning.org/races/race_info.php?race=460'
+  }, {
+    event: 'Illinois Twilight',
+    date: 'April 22, 2017',
+    location: 'Champaign, IL'
+  }, {
+    event: 'Illinois Club Peaks',
+    date: 'April 29, 2017',
+    location: 'Champaign, IL'
+  }, {
+    event: 'NCC Dr. Keeler',
+    date: 'May 15, 2017',
+    location: 'Naperville, IL'
+  }, {
+    event: 'NCC Gregory',
+    date: 'May 22, 2017',
+    location: 'Naperville, IL'
+  }];
 });
