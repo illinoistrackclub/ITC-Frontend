@@ -20,8 +20,15 @@ angular.module('itcFrontendApp')
       controller: 'RacesCtrl'
     })
     .when('/clubrelays', {
-      templateUrl: 'views/clubrelays.html',
+      redirectTo: '/home_meets/clubrelays'
+    })
+    .when('/home_meets/clubrelays', {
+      templateUrl: 'views/home_meets/clubrelays.html',
       controller: 'ClubRelaysCtrl'
+    })
+    .when('/home_meets/clubpeaks', {
+      templateUrl: 'views/home_meets/clubpeaks.html',
+      controller: 'ClubPeaksCtrl'
     })
     .when('/results', {
       templateUrl: 'views/results.html',

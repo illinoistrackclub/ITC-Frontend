@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/404.css">
     <link rel="stylesheet" href="styles/board_minutes.css">
-    <link rel="stylesheet" href="styles/club_relays.css">
+    <link rel="stylesheet" href="styles/home_meets.css">
     <link rel="stylesheet" href="styles/contact.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
@@ -40,7 +40,15 @@
           <div layout="row" layout-align="end center" hide-xs hide-sm>
             <div class="large-header-item"><a ng-click="goTo('news')">News</a></div>
             <div class="large-header-item"><a ng-click="goTo('races')">Race Schedule</a></div>
-            <div class="large-header-item"><a ng-click="goTo('clubrelays')">Club Relays</a></div>
+            <md-menu>
+              <div class="large-header-item large-menu-selector" ng-click="$mdOpenMenu()">
+                Home Meets
+              </div>
+              <md-menu-content width="2">
+                <md-menu-item><md-button ng-click="goTo('home_meets/clubrelays')">Club Relays</md-button></md-menu-item>
+                <md-menu-item><md-button ng-click="goTo('home_meets/clubpeaks')">Club Peaks</md-button></md-menu-item>
+              </md-menu-content>
+            </md-menu>
             <div class="large-header-item"><a ng-click="goTo('results')">Results</a></div>
             <div class="large-header-item"><a ng-click="goTo('prospective_members')">Prospective Members</a></div>
             <md-menu>
@@ -76,7 +84,15 @@
               <md-button ng-click="goTo('races')">Race Schedule</md-button>
             </md-menu-item>
             <md-menu-item>
-              <md-button ng-click="goTo('clubrelays')">Club Relays</md-button>
+              <md-menu>
+                <md-button class="small-menu-button" ng-click="$mdOpenMenu()">
+                  Home Meets
+                </md-button>
+                <md-menu-content width="2">
+                  <md-menu-item><md-button ng-click="goTo('home_meets/clubrelays')">Club Relays</md-button></md-menu-item>
+                  <md-menu-item><md-button ng-click="goTo('home_meets/clubpeaks')">Club Peaks</md-button></md-menu-item>
+                </md-menu-content>
+              </md-menu>
             </md-menu-item>
             <md-menu-item>
               <md-button ng-click="goTo('results')">Results</md-button>
@@ -170,7 +186,8 @@
   <script src="scripts/filters.js"></script>
   <script src="scripts/config/events.js"></script>
   <script src="scripts/config/urls.js"></script>
-  <script src="scripts/controllers/clubrelays.js"></script>
+  <script src="scripts/controllers/home_meets/clubrelays.js"></script>
+  <script src="scripts/controllers/home_meets/clubpeaks.js"></script>
   <script src="scripts/controllers/contact.js"></script>
   <script src="scripts/controllers/home.js"></script>
   <script src="scripts/controllers/illinoistrackclub.js"></script>

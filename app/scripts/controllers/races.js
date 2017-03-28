@@ -57,7 +57,7 @@ angular.module('itcFrontendApp')
     date: 'February 25, 2017',
     location: 'Champaign, IL',
     important: true,
-    link: 'clubrelays'
+    link: 'home_meets/clubrelays'
   }];
 
   $scope.outdoorMeets = [{
@@ -85,7 +85,9 @@ angular.module('itcFrontendApp')
   }, {
     event: 'Illinois Club Peaks',
     date: 'April 29, 2017',
-    location: 'Champaign, IL'
+    location: 'Champaign, IL',
+    important: true,
+    link: 'home_meets/clubpeaks'
   }, {
     event: 'NCC Dr. Keeler',
     date: 'May 15, 2017',
