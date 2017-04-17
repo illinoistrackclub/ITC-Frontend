@@ -12,9 +12,9 @@
             </div>
             <md-divider></md-divider>
             <div layout="row" layout-align="space-around">
-              <md-progress-circular class="spinner" md-mode="indeterminate" md-diameter="40px" ng-show="isLoadingRec"></md-progress-circular>
+              <md-progress-circular class="spinner" md-mode="indeterminate" md-diameter="40px" ng-if="isLoadingRec"></md-progress-circular>
             </div>
-            <div class="table-row" layout="row" layout-align="start center" layout-padding ng-repeat-start="performanceList in records['XC']">
+            <div class="table-row" layout="row" layout-align="start center" layout-padding ng-repeat-start="performanceList in records['XC']" ng-if="!isLoadingRec">
               <div class="right" flex="30" flex-xs="20" ng-if="!performanceList.record.maleRecord">Event not contested</div>
               <div class="right" flex="10" flex-xs="20" ng-if="!performanceList.record.maleRecord"></div>
               <div class="right" flex="30" flex-xs="20" ng-if="performanceList.record.maleRecord"><span class="name" ng-repeat="athleteName in performanceList.record.maleRecord[0].athlete | relayNames">{{ ::athleteName }}</span></div>
@@ -37,9 +37,9 @@
             </div>
             <md-divider></md-divider>
             <div layout="row" layout-align="space-around">
-              <md-progress-circular class="spinner" md-mode="indeterminate" md-diameter="40px" ng-show="isLoadingRec"></md-progress-circular>
+              <md-progress-circular class="spinner" md-mode="indeterminate" md-diameter="40px" ng-if="isLoadingRec"></md-progress-circular>
             </div>
-            <div class="table-row" layout="row" layout-padding layout-align="start center" ng-repeat-start="performanceList in records['Indoor']">
+            <div class="table-row" layout="row" layout-padding layout-align="start center" ng-repeat-start="performanceList in records['Indoor']" ng-if="!isLoadingRec">
               <div class="right" flex="30" flex-xs="20" ng-if="!performanceList.record.maleRecord">Event not contested</div>
               <div class="right" flex="10" flex-xs="20" ng-if="!performanceList.record.maleRecord"></div>
               <div class="right" flex="30" flex-xs="20" ng-if="performanceList.record.maleRecord"><span class="name" ng-repeat="athleteName in performanceList.record.maleRecord[0].athlete | relayNames">{{ ::athleteName }}</span></div>
@@ -64,9 +64,9 @@
             </div>
             <md-divider></md-divider>
             <div layout="row" layout-align="space-around">
-              <md-progress-circular class="spinner" md-mode="indeterminate" md-diameter="40px" ng-show="isLoadingRec"></md-progress-circular>
+              <md-progress-circular class="spinner" md-mode="indeterminate" md-diameter="40px" ng-if="isLoadingRec"></md-progress-circular>
             </div>
-            <div class="table-row" layout="row" layout-padding layout-align="start center" ng-repeat-start="performanceList in records['Outdoor']">
+            <div class="table-row" layout="row" layout-padding layout-align="start center" ng-repeat-start="performanceList in records['Outdoor']" ng-if="!isLoadingRec">
               <div class="right" flex="30" flex-xs="20" ng-if="!performanceList.record.maleRecord">Event not contested</div>
               <div class="right" flex="10" flex-xs="20" ng-if="!performanceList.record.maleRecord"></div>
               <div class="right" flex="30" flex-xs="20" ng-if="performanceList.record.maleRecord"><span class="name" ng-repeat="athleteName in performanceList.record.maleRecord[0].athlete | relayNames">{{ ::athleteName }}</span></div>
@@ -86,10 +86,10 @@
       <md-tab label="Top Performances" analytics-on="click" analytics-event="Viewed top performances">
         <md-tabs class="tabs" md-dynamic-height>
           <md-tab label="Cross Country" analytics-on="click" analytics-event="Viewed XC top performances">
-            <md-content>
-              <div layout="row" layout-align="space-around">
-                <md-progress-circular class="spinner" md-mode="indeterminate" md-diameter="40px" ng-show="isLoadingTP"></md-progress-circular>
-              </div>
+            <div layout="row" layout-align="space-around">
+              <md-progress-circular class="spinner" md-mode="indeterminate" md-diameter="40px" ng-if="isLoadingTP"></md-progress-circular>
+            </div>
+            <md-content ng-if="!isLoadingTP">
               <div class="top-performance-table" ng-repeat="performanceList in topPerformances['XC']">
                 <div class="itc-h5">{{ ::performanceList.name }}</div>
                 <div class="left-table">
@@ -132,10 +132,10 @@
             </md-content>
           </md-tab>
           <md-tab label="Indoor Track" analytics-on="click" analytics-event="Viewed Indoor track top performances">
-            <md-content>
-              <div layout="row" layout-align="space-around">
-                <md-progress-circular class="spinner" md-mode="indeterminate" md-diameter="40px" ng-show="isLoadingTP"></md-progress-circular>
-              </div>
+            <div layout="row" layout-align="space-around">
+              <md-progress-circular class="spinner" md-mode="indeterminate" md-diameter="40px" ng-if="isLoadingTP"></md-progress-circular>
+            </div>
+            <md-content ng-if="!isLoadingTP">
               <div class="top-performance-table" ng-repeat="performanceList in topPerformances['Indoor']">
                 <div class="itc-h5">{{ ::performanceList.name }}</div>
                 <div class="left-table">
@@ -184,10 +184,10 @@
             </md-content>
           </md-tab>
           <md-tab label="Outdoor Track" analytics-on="click" analytics-event="Viewed Outdoor track top performances">
-            <md-content>
-              <div layout="row" layout-align="space-around">
-                <md-progress-circular class="spinner" md-mode="indeterminate" md-diameter="40px" ng-show="isLoadingTP"></md-progress-circular>
-              </div>
+            <div layout="row" layout-align="space-around">
+              <md-progress-circular class="spinner" md-mode="indeterminate" md-diameter="40px" ng-if="isLoadingTP"></md-progress-circular>
+            </div>
+            <md-content ng-if="!isLoadingTP">
               <div class="top-performance-table" ng-repeat="performanceList in topPerformances['Outdoor']">
                 <div class="itc-h5">{{ ::performanceList.name }}</div>
                 <div class="left-table">
@@ -240,17 +240,17 @@
       <md-tab label="Meet Results" analytics-on="click" analytics-event="Viewed meet results">
         <md-tabs class="tabs" md-dynamic-height analytics-on="click" analytics-event="Viewed XC track meet results">
           <md-tab label="Cross Country">
-            <md-content>
-              <div layout="row" layout-align="space-around">
-                <md-progress-circular class="spinner" md-mode="indeterminate" md-diameter="40px" ng-show="isLoadingMeets"></md-progress-circular>
-              </div>
+            <div layout="row" layout-align="space-around">
+              <md-progress-circular class="spinner" md-mode="indeterminate" md-diameter="40px" ng-if="isLoadingMeets"></md-progress-circular>
+            </div>
+            <md-content ng-if="!isLoadingMeets">
               <span ng-repeat="meets in crossCountryMeets | orderObjectBy:date:true">
                 <div class="table meet-table">
                   <div class="table-header" layout="row" layout-align="start center">
-                    <div flex="100">{{ meets[0].date.substring(0,4) }}</div>
+                    <div flex="100">{{ ::meets[0].date.substring(0,4) }}</div>
                   </div>
                   <div class="table-row" layout="row" layout-align="start center" ng-repeat-start="meet in meets">
-                    <div flex="70">{{ meet.name }}</div>
+                    <div flex="70">{{ ::meet.name }}</div>
                     <div class="right" flex="30">
                       <a class="link results" ng-if="meet.resultURL" href="{{ meet.resultURL }}">Results</a>
                       <a class="link splits" ng-if="meet.splitURL" href="{{ meet.splitURL }}">Splits</a>
@@ -262,17 +262,17 @@
             </md-content>
           </md-tab>
           <md-tab label="Indoor Track" analytics-on="click" analytics-event="Viewed indoor track meet results">
-            <md-content>
-              <div layout="row" layout-align="space-around">
-                <md-progress-circular class="spinner" md-mode="indeterminate" md-diameter="40px" ng-show="isLoadingMeets"></md-progress-circular>
-              </div>
+            <div layout="row" layout-align="space-around">
+              <md-progress-circular class="spinner" md-mode="indeterminate" md-diameter="40px" ng-if="isLoadingMeets"></md-progress-circular>
+            </div>
+            <md-content ng-if="!isLoadingMeets">
               <span ng-repeat="meets in indoorMeets | orderObjectBy:date:true">
                 <div class="table meet-table">
                   <div class="table-header" layout="row" layout-align="start center">
-                    <div flex="100">{{ meets[0].date.substring(0,4) }}</div>
+                    <div flex="100">{{ ::meets[0].date.substring(0,4) }}</div>
                   </div>
                   <div class="table-row" layout="row" layout-align="start center" ng-repeat-start="meet in meets">
-                    <div flex="70">{{ meet.name }}</div>
+                    <div flex="70">{{ ::meet.name }}</div>
                     <div class="right" flex="30">
                       <a class="link results" ng-if="meet.resultURL" href="{{ meet.resultURL }}">Results</a>
                       <a class="link splits" ng-if="meet.splitURL" href="{{ meet.splitURL }}">Splits</a>
@@ -284,17 +284,17 @@
             </md-content>
           </md-tab>
           <md-tab label="Outdoor Track" analytics-on="click" analytics-event="Viewed outdoor track meet results">
-            <md-content>
-              <div layout="row" layout-align="space-around">
-                <md-progress-circular class="spinner" md-mode="indeterminate" md-diameter="40px" ng-show="isLoadingMeets"></md-progress-circular>
-              </div>
+            <div layout="row" layout-align="space-around">
+              <md-progress-circular class="spinner" md-mode="indeterminate" md-diameter="40px" ng-if="isLoadingMeets"></md-progress-circular>
+            </div>
+            <md-content ng-if="!isLoadingMeets">
               <span ng-repeat="meets in outdoorMeets | orderObjectBy:date:true">
                 <div class="table meet-table">
                   <div class="table-header" layout="row" layout-align="start center">
-                    <div flex="100">{{ meets[0].date.substring(0,4) }}</div>
+                    <div flex="100">{{ ::meets[0].date.substring(0,4) }}</div>
                   </div>
                   <div class="table-row" layout="row" layout-align="start center" ng-repeat-start="meet in meets">
-                    <div flex="70">{{ meet.name }}</div>
+                    <div flex="70">{{ ::meet.name }}</div>
                     <div class="right" flex="30">
                       <a class="link results" ng-if="meet.resultURL" href="{{ meet.resultURL }}">Results</a>
                       <a class="link splits" ng-if="meet.splitURL" href="{{ meet.splitURL }}">Splits</a>
