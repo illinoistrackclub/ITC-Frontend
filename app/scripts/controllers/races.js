@@ -90,11 +90,11 @@ angular.module('itcFrontendApp')
     link: 'home_meets/clubpeaks'
   }, {
     event: 'NCC Dr. Keeler',
-    date: 'May 15, 2017',
+    date: 'May 11-12, 2017',
     location: 'Naperville, IL'
   }, {
     event: 'NCC Gregory',
-    date: 'May 22, 2017',
+    date: 'May 17-18, 2017',
     location: 'Naperville, IL'
   }];
 });

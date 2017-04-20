@@ -34,6 +34,9 @@ angular.module('itcFrontendApp')
       }, {
         link: 'https://drive.google.com/open?id=0B9IJ7PBOO1nSN2E4TXVMYjRDRkU',
         date: 'March 27, 2017',
+      }, {
+        link: 'https://drive.google.com/open?id=0B9IJ7PBOO1nSZEVTckpKV2JhYnc',
+        date: 'April 2, 2017',
       }],
     2016: [{
         link: 'https://drive.google.com/open?id=0B9IJ7PBOO1nSU3N0NHNnVURRY0k',
