@@ -403,6 +403,14 @@ module.exports = function (grunt) {
 
     // Copies remaining files to places other tasks can use
     copy: {
+      distApi: {
+        files: [{
+          expand: true,
+          cwd: '<%= yeoman.app %>/env/dist/',
+          src: 'apiUrl.js',
+          dest: '<%= yeoman.app %>/scripts/services/'
+        }]
+      },
       dist: {
         files: [{
           expand: true,
@@ -421,6 +429,14 @@ module.exports = function (grunt) {
           cwd: '.tmp/images',
           dest: '<%= yeoman.dist %>/images',
           src: ['generated/*']
+        }]
+      },
+      local: {
+        files: [{
+          expand: true,
+          cwd: '<%= yeoman.app %>/env/local/',
+          src: 'apiUrl.js',
+          dest: '<%= yeoman.app %>/scripts/services/'
         }]
       },
       styles: {
@@ -463,6 +479,7 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
+      'copy:local',
       'wiredep',
       'concurrent:server',
       'postcss:server',
@@ -487,6 +504,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
+    'copy:distApi',
     'wiredep',
     'useminPrepare',
     'concurrent:dist',
