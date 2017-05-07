@@ -61,7 +61,7 @@ This is the frontend of the Illinois Track Club website.
 
 2. `git checkout -b new-branch-name`
 
-3. Make your changes, using `grunt serve` to watch your changes. Ensure that they work with the backend if updating the news or results page (Run the backend server locally and point the API service to `localhost:8000`).
+3. Make your changes, using `grunt serve` to watch your changes. Ensure that they work with the backend if updating the news or results page (Run the backend server locally. Frontend automatically will point to it).
 
 4. Run `grunt test` to confirm you did not break anything
 
