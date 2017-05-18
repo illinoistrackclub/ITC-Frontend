@@ -320,6 +320,9 @@
             </md-autocomplete>
           </div>
           <div>
+            <div layout="row" layout-align="space-around">
+              <md-progress-circular class="spinner" md-mode="indeterminate" md-diameter="40px" ng-if="loadingAthlete"></md-progress-circular>
+            </div>
             <div ng-if="athletePRs">
               <div class="itc-h5 pr-title">Personal Records</div>
               <div ng-if="athletePRs['XC']">

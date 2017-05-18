@@ -109,15 +109,21 @@ angular.module('itcFrontendApp')
     return deferred.promise;
   };
 
-  $scope.$watch('selectedAthlete', function(newAthlete) {
-    if (newAthlete) {
+  $scope.$watch('selectedAthlete', function(newAthlete, oldAthlete) {
+    if (newAthlete && oldAthlete !== newAthlete) {
+      $scope.athletePerformances = undefined;
+      $scope.athletePRs = undefined;
+
+      $scope.loadingAthlete = true;
+
       var request1 = Api.getAthleteResults(newAthlete.id);
       var request2 = Api.getAthletePRs(newAthlete.id);
 
       $q.all([request1, request2]).then(function(responses) {
         setupAthleteResults(responses[0].data);
         setupAthletePRs(responses[1].data);
-        console.log(responses[1].data);
+
+        $scope.loadingAthlete = false;
       });
     }
   });
