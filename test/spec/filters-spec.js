@@ -39,100 +39,11 @@ describe('Filters', function() {
     });
   });
 
-  describe('results', function() {
-    var given, expectedResult;
-
-    beforeEach(function() {
-      given = [
-        {
-          'event':{
-            'name':"60m",
-            'season':"Indoor"
-          },
-          'performance':12
-        }, {
-          'event':{
-            'name':"200m",
-            'season':"Indoor"
-          },
-          'performance':22
-        }, {
-          'event':{
-            'name':"200m",
-            'season':"Indoor"
-          },
-          'performance':32
-        }, {
-          'event':{
-            'name':"Triple Jump",
-            'season':"Indoor"
-          },
-          'performance':42,
-          'distanceResult':true
-        }, {
-          'event':{
-            'name':"Triple Jump",
-            'season':"Indoor"
-          },
-          'performance':52,
-          'distanceResult':true
-        }
-
-      ];
-      expectedResult = {
-        'Indoor': {
-          '60m': [{
-            'event':{
-              'name':"60m",
-              'season':"Indoor"
-            },
-            'performance':12
-          }],
-          '200m': [{
-            'event':{
-              'name':"200m",
-              'season':"Indoor"
-            },
-            'performance':22
-          },{
-            'event':{
-              'name':"200m",
-              'season':"Indoor"
-            },
-            'performance':32
-          }],
-          'Triple Jump': [{
-            'event':{
-              'name':"Triple Jump",
-              'season':"Indoor"
-            },
-            'performance':52,
-            'distanceResult':true
-          },{
-            'event':{
-              'name':"Triple Jump",
-              'season':"Indoor"
-            },
-            'performance':42,
-            'distanceResult':true
-          }]
-        }
-      };
-    });
-
-    it('should return results as an array organized by event', function() {
-      var result = $filter('results')(given);
-      expect(result).toEqual(expectedResult);
-    });
-
-  });
-
   describe('xcTime', function() {
     var given, expectedResult;
 
     beforeEach(function() {
       given = 1101;
-
       expectedResult = '18:21';
     });
 
@@ -147,11 +58,9 @@ describe('Filters', function() {
 
     beforeEach(function() {
       given = 115.05;
-
       otherGiven = 12.003;
 
       expectedResult = '1:55.05';
-
       otherExpectedResult  = '12.00';
     });
 
@@ -160,7 +69,7 @@ describe('Filters', function() {
       expect(result).toEqual(expectedResult);
     });
 
-    it('should return a time that is spliced', function() {
+    it('should return a time that is rounded to hundredths of a second', function() {
       var result = $filter('trackTime')(otherGiven);
       expect(result).toEqual(otherExpectedResult);
     });
@@ -178,21 +87,19 @@ describe('Filters', function() {
       expectedResultOneDigit = '9.00m';
       expectedResultTwoDigit = '9.90m';
       expectedResultThreeDigit = '9.99m';
-
-
     });
 
-    it('should return a distance with .00m appended', function() {
+    it('should return a distance with X.00m appended', function() {
       var result = $filter('trackDist')(givenOneDigit);
       expect(result).toEqual(expectedResultOneDigit);
     });
 
-    it('should return a distance with 0m appended', function() {
+    it('should return a distance with X.X0m appended', function() {
       var result = $filter('trackDist')(givenTwoDigit);
       expect(result).toEqual(expectedResultTwoDigit);
     });
 
-    it('should return a distance with m appended', function() {
+    it('should return a distance with X.XXm appended', function() {
       var result = $filter('trackDist')(givenThreeDigit);
       expect(result).toEqual(expectedResultThreeDigit);
     });
@@ -219,7 +126,6 @@ describe('Filters', function() {
 
     beforeEach(function() {
       givenIndividual = [{'name': "Tyler Splitt"}];
-
       givenRelay = [
         {'name': "Tyler Splitt"},
         {'name': "Mike Kreiser"},
@@ -228,7 +134,6 @@ describe('Filters', function() {
       ];
 
       expectedResultIndividual = ["Tyler Splitt"];
-
       expectedResultRelay = ["Splitt, Kreiser, Somerfield, Frintner"];
     });
 
