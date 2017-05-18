@@ -35,11 +35,11 @@ angular.module('itcFrontendApp')
   };
 
   this.getAllTopPerformances = function() {
-    return $http.get(urlBase + 'events/getTopPerformances/', {cache: true});
+    return $http.get(urlBase + 'events/getTopPerformances/');
   };
 
   this.getAllRecords = function() {
-    return $http.get(urlBase + 'events/getRecords/', {cache: true});
+    return $http.get(urlBase + 'events/getRecords/');
   };
 
   this.getAllMeets = function() {
