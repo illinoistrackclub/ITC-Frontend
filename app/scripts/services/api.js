@@ -18,6 +18,14 @@ angular.module('itcFrontendApp')
     return $http.get(urlBase + 'athletes/getAthlete/' + id + '/');
   };
 
+  this.getAthleteResults = function(id) {
+    return $http.get(urlBase + 'athletes/getAthleteResults/' + id + '/');
+  };
+
+  this.getAthletePRs = function(id) {
+    return $http.get(urlBase + 'athletes/getAthleteBests/' + id + '/');
+  };
+
   this.getAllEvents = function() {
     return $http.get(urlBase + 'events/');
   };

@@ -108,4 +108,58 @@ angular.module('itcFrontendApp')
     // Return promise to be resolved when search results return
     return deferred.promise;
   };
+
+  $scope.$watch('selectedAthlete', function(newAthlete) {
+    if (newAthlete) {
+      var request1 = Api.getAthleteResults(newAthlete.id);
+      var request2 = Api.getAthletePRs(newAthlete.id);
+
+      $q.all([request1, request2]).then(function(responses) {
+        setupAthleteResults(responses[0].data);
+        setupAthletePRs(responses[1].data);
+        console.log(responses[1].data);
+      });
+    }
+  });
+
+  var setupAthleteResults = function(performances) {
+    $scope.athletePerformances = {};
+
+    // Map the performances by season in the order provided by EVENTS
+    _.forEach(EVENTS, function(events, season) {
+      $scope.athletePerformances[season] = [];
+
+      _.forEach(events, function(event) {
+        var foundResults = _.find(performances[season], { 'name': event });
+
+        if (foundResults) {
+          $scope.athletePerformances[season].push(foundResults);
+        }
+      });
+
+      if ($scope.athletePerformances[season].length === 0) {
+        delete $scope.athletePerformances[season];
+      }
+    });
+  };
+
+  var setupAthletePRs = function(performances) {
+    $scope.athletePRs = {};
+
+    _.forEach(EVENTS, function(events, season) {
+      $scope.athletePRs[season] = [];
+
+      _.forEach(events, function(event) {
+        var foundResults = _.find(performances[season], { 'name': event });
+
+        if (foundResults) {
+          $scope.athletePRs[season].push(foundResults);
+        }
+      });
+
+      if ($scope.athletePRs[season].length === 0) {
+        delete $scope.athletePRs[season];
+      }
+    });
+  };
 });

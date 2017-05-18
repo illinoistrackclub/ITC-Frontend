@@ -320,22 +320,103 @@
             </md-autocomplete>
           </div>
           <div>
-            <div ng-repeat="(season, seasons) in selectedAthlete.results | results" >
-              <div class="itc-h5" ng-if="seasons">{{ season }}</div>
-              <div class="table" ng-repeat="(event, results) in seasons">
-                <div class="table-header" layout="row">
-                  <div>{{ event }}</div>
+            <div ng-if="athletePRs">
+              <div class="itc-h5 pr-title">Personal Records</div>
+              <div ng-if="athletePRs['XC']">
+                <div class="itc-h6">Cross Country</div>
+                <div class="table">
+                  <span ng-repeat="athPRs in athletePRs['XC']">
+                    <div class="table-row" layout="row" layout-align="start center" ng-repeat-start="result in athPRs.performances">
+                      <div class="left itc-bold" flex="30">{{ athPRs.name }}</div>
+                      <div class="left" flex="50">{{ result.meet.date | date : 'yyyy' }} {{ result.meet.name }}</div>
+                      <div class="right itc-bold" flex="20" ng-if="result.event.season == 'XC'">{{ result.performance | xcTime }}</div>
+                    </div>
+                    <md-divider ng-repeat-end></md-divider>
+                  </span>
                 </div>
-                <md-divider></md-divider>
-                <div class="table-row" layout="row" layout-align="start center" ng-repeat-start="result in results">
-                  <div class="left" flex="70">{{ result.meet.date | date : 'yyyy' }} {{ result.meet.name }}</div>
-                  <div class="itc-bold right" flex="30" ng-if="result.event.season == 'XC'">{{ result.performance | xcTime }}</div>
-                  <div class="itc-bold right" flex="30" ng-if="result.event.season !== 'XC'">
-                    <span ng-if="result.distanceResult">{{ result.performance | trackDist }}</span>
-                    <span ng-if="!result.distanceResult">{{ result.performance | trackTime }}</span>
+              </div>
+              <div ng-if="athletePRs['Indoor']">
+                <div class="itc-h6">Indoor</div>
+                <div class="table">
+                  <span ng-repeat="athPRs in athletePRs['Indoor']">
+                    <div class="table-row" layout="row" layout-align="start center" ng-repeat-start="result in athPRs.performances">
+                      <div class="left itc-bold" flex="30">{{ athPRs.name }}</div>
+                      <div class="left" flex="50">{{ result.meet.date | date : 'yyyy' }} {{ result.meet.name }}</div>
+                      <div class="itc-bold right" flex="20">
+                        <span ng-if="result.distanceResult">{{ result.performance | trackDist }}</span>
+                        <span ng-if="!result.distanceResult">{{ result.performance | trackTime }}</span>
+                      </div>
+                    </div>
+                    <md-divider ng-repeat-end></md-divider>
+                  </span>
+                </div>
+              </div>
+              <div ng-if="athletePRs['Outdoor']">
+                <div class="itc-h6">Outdoor</div>
+                <div class="table">
+                  <span ng-repeat="athPRs in athletePRs['Outdoor']">
+                    <div class="table-row" layout="row" layout-align="start center" ng-repeat-start="result in athPRs.performances">
+                      <div class="left itc-bold" flex="30">{{ athPRs.name }}</div>
+                      <div class="left" flex="50">{{ result.meet.date | date : 'yyyy' }} {{ result.meet.name }}</div>
+                      <div class="itc-bold right" flex="20">
+                        <span ng-if="result.distanceResult">{{ result.performance | trackDist }}</span>
+                        <span ng-if="!result.distanceResult">{{ result.performance | trackTime }}</span>
+                      </div>
+                    </div>
+                    <md-divider ng-repeat-end></md-divider>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div ng-if="athletePerformances">
+              <div class="itc-h5">Performances</div>
+              <div ng-if="athletePerformances['XC']">
+                <div class="itc-h6">Cross Country</div>
+                <div class="table" ng-repeat="athPerfs in athletePerformances['XC']">
+                  <div class="table-header" layout="row">
+                    <div>{{ athPerfs.name }}</div>
                   </div>
+                  <md-divider></md-divider>
+                  <div class="table-row" layout="row" layout-align="start center" ng-repeat-start="result in athPerfs.performances">
+                    <div class="left" flex="70">{{ result.meet.date | date : 'yyyy' }} {{ result.meet.name }}</div>
+                    <div class="itc-bold right" flex="30" ng-if="result.event.season == 'XC'">{{ result.performance | xcTime }}</div>
+                  </div>
+                  <md-divider ng-repeat-end></md-divider>
                 </div>
-                <md-divider ng-repeat-end></md-divider>
+              </div>
+              <div ng-if="athletePerformances['Indoor']">
+                <div class="itc-h6">Indoor</div>
+                <div class="table" ng-repeat="athPerfs in athletePerformances['Indoor']">
+                  <div class="table-header" layout="row">
+                    <div>{{ athPerfs.name }}</div>
+                  </div>
+                  <md-divider></md-divider>
+                  <div class="table-row" layout="row" layout-align="start center" ng-repeat-start="result in athPerfs.performances">
+                    <div class="left" flex="70">{{ result.meet.date | date : 'yyyy' }} {{ result.meet.name }}</div>
+                    <div class="itc-bold right" flex="30">
+                      <span ng-if="result.distanceResult">{{ result.performance | trackDist }}</span>
+                      <span ng-if="!result.distanceResult">{{ result.performance | trackTime }}</span>
+                    </div>
+                  </div>
+                  <md-divider ng-repeat-end></md-divider>
+                </div>
+              </div>
+              <div ng-if="athletePerformances['Outdoor']">
+                <div class="itc-h6">Outdoor</div>
+                <div class="table" ng-repeat="athPerfs in athletePerformances['Outdoor']">
+                  <div class="table-header" layout="row">
+                    <div>{{ athPerfs.name }}</div>
+                  </div>
+                  <md-divider></md-divider>
+                  <div class="table-row" layout="row" layout-align="start center" ng-repeat-start="result in athPerfs.performances">
+                    <div class="left" flex="70">{{ result.meet.date | date : 'yyyy' }} {{ result.meet.name }}</div>
+                    <div class="itc-bold right" flex="30">
+                      <span ng-if="result.distanceResult">{{ result.performance | trackDist }}</span>
+                      <span ng-if="!result.distanceResult">{{ result.performance | trackTime }}</span>
+                    </div>
+                  </div>
+                  <md-divider ng-repeat-end></md-divider>
+                </div>
               </div>
             </div>
           </div>
