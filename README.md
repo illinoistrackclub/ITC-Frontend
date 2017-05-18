@@ -1,4 +1,4 @@
-# ITC Frontend [![Build Status](https://travis-ci.org/mkreiser/ITC-Frontend.svg?branch=master)](https://travis-ci.org/mkreiser/ITC-Frontend) [![Coverage Status](https://coveralls.io/repos/github/mkreiser/ITC-Frontend/badge.svg?branch=master)](https://coveralls.io/github/mkreiser/ITC-Frontend?branch=master)
+# ITC Frontend [![Build Status](https://travis-ci.org/illinoistrackclub/ITC-Frontend.svg?branch=master)](https://travis-ci.org/illinoistrackclub/ITC-Frontend)
 
 This is the frontend of the Illinois Track Club website.
 
