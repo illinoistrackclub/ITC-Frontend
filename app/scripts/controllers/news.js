@@ -5,9 +5,7 @@ angular.module('itcFrontendApp')
 .controller('NewsCtrl', function(Api, $http, $q, $scope) {
   // Sort news such that most recent articles are on top
   var sortByDate = function(array) {
-
     array.sort(function(a, b) { return new Date(a.post_datetime).getTime() - new Date(b.post_datetime).getTime(); });
-
 	};
 
   // Organize news by year

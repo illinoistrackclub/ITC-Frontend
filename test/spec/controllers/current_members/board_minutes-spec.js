@@ -17,7 +17,11 @@ describe('Controller: BoardMinutesCtrl', function () {
     });
   }));
 
-  it('contains spec with an expectation', function() {
-    expect(true).toBe(true);
+  it('should have a config object of track minutes', function() {
+    expect($scope.trackMinutes).toEqual(jasmine.any(Object));
+  });
+
+  it('should have a config object of cross minutes', function() {
+    expect($scope.crossMinutes).toEqual(jasmine.any(Object));
   });
 });

@@ -91,6 +91,50 @@ describe('service: Api', function() {
     });
   });
 
+  describe('getAthleteResults', function() {
+    var id;
+
+    beforeEach(function() {
+      id = 1738;
+    });
+
+    itShouldCallGET(function() {
+      return {
+        run: Api.getAthleteResults(id),
+        url: urlBase + 'athletes/getAthleteResults/' +  id + '/'
+      };
+    });
+
+    itShouldReturnAPromise(function() {
+      return {
+        funcReturn: Api.getAthleteResults(id),
+        promise: httpGet.promise
+      };
+    });
+  });
+
+  describe('getAthletePRs', function() {
+    var id;
+
+    beforeEach(function() {
+      id = 1738;
+    });
+
+    itShouldCallGET(function() {
+      return {
+        run: Api.getAthletePRs(id),
+        url: urlBase + 'athletes/getAthleteBests/' +  id + '/'
+      };
+    });
+
+    itShouldReturnAPromise(function() {
+      return {
+        funcReturn: Api.getAthletePRs(id),
+        promise: httpGet.promise
+      };
+    });
+  });
+
   describe('getAllEvents', function() {
     itShouldCallGET(function() {
       return {

@@ -30,6 +30,7 @@ describe('Controller: ContactCtrl', function () {
 
   it('should have a config array of XC coaches', function() {
     expect($scope.xcCoaches).toEqual(jasmine.any(Array));
+    expect($scope.xcCoaches.length).not.toEqual(0);
 
     angular.forEach($scope.xcCoaches, function(coach) {
       expect(coach).toEqual(jasmine.any(Object));
@@ -37,7 +38,8 @@ describe('Controller: ContactCtrl', function () {
   });
 
   it('should have a config array of TF coaches', function() {
-    expect($scope.tfCoaches).toEqual(jasmine.any(Array));
+    expect($scope.xcCoaches).toEqual(jasmine.any(Array));
+    expect($scope.tfCoaches.length).not.toEqual(0);
 
     angular.forEach($scope.tfCoaches, function(coach) {
       expect(coach).toEqual(jasmine.any(Object));
