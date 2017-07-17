@@ -18,7 +18,7 @@ angular.module('itcFrontendApp')
     name: 'Richard Skogsberg',
     position: 'Head Coach',
     email: 'illinoisxcclub+coach@gmail.com',
-    image: '/images/contacts/xc_hc.jpg'
+    image: '/images/contacts/tf_distance.jpg'
   }, {
     name: 'Mariela Marquez',
     position: 'Treasurer',
@@ -105,7 +105,7 @@ angular.module('itcFrontendApp')
   {
     name: 'Keith Lee',
     position: 'Mid-D Coach',
-    email: 'tylersplitt@gmail.com',
+    email: 'keithclee@gmail.com',
     image: '/images/contacts/tf_midd.jpg'
   },
    {
@@ -118,7 +118,7 @@ angular.module('itcFrontendApp')
   {name: 'Josh Feldman',
     position: 'Steeplechase Coach',
     email: 'jmfeldm2@illinois.edu',
-    image: '/images/contacts/tf_distance.jpg'
+    image: '/images/contacts/tf_steeple.jpg'
   },
 
    {
