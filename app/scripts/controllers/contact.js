@@ -28,7 +28,7 @@ angular.module('itcFrontendApp')
     name: 'Anneliese Schulz',
     position: 'Gender Minority Captain',
     email: 'illinoisxcclub+genderminority@gmail.com',
-    image: '/images/contacts/tf_secretary.jpg'
+    image: '/images/contacts/xc_genderminority.jpg'
   }, {
     name: 'Cody Lund',
     position: 'Secretary',
