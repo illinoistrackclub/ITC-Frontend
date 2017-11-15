@@ -50,7 +50,7 @@ angular.module('itcFrontendApp')
     email: 'illinoisxcclub+travel@gmail.com',
     image: '/images/contacts/xc_travel.jpg'
   }, {
-    name: 'Mackenzie Bach',
+    name: 'Josh Feldman',
     position: 'Webmaster',
     email: 'illinoisxcclub+webmaster@gmail.com',
     image: '/images/contacts/xc_webmaster.jpg'
