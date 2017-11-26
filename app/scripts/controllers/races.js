@@ -72,7 +72,7 @@ angular.module('itcFrontendApp')
     //link: 'http://www.clubrunning.org/races/race_info.php?race=460'
   }, {
     event: 'Illinois Club Peaks',
-    date: 'April 28, 2018',
+    date: 'April 21, 2018',
     location: 'Champaign, IL',
     important: true,
     link: 'home_meets/clubpeaks'
