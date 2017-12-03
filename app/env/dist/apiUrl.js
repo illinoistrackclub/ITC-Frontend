@@ -4,6 +4,6 @@ angular.module('itcFrontendApp')
 
 .service('ApiUrl', function() {
   this.getUrl = function() {
-    return 'http://illinoistrackclub.herokuapp.com/';
+    return 'http://localhost:8000/#/races';
   };
 });

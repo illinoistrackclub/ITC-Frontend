@@ -66,7 +66,7 @@ angular.module('itcFrontendApp')
     location: 'St. Louis, MO'
   }, {
     event: 'NIRCA Track & Field Nationals',
-    date: 'April 14-15, 2017',
+    date: 'April 14-15, 2018',
     location: 'Bloomington, IN',
     important: true,
     //link: 'http://www.clubrunning.org/races/race_info.php?race=460'
