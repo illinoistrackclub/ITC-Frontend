@@ -48,7 +48,23 @@ angular.module('itcFrontendApp')
     event: 'IWU Titan Open',
     date: 'January 27, 2018',
     location: 'Bloomington, IL'
-  }, {
+  }, 
+  {
+    event: 'Olivet Nazarene Invitational',
+    date: 'February 3, 2018',
+    location: 'Bourbonnais, IL'
+  }, 
+  {
+    event: 'GVSU Big Meet',
+    date: 'February 10, 2018',
+    location: 'Allendale, MI'
+  }, 
+  {
+    event: 'Illinois Orange and Blue',
+    date: 'February 17, 2018',
+    location: 'Champaign, IL'
+  },
+  {
     event: 'Illinois Club Relays',
     date: 'February 24, 2018',
     location: 'Champaign, IL',
