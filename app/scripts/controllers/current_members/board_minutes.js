@@ -4,6 +4,13 @@ angular.module('itcFrontendApp')
 
 .controller('BoardMinutesCtrl', function($scope) {
   $scope.trackMinutes = {
+    2018: [{
+        link: 'https://docs.google.com/document/d/1VsAYPdkpLx2glKY176U52s6H16tmmi9A_FpiW04Wjl8/edit?usp=sharing',
+        date: 'January 15, 2018',
+      }, {
+        link: 'https://docs.google.com/document/d/1yfVv4h4ooH6gtPrKZ-JC8tG81vYzWiSG4j3teKSQVi0/edit?usp=sharing',
+        date: 'January 21, 2018',
+      }],
     2017: [{
         link: 'https://drive.google.com/open?id=0B9IJ7PBOO1nSNk5DY0poenNfZlE',
         date: 'January 16, 2017',
@@ -43,6 +50,18 @@ angular.module('itcFrontendApp')
       }, {
         link: 'https://drive.google.com/open?id=0B9IJ7PBOO1nSTFl3MlJfS3JZNkE',
         date: 'April 23, 2017',
+      }, {
+        link: 'https://docs.google.com/document/d/1gLx107jBqzhFHD6HlEtjl85Dp5XNwpbM-oKw6idALUk/edit?usp=sharing',
+        date: 'April 30, 2017',
+      }, {
+        link: 'https://drive.google.com/file/d/0Bx3ZveflTDHUNmVCVGVoOW5FbU55XzdJOUZ4UGNGd3JpT2tF/view?usp=sharing',
+        date: 'May 7, 2017',
+      }, {
+        link: 'https://docs.google.com/document/d/10Xd8YWPmYBqA_YuHgL-mgEIVJhgpDX1lWGvD5VyvXkg/edit?usp=sharing',
+        date: 'August 26, 2017',
+      }, {
+        link: 'https://docs.google.com/document/d/1QtH0OKuGQSGVA7aM2xggypuduCTmNi3O3C-85sJcbfs/edit?usp=sharing',
+        date: 'October 15, 2017',
       }],
     2016: [{
         link: 'https://drive.google.com/open?id=0B9IJ7PBOO1nSU3N0NHNnVURRY0k',
