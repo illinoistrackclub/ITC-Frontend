@@ -162,6 +162,22 @@ angular.module('itcFrontendApp')
   };
 
   $scope.crossMinutes = {
+    2017: [{
+        link: 'https://drive.google.com/open?id=1q05QaN7gdHIo4HawbBGy2vBmJl6uO52yMwN6oR6CT-Y',
+        date: 'April 2 2017',
+      }, {
+        link: 'https://drive.google.com/file/d/0B3UZgvAnCpURQTQ5SXU5TU5NaUk/view?usp=sharing',
+        date: 'April 23 2017',
+      }, {
+        link: 'https://drive.google.com/open?id=0B3UZgvAnCpURN1dmSHlzTUhfLTg',
+        date: 'August 26 2017',
+      },{
+        link: 'https://drive.google.com/open?id=0B3UZgvAnCpURcHkwMWhKWHhSZGM',
+        date: 'September 4 2017',
+      },{
+        link: 'https://drive.google.com/open?id=0B3UZgvAnCpURUEpFbVpMLXJsWm8',
+        date: 'September 10 2017',
+      },],
     2016: [{
       link: 'https://drive.google.com/open?id=0B9IJ7PBOO1nSc2tQbEp0Tm5jdVU',
       date: 'May 8, 2016',
