@@ -10,6 +10,12 @@ angular.module('itcFrontendApp')
       }, {
         link: 'https://docs.google.com/document/d/1yfVv4h4ooH6gtPrKZ-JC8tG81vYzWiSG4j3teKSQVi0/edit?usp=sharing',
         date: 'January 21, 2018',
+      }, {
+        link: 'https://docs.google.com/document/d/1UqYl5cVmnxC1_FctGfxszh6HvtiFIO41TCu6d1431Us/edit?usp=sharing',
+        date: 'January 28, 2018',
+      }, {
+        link: 'https://docs.google.com/document/d/1qxMZqEoQHU-AYkuxEwZhkuamPZJksdbTyeDMTEeF-H4/edit?usp=sharing',
+        date: 'February 4, 2018',
       }],
     2017: [{
         link: 'https://drive.google.com/open?id=0B9IJ7PBOO1nSNk5DY0poenNfZlE',
