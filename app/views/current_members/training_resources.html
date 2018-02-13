@@ -1,1 +1,51 @@
-<div>training resources</div>
+<div class="training-resources-page-container">
+  <div class="container">
+    <div class="itc-h1">Training Resources</div>
+    <div layout="row" class="link-header">
+        <div class="itc-h4">Important Links</div>
+    </div>
+    <md-divider></md-divider>
+    <div class="link-list">
+        <div class="link" ng-repeat="link in links">
+            <a target="_blank" href="{{ link.link }}">{{ link.title }}</a>
+        </div>
+    </div>
+    <div layout="row" class="vid-header">
+        <span class="itc-h4">Training Videos</span>
+        <span flex></span>
+        <div layout="row" class="video-filters" hide-xs hide-sm>
+            <md-input-container class="selector">
+                <label>Exercise Type</label>
+                <md-select ng-model="exercise" ng-change="filterVideos()" placeholder="Filter Exercise Type"> 
+                    <md-option ng-value="value" ng-repeat="(key, value) in tags.EXERCISE">{{ value }}</md-option>
+                </md-select>
+            </md-input-container>
+            <md-input-container class="selector">
+                <label>Body Section</label>
+                <md-select ng-model="body_section" ng-change="filterVideos()" placeholder="Filter Body Section"> 
+                    <md-option ng-value="value" ng-repeat="(key, value) in tags.BODYSECTION">{{ value.name }}</md-option>
+                </md-select>
+            </md-input-container>
+            <md-input-container class="selector">
+                <label>Body Part</label>
+                <md-select ng-model="body_part" ng-change="filterVideos()" placeholder="Filter Body Part">
+                    <md-option ng-value="" ng-if="body_section == null">No Body Section, please select one</md-option>
+                    <md-option ng-value="value" ng-repeat="(key, value) in body_section.body_parts">{{ value }}</md-option>
+                </md-select>
+            </md-input-container>
+            <span class="clear-filters" ng-click="clearFilters()">Clear</span>
+        </div>
+    </div>
+    <md-divider></md-divider>
+    <div class="training-videos">
+        <div class="video" ng-repeat="vid in filteredVideos">
+            <div class="thumbholder" ng-click="openVideo(vid)">
+                <img width="240px" class="thumb" ng-src="{{vid.url | thumb}}"></img>
+                <img width="50px" class="play" ng-src="images/youtubeplay.png"></img>
+            </div>
+            <p>{{vid.title}}</p>
+            <p><strong>{{vid.exercise}}</strong> : {{vid.body_section.name}} : {{vid.body_part}}</p>
+        </div>
+    </div>
+  </div>
+</div>

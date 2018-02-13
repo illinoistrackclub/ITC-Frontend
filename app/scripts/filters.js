@@ -57,6 +57,20 @@ angular.module('itcFrontendApp')
   };
 })
 
+.filter('thumb', ['$sce', function ($sce) {
+    return function(url) {
+            var video_id = url.split('v=')[1].split('&')[0];
+        return $sce.trustAsResourceUrl("http://img.youtube.com/vi/" + video_id + "/mqdefault.jpg");
+    };
+}])
+
+.filter('trusted', ['$sce', function ($sce) {
+    return function(url) {
+            var video_id = url.split('v=')[1].split('&')[0];
+        return $sce.trustAsResourceUrl("https://www.youtube.com/embed/" + video_id);
+    };
+}])
+
 .filter('relayNames', function(_) {
   return function(items) {
     if(items.length === 1){

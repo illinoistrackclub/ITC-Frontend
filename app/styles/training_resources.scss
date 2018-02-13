@@ -1,0 +1,73 @@
+@import 'base';
+
+.training-resources-page-container {
+  .table {
+    margin: 10px 0;
+  }
+  .link-header{
+    margin-top: 10px;
+  }
+  .link-list {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    
+    .link {
+      margin: 5px;
+      margin-bottom: 10px;
+    }
+  }
+  .vid-header{
+    margin-top: 10px;
+
+    .video-filters {
+      .clear-filters {
+        margin-top: 10px;
+        color: orange;
+        cursor: pointer;
+      }
+      .clear-filters:focus {
+        outline: none;
+        border: 0;
+      }
+      
+      .selector {
+        margin-top: 0px;
+        margin-right: 5px;
+        margin-bottom: 4px;
+      }
+    }
+  }
+  .training-videos {
+    display: -webkit-flex;
+    -webkit-flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+
+    .video {
+      margin: 5px;
+      position: relative;
+
+      .thumbholder {
+        width: 240px;
+        height: 135px;
+        cursor: pointer;
+
+        .play {
+          position: relative;
+          z-index: 2;
+          top: 50px;
+          left: 95px;
+        }
+
+        .thumb {
+          position: absolute;
+          z-index: 1;
+        }
+      }
+    }
+  }
+}

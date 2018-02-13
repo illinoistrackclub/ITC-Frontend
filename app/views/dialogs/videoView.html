@@ -1,0 +1,20 @@
+<md-dialog>
+  <form>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h1>{{video.title}}</h1>
+        <span flex></span>
+        <md-button ng-click="closeVideo()" class="md-white" analytics-on="click" analytics-event="Closed video">X</md-button>        
+      </div>
+    </md-toolbar>
+
+    <md-dialog-content class="md-dialog-content">
+        <iframe width="560" height="315" ng-src="{{video.url | trusted}}" frameborder="0" allowfullscreen></iframe>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+      <span flex></span>
+      <md-button ng-click="closeVideo()" class="md-primary" analytics-on="click" analytics-event="Closed video">Close</md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>
