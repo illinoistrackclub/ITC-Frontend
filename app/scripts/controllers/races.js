@@ -73,14 +73,22 @@ angular.module('itcFrontendApp')
   }];
 
   $scope.outdoorMeets = [{
-    event: 'Rose Hulman',
-    date: 'March 17, 2018',
-    location: 'Terre Haute, IN'
+    event: 'Augustana College Early Spring Opener',
+    date: 'March 24, 2018',
+    location: 'Rock Island'
   }, {
     event: 'WashU Invite',
     date: 'March 30, 2018',
     location: 'St. Louis, MO'
   }, {
+    event: 'John Creer Invitational',
+    date: 'March 31, 2018',
+    location: 'Lindenwood, MO'
+  },{
+    event: 'Western Illinois Lee Calhoun Memorial',
+    date: 'April 7, 2018',
+    location: 'Macomb, IL'
+  },{
     event: 'NIRCA Track & Field Nationals',
     date: 'April 14-15, 2018',
     location: 'Bloomington, IN',
