@@ -62,7 +62,7 @@ angular.module('itcFrontendApp')
     email: 'illinoistfclub+president@gmail.com',
     image: '/images/contacts/tf_president.jpg'
   }, {
-    name: 'Tyler Splitt',
+    name: 'Keith Lee',
     position: 'Head Coach',
     email: 'illinoistfclub+coach@gmail.com',
     image: '/images/contacts/tf_hc.jpg'
