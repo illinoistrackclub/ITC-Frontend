@@ -20,7 +20,7 @@ angular.module('itcFrontendApp')
     email: 'illinoisxcclub+coach@gmail.com',
     image: '/images/contacts/tf_distance.jpg'
   }, {
-    name: 'Mariela Marquez',
+    name: 'Julia Schultz',
     position: 'Treasurer',
     email: 'illinoisxcclub+treasurer@gmail.com',
     image: '/images/contacts/xc_treasurer.jpg'
@@ -45,12 +45,12 @@ angular.module('itcFrontendApp')
     email: 'illinoisxcclub+meetcoord@gmail.com',
     image: '/images/contacts/xc_home_meet.jpg'
   }, {
-    name: 'Austin Kuehr',
+    name: 'Alex Hanskat',
     position: 'Travel Coordinator',
     email: 'illinoisxcclub+travel@gmail.com',
     image: '/images/contacts/xc_travel.jpg'
   }, {
-    name: 'Josh Feldman',
+    name: 'Josh Mollway',
     position: 'Webmaster',
     email: 'illinoisxcclub+webmaster@gmail.com',
     image: '/images/contacts/xc_webmaster.jpg'
