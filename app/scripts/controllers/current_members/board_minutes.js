@@ -16,6 +16,27 @@ angular.module('itcFrontendApp')
       }, {
         link: 'https://docs.google.com/document/d/1qxMZqEoQHU-AYkuxEwZhkuamPZJksdbTyeDMTEeF-H4/edit?usp=sharing',
         date: 'February 4, 2018',
+      },{
+        link: 'https://docs.google.com/document/d/1vkfWBN9eh4oapRQLPEz-WORaITRJuRiyD676Eg52vWo/edit?usp=sharing',
+        date: 'February 11, 2018',
+      },{
+        link: 'https://docs.google.com/document/d/1LMvI9EGhvQvm0G0xabsaQYxIuxp1UrFKsh8J3DjQZbk/edit?usp=sharing',
+        date: 'February 18, 2018',
+      },{
+        link: 'https://docs.google.com/document/d/1zZWCVS6PLEFk77owMyFTEVCeIP3-gE3QdOdZGFLnyms/edit?usp=sharing',
+        date: 'March 4, 2018',
+      },{
+        link: 'https://docs.google.com/document/d/1TpoyJkp_QWSRbJO11BVo0IrYk-ydJFgvTtbCvdWl07g/edit?usp=sharing',
+        date: 'March 11, 2018',
+      },{
+        link: 'https://docs.google.com/document/d/1LMWDFcXQCxuwr00M5cFOC_2SZQdV31Xi70qtuSN4ocs/edit?usp=sharing',
+        date: 'April 1, 2018',
+      },{
+        link: 'https://docs.google.com/document/d/1kfk1wVBkc97cdRW_pOnKMACweZ7XSGW8fJs6WNivc8Q/edit?usp=sharing',
+        date: 'April 8, 2018',
+      },{
+        link: 'https://docs.google.com/document/d/1ozq7SbRXMIkySXiZTmlu5od_gBqUx6q8ebVNYsGJOcM/edit?usp=sharing',
+        date: 'April 29, 2018',
       }],
     2017: [{
         link: 'https://drive.google.com/open?id=0B9IJ7PBOO1nSNk5DY0poenNfZlE',
