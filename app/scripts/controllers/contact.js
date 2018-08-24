@@ -63,7 +63,7 @@ angular.module('itcFrontendApp')
     image: '/images/contacts/tf_president.jpg'
   }, {
     name: 'Keith Lee',
-    position: 'Head Coach',
+    position: 'Head Coach and Mid D Coach',
     email: 'illinoistfclub+coach@gmail.com',
     image: '/images/contacts/tf_hc.jpg'
   }, {
@@ -101,14 +101,7 @@ angular.module('itcFrontendApp')
     position: 'Sprints Coach',
     email: 'rhaight2@illinois.edu ',
     image: '/images/contacts/tf_sprints.jpg'
-  },
-  {
-    name: 'Keith Lee',
-    position: 'Mid-D Coach',
-    email: 'keithclee@gmail.com',
-    image: '/images/contacts/tf_midd.jpg'
-  },
-   {
+  }, {
     name: 'Richard Skogsberg',
     position: 'Distance Coach',
     email: 'illinoisxcclub+coach@gmail.com',
