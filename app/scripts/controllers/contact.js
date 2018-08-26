@@ -57,13 +57,13 @@ angular.module('itcFrontendApp')
   }];
 
   $scope.tfCoaches = [{
-    name: 'Mateusz Lopez',
-    position: 'President & Jumps Coach',
+    name: 'Alex Bienduga',
+    position: 'President',
     email: 'illinoistfclub+president@gmail.com',
     image: '/images/contacts/tf_president.jpg'
   }, {
     name: 'Keith Lee',
-    position: 'Head Coach',
+    position: 'Head Coach and Mid D Coach',
     email: 'illinoistfclub+coach@gmail.com',
     image: '/images/contacts/tf_hc.jpg'
   }, {
@@ -72,12 +72,12 @@ angular.module('itcFrontendApp')
     email: 'illinoistfclub+treasurer@gmail.com',
     image: '/images/contacts/tf_treasurer.jpg'
   }, {
-    name: 'Leonel Rodriguez',
+    name: 'Cody Lund',
     position: 'Secretary',
     email: 'illinoistfclub+secretary@gmail.com',
     image: '/images/contacts/tf_secretary.jpg'
   }, {
-    name: 'Adriana Miltko',
+    name: 'Shan Amin',
     position: 'Social & Fundraising Chair',
     email: 'illinoistfclub+social@gmail.com',
     image: '/images/contacts/tf_social.jpg'
@@ -101,14 +101,7 @@ angular.module('itcFrontendApp')
     position: 'Sprints Coach',
     email: 'rhaight2@illinois.edu ',
     image: '/images/contacts/tf_sprints.jpg'
-  },
-  {
-    name: 'Keith Lee',
-    position: 'Mid-D Coach',
-    email: 'keithclee@gmail.com',
-    image: '/images/contacts/tf_midd.jpg'
-  },
-   {
+  }, {
     name: 'Richard Skogsberg',
     position: 'Distance Coach',
     email: 'illinoisxcclub+coach@gmail.com',
@@ -122,9 +115,16 @@ angular.module('itcFrontendApp')
   },
 
    {
-    name: 'Thomas Nute ',
+    name: 'Inga Augustaitis',
     position: 'Throws Coach',
-    email: '    tnute2@illinois.edu',
+    email: '      ingaa2@illinois.edu',
     image: '/images/contacts/tf_throws.jpg'
+  },
+
+   {
+    name: 'Justin Nebel',
+    position: 'Jumps Coach',
+    email: '   jrnebel2@illinois.edu ',
+    image: '/images/contacts/tf_jumps.jpg'
   }];
 });
