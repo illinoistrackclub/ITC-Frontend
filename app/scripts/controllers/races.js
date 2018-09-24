@@ -12,24 +12,24 @@ angular.module('itcFrontendApp')
 
   $scope.crossMeets = [{
     event: 'Aurora Spartan Classic',
-    date: 'September 7, 2018',
+    date: 'September 8, 2017',
     location: 'Aurora, IL'
   }, {
-    event: 'Olivet Nazarene University Midwest Intercollegiate',
-    date: 'September 28, 2018',
-    location: 'Bourbonnais, IL'
+    event: 'Augustana Brissman-Lundeen Invitational',
+    date: 'September 22, 2017',
+    location: 'Rock Island, IL'
   }, {
-    event: 'Lewis University Conference Crossover',
-    date: 'October 6, 2018',
-    location: 'Romeoville, IL'
+    event: 'Lucian Rosa Invitational',
+    date: 'October 7, 2017',
+    location: 'Somers, WI'
   }, {
     event: 'NIRCA Cross Country Regionals',
-    date: 'October 20, 2018',
-    location: 'Urbana, IL'
+    date: 'October 21, 2017',
+    location: 'Iowa City, IA'
   }, {
     event: 'NIRCA Cross Country Nationals',
-    date: 'November 10, 2018',
-    location: 'Lexington, KY'
+    date: 'November 11, 2017',
+    location: 'East Lansing, MI'
   }];
 
   $scope.indoorMeets = [{
