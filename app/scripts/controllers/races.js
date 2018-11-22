@@ -34,39 +34,11 @@ angular.module('itcFrontendApp')
 
   $scope.indoorMeets = [{
     event: 'Titan First Chance',
-    date: 'December 2, 2017',
+    date: 'December 1, 2018',
     location: 'Bloomington, IL'
-  }, {
-    event: 'Illini Open***',
-    date: 'January 13, 2018',
-    location: 'Champaign, IL'
   },{
-    event: 'John Craft Invite',
-    date: 'January 20, 2018',
-    location: 'Charleston, IL'
-  }, {
-    event: 'IWU Titan Open',
-    date: 'January 27, 2018',
-    location: 'Bloomington, IL'
-  }, 
-  {
-    event: 'Olivet Nazarene Invitational',
-    date: 'February 3, 2018',
-    location: 'Bourbonnais, IL'
-  }, 
-  {
-    event: 'GVSU Big Meet',
-    date: 'February 10, 2018',
-    location: 'Allendale, MI'
-  }, 
-  {
-    event: 'Illinois Orange and Blue',
-    date: 'February 17, 2018',
-    location: 'Champaign, IL'
-  },
-  {
     event: 'Illinois Club Relays',
-    date: 'February 24, 2018',
+    date: 'February 23, 2019',
     location: 'Champaign, IL',
     important: true,
     link: 'home_meets/clubrelays'
@@ -74,15 +46,15 @@ angular.module('itcFrontendApp')
 
   $scope.outdoorMeets = [{
     event: 'Augustana College Early Spring Opener',
-    date: 'March 24, 2018',
+    date: 'March 23, 2018',
     location: 'Rock Island'
   }, {
     event: 'WashU Invite',
-    date: 'March 30, 2018',
+    date: 'March 29, 2019',
     location: 'St. Louis, MO'
   }, {
     event: 'John Creer Invitational',
-    date: 'March 31, 2018',
+    date: 'March 30, 2019',
     location: 'Lindenwood, MO'
   },{
     event: 'Western Illinois Lee Calhoun Memorial',
@@ -90,8 +62,8 @@ angular.module('itcFrontendApp')
     location: 'Macomb, IL'
   },{
     event: 'NIRCA Track & Field Nationals',
-    date: 'April 14-15, 2018',
-    location: 'Bloomington, IN',
+    date: 'April 13-14, 2019',
+    location: 'Miami, OH',
     important: true,
     //link: 'http://www.clubrunning.org/races/race_info.php?race=460'
   }, {
