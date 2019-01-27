@@ -37,6 +37,29 @@ angular.module('itcFrontendApp')
     date: 'December 1, 2018',
     location: 'Bloomington, IL'
   },{
+    event: 'John Craft Invite',
+    date: 'January 19, 2019',
+    location: 'Charleston, IL'  
+  },{
+    event: 'Titan Open',
+    date: 'January 26, 2019',
+    location: 'Bloomington, IL'  
+  },{
+    event: 'Olivet Nazarene Invite',
+    date: 'February 2, 2019',
+    location: 'Bourbonnais, IL'
+  }, 
+  {
+    event: 'UIndy Invite',
+    date: 'February 9, 2019',
+    location: 'Indianapolis, IN'
+  }, 
+  {
+    event: 'GVSU Big Meet',
+    date: 'February 9, 2019',
+    location: 'Allendale, MI'
+  }, 
+  {
     event: 'Illinois Club Relays',
     date: 'February 23, 2019',
     location: 'Champaign, IL',
@@ -45,40 +68,34 @@ angular.module('itcFrontendApp')
   }];
 
   $scope.outdoorMeets = [{
-    event: 'Augustana College Early Spring Opener',
-    date: 'March 23, 2018',
-    location: 'Rock Island'
-  }, {
-    event: 'WashU Invite',
-    date: 'March 29, 2019',
+    event: 'WashU Mini Meet',
+    date: 'March 24, 2019',
     location: 'St. Louis, MO'
-  }, {
+  },{
     event: 'John Creer Invitational',
     date: 'March 30, 2019',
     location: 'Lindenwood, MO'
   },{
-    event: 'Western Illinois Lee Calhoun Memorial',
-    date: 'April 7, 2018',
-    location: 'Macomb, IL'
+    event: 'Millikin',
+    date: 'April 6, 2019',
+    location: 'Decatur, IL'
   },{
     event: 'NIRCA Track & Field Nationals',
     date: 'April 13-14, 2019',
     location: 'Miami, OH',
     important: true,
     //link: 'http://www.clubrunning.org/races/race_info.php?race=460'
-  }, {
-    event: 'Illinois Club Peaks',
-    date: 'April 21, 2018',
-    location: 'Champaign, IL',
-    important: true,
-    link: 'home_meets/clubpeaks'
-  }, {
+  },{
+    event: 'True Blue Open',
+    date: 'April 27, 2019',
+    location: 'Jacksonville, IL'
+  },{
     event: 'NCC Dr. Keeler',
-    date: 'May 10-11, 2018',
+    date: 'May 19-10, 2019',
     location: 'Naperville, IL'
-  }, {
+  },{
     event: 'NCC Gregory',
-    date: 'May 16-17, 2018',
+    date: 'May 15-16, 2019',
     location: 'Naperville, IL'
   }];
 });
