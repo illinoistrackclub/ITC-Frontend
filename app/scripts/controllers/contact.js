@@ -10,7 +10,7 @@ angular.module('itcFrontendApp')
   };
 
   $scope.xcCoaches = [{
-    name: 'Julia Shultz',
+    name: 'Julia Schultz',
     position: 'President',
     email: 'illinoisxcclub+president@gmail.com',
     image: '/images/contacts/xc_president.jpg'
@@ -18,7 +18,7 @@ angular.module('itcFrontendApp')
     name: 'Josh Mollway',
     position: 'Head Coach',
     email: 'illinoisxcclub+coach@gmail.com',
-    image: '/images/contacts/tf_distance.jpg'
+    image: '/images/contacts/xc_hc.jpg'
   }, {
     name: 'Alex Kogen',
     position: 'Treasurer',
@@ -35,7 +35,7 @@ angular.module('itcFrontendApp')
     email: 'illinoisxcclub+secretary@gmail.com',
     image: '/images/contacts/xc_secretary.jpg'
   }, {
-    name: 'Riley Maloney',
+    name: 'Nate Sun',
     position: 'Social & Fundraising Chair',
     email: 'illinoisxcclub+social@gmail.com',
     image: '/images/contacts/xc_social.jpg'
