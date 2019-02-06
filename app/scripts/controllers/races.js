@@ -45,9 +45,9 @@ angular.module('itcFrontendApp')
     date: 'January 26, 2019',
     location: 'Bloomington, IL'  
   },{
-    event: 'Olivet Nazarene Invite',
+    event: 'Jim Green Invite',
     date: 'February 2, 2019',
-    location: 'Bourbonnais, IL'
+    location: 'Jacksonville, IL'
   }, 
   {
     event: 'UIndy Invite',
