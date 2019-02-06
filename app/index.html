@@ -46,7 +46,7 @@
               </div>
               <md-menu-content width="2">
                 <md-menu-item><md-button ng-click="goTo('home_meets/clubrelays')">Club Relays</md-button></md-menu-item>
-                <md-menu-item><md-button ng-click="goTo('home_meets/clubpeaks')">Club Peaks</md-button></md-menu-item>
+                <!--<md-menu-item><md-button ng-click="goTo('home_meets/clubpeaks')">Club Peaks</md-button></md-menu-item>-->
               </md-menu-content>
             </md-menu>
             <div class="large-header-item"><a ng-click="goTo('results')">Results</a></div>
@@ -59,6 +59,8 @@
                 <md-menu-item><md-button ng-click="goTo('current_members/board_minutes')">Board Minutes</md-button></md-menu-item>
                 <md-menu-item><md-button target="_blank" ng-href="https://drive.google.com/open?id=0B9IJ7PBOO1nSWFlMcVZULVdwUkk" analytics-on="click" analytics-event="Opened IXC Constitution">IXC Constitution</md-button></md-menu-item>
                 <md-menu-item><md-button target="_blank" ng-href="https://drive.google.com/file/d/1QFxe82mPKjr23-IFJWqSpJxTwB2PHpxn/view?usp=sharing" analytics-on="click" analytics-event="Opened ITFC Constitution">ITFC Constitution</md-button></md-menu-item>
+                <md-menu-item><md-button target="_blank" ng-href="https://docs.google.com/spreadsheets/d/12Kfj9BpML1nDCN05UKrqVa5MpvilVZf2WZ2tqc7bxAI/edit#gid=1658358771" analytics-on="click" analytics-event="Opened Social Calendar">Social Calendar</md-button></md-menu-item>
+
               </md-menu-content>
             </md-menu>
             <md-menu>
@@ -144,7 +146,9 @@
           <a class="footer-logo" href="https://www.youtube.com/channel/UCcZRTX-FYPADoTpgc1jAcow" analytics-on="click" analytics-event="Went to YouTube page"><i class="ion-social-youtube"></i></a>
         </div>
         <div class="masthead" layout="row" layout-align="space-between center">
-          <div>Illinois Track Club</div>
+          <div>
+            Illinois Track <a ng-click="goTo('goat')">C</a>lub
+          </div>
           <div class="right">Built by: Mike Kreiser, Tyler Splitt, and Ryan Somerfield</div>
         </div>
       </div>

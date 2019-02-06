@@ -50,6 +50,10 @@ angular.module('itcFrontendApp')
       templateUrl: 'views/contact.html',
       controller: 'ContactCtrl'
     })
+    .when('/goat', {
+      templateUrl: 'views/goat.html',
+      controller: 'GoatCtrl'
+    })
     .when('/404', {
       templateUrl: 'views/404.html'
     })
