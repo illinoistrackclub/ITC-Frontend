@@ -13,6 +13,15 @@ angular.module('itcFrontendApp')
     }, {
       link: 'https://drive.google.com/open?id=1pPGDd8hMaPOjEiXuCv9THswKUouWWOqftMBGu-i5Kv0',
       date: 'January 27, 2019',
+    }, {
+      link: 'https://drive.google.com/open?id=1t5wK-sS8X5PtUff8gZtraLDT0TyfknSaJFF2cPjD6u0',
+      date: 'February 10, 2019',
+    }, {
+      link: 'https://drive.google.com/open?id=1TsURhp-dc7-SPO0yyvXZjMZABCm1OjwuRbvZ8bKZVVM',
+      date: 'February 17, 2019',
+    }, {
+      link: 'https://drive.google.com/open?id=15n42iBzxDJZB-rvaLMuWtkVBLWDlviff2RjB_sKPb48',
+      date: 'March 10, 2019',
     }],
     2018: [{
         link: 'https://docs.google.com/document/d/1VsAYPdkpLx2glKY176U52s6H16tmmi9A_FpiW04Wjl8/edit?usp=sharing',

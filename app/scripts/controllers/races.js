@@ -68,8 +68,8 @@ angular.module('itcFrontendApp')
   }];
 
   $scope.outdoorMeets = [{
-    event: 'WashU Mini Meet',
-    date: 'March 24, 2019',
+    event: 'WashU Invitational',
+    date: 'March 29, 2019',
     location: 'St. Louis, MO'
   },{
     event: 'John Creer Invitational',
@@ -82,16 +82,16 @@ angular.module('itcFrontendApp')
   },{
     event: 'NIRCA Track & Field Nationals',
     date: 'April 13-14, 2019',
-    location: 'Miami, OH',
+    location: 'Oxford, OH',
     important: true,
-    //link: 'http://www.clubrunning.org/races/race_info.php?race=460'
+    // link: 'https://clubrunning.org/races/race_info.php?race=766'
   },{
     event: 'True Blue Open',
     date: 'April 27, 2019',
     location: 'Jacksonville, IL'
   },{
     event: 'NCC Dr. Keeler',
-    date: 'May 19-10, 2019',
+    date: 'May 9-10, 2019',
     location: 'Naperville, IL'
   },{
     event: 'NCC Gregory',
