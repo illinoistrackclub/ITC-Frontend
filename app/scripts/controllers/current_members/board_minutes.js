@@ -22,6 +22,12 @@ angular.module('itcFrontendApp')
     }, {
       link: 'https://drive.google.com/open?id=15n42iBzxDJZB-rvaLMuWtkVBLWDlviff2RjB_sKPb48',
       date: 'March 10, 2019',
+    }, {
+      link: 'https://docs.google.com/document/d/1fbCpPlANxZG7xxKCU8aYQLsKcIZatS2VxrEOFuig1sI/edit?usp=sharing',
+      date: 'March 31, 2019',
+    }, {
+      link: 'https://docs.google.com/document/d/1mRl8jBDTscrhl6Ok_cIdp3ilm0i857f_IHLc-uCl3Lg/edit?usp=sharing',
+      date: 'April 28, 2019',
     }],
     2018: [{
         link: 'https://docs.google.com/document/d/1VsAYPdkpLx2glKY176U52s6H16tmmi9A_FpiW04Wjl8/edit?usp=sharing',
@@ -208,6 +214,10 @@ angular.module('itcFrontendApp')
   };
 
   $scope.crossMinutes = {
+    2019: [{ 
+      link: 'https://docs.google.com/document/d/16DytcJaylr7n49szGXyNJyGylE-zkwV0AAYPpwc4a24/edit?usp=sharing',
+      date: 'April 22, 2019',
+    },],
     2018: [{
       link: 'https://drive.google.com/open?id=1MdL22rd-fJtcvHa60P6m5oAkt4lSgXVa',
       date: 'April 25, 2018',
