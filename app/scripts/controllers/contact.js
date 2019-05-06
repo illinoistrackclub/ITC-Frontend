@@ -62,17 +62,17 @@ angular.module('itcFrontendApp')
     email: 'illinoistfclub+president@gmail.com',
     image: '/images/contacts/tf_president.jpg'
   }, {
-    name: 'Keith Lee',
-    position: 'Head Coach and Mid D Coach',
+    name: 'Cody Lund',
+    position: 'Head Coach',
     email: 'illinoistfclub+coach@gmail.com',
     image: '/images/contacts/tf_hc.jpg'
   }, {
-    name: 'Noel Brindise',
+    name: 'Andrew Rhode',
     position: 'Treasurer',
     email: 'illinoistfclub+treasurer@gmail.com',
     image: '/images/contacts/tf_treasurer.jpg'
   }, {
-    name: 'Cody Lund',
+    name: 'Evan Patel',
     position: 'Secretary',
     email: 'illinoistfclub+secretary@gmail.com',
     image: '/images/contacts/tf_secretary.jpg'
@@ -82,44 +82,54 @@ angular.module('itcFrontendApp')
     email: 'illinoistfclub+social@gmail.com',
     image: '/images/contacts/tf_social.jpg'
   }, {
-    name: 'Sean Frintner',
+    name: 'Bryan Himmel',
     position: 'Home Meet Coordinator',
     email: 'illinoistfclub+meetcoord@gmail.com',
     image: '/images/contacts/tf_home_meet.jpg'
   },{
-    name: 'Michael Jang',
-    position: 'Travel Coordinator & Hurdles Coach',
+    name: 'Andy Marszewski',
+    position: 'Travel Coordinator',
     email: 'illinoistfclub+travel@gmail.com',
     image: '/images/contacts/tf_travel.jpg'
   },{
-    name: 'Josh Mollway',
+    name: 'Matthew Beckerman',
     position: 'Webmaster',
     email: 'illinoistfclub+webmaster@gmail.com',
     image: '/images/contacts/tf_webmaster.jpg'
   },{
-    name: 'Becky Haight',
+    name: 'Alex Bienduga',
     position: 'Sprints Coach',
-    email: 'rhaight2@illinois.edu ',
+    email: 'ajb3@illinois.edu',
     image: '/images/contacts/tf_sprints.jpg'
   },{
-    name: 'Richard Skogsberg',
+    name: 'Josh Mollway',
     position: 'Distance Coach',
     email: 'illinoisxcclub+coach@gmail.com',
     image: '/images/contacts/tf_distance.jpg'
   },{
-    name: 'Josh Feldman',
+    name: 'Patrick Willhalm',
+    position: 'Mid D Coach',
+    email: 'illinoistfclub+midd@gmail.com',
+    image: '/images/contacts/tf_midd.jpg'
+  }, {
+    name: 'Justin Ostrem',
     position: 'Steeplechase Coach',
-    email: 'jmfeldm2@illinois.edu',
+    email: 'jostrem2@illinois.edu',
     image: '/images/contacts/tf_steeple.jpg'
+  },{
+    name: 'Desarae Echevarria',
+    position: 'Hurdles Coach',
+    email: 'desarae2@illinois.edu',
+    image: '/images/contacts/tf_hurdles.jpg'
   },{
     name: 'Inga Augustaitis',
     position: 'Throws Coach',
     email: 'ingaa2@illinois.edu',
     image: '/images/contacts/tf_throws.jpg'
   },{
-    name: 'Justin Nebel',
+    name: 'Jad Karajeh',
     position: 'Jumps Coach',
-    email: 'jrnebel2@illinois.edu ',
+    email: 'karajeh2@illinois.edu',
     image: '/images/contacts/tf_jumps.jpg'
   }];
 });
