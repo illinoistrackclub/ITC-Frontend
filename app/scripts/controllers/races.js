@@ -11,25 +11,17 @@ angular.module('itcFrontendApp')
   };
 
   $scope.crossMeets = [{
-    event: 'Aurora Spartan Classic',
-    date: 'September 7, 2018',
-    location: 'Aurora, IL'
-  }, {
-    event: 'Olivet Nazarene University Midwest Intercollegiate',
-    date: 'September 28, 2018',
-    location: 'Bourbonnais, IL'
-  }, {
-    event: 'Lewis University Conference Crossover',
-    date: 'October 6, 2018',
-    location: 'Romeoville, IL'
+    event: 'TBD',
+    date: 'TBD',
+    location: 'TBD'
   }, {
     event: 'NIRCA Cross Country Regionals',
-    date: 'October 20, 2018',
-    location: 'Urbana, IL'
+    date: 'TBD',
+    location: 'TBD'
   }, {
     event: 'NIRCA Cross Country Nationals',
-    date: 'November 10, 2018',
-    location: 'Lexington, KY'
+    date: 'November 9, 2019',
+    location: 'Hanover County, VA'
   }];
 
   $scope.indoorMeets = [{
