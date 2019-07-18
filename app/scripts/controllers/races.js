@@ -20,7 +20,7 @@ angular.module('itcFrontendApp')
     location: 'TBD'
   }, {
     event: 'NIRCA Cross Country Nationals',
-    date: 'November 9, 2019',
+    date: 'November 16, 2019',
     location: 'Hanover County, VA'
   }];
 
