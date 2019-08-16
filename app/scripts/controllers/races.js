@@ -11,17 +11,25 @@ angular.module('itcFrontendApp')
   };
 
   $scope.crossMeets = [{
-    event: 'TBD',
-    date: 'TBD',
-    location: 'TBD'
+    event: 'Aurora University Spartan Classic',
+    date: 'September 13, 2019',
+    location: 'Oakhurst Forest Preserve, Aurora, IL'
   }, {
-    event: 'NIRCA Cross Country Regionals',
-    date: 'TBD',
-    location: 'TBD'
+    event: 'Augustana College Brissman Lundeen Invitational',
+    date: 'October 4, 2019',
+    location: 'Saukie Golf Course, Rock Island, IL',
+  }, {
+    event: 'Lewis University Lewis Crossover',
+    date: 'October 12, 2019',
+    location: 'Lewis XC Course, Romeoville, IL',
+  }, {
+    event: 'NIRCA Great Plains Regional',
+    date: 'November 2, 2019',
+    location: 'UIUC Arboretum, Urbana, IL'
   }, {
     event: 'NIRCA Cross Country Nationals',
     date: 'November 16, 2019',
-    location: 'Hanover County, VA'
+    location: 'Pole Green Park, Hanover County, VA'
   }];
 
   $scope.indoorMeets = [{
