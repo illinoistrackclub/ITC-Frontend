@@ -11,13 +11,21 @@ angular.module('itcFrontendApp')
   };
 
   $scope.crossMeets = [{
-    event: 'TBD',
-    date: 'TBD',
-    location: 'TBD'
+    event: 'Spartan Classic',
+    date: 'September 13, 2019',
+    location: 'Aurora, IL'
+  }, {
+    event: 'Brissman/Lundeen Invitational',
+    date: 'October 4, 2019',
+    location: 'Rock Island, IL'
+  }, {
+    event: 'Lewis Crossover',
+    date: 'October 12, 2019',
+    location: 'Romeoville, IL'
   }, {
     event: 'NIRCA Cross Country Regionals',
-    date: 'TBD',
-    location: 'TBD'
+    date: 'November 2, 2019',
+    location: 'Urbana, IL'
   }, {
     event: 'NIRCA Cross Country Nationals',
     date: 'November 16, 2019',
