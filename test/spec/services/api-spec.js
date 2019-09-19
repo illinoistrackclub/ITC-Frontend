@@ -11,7 +11,7 @@ describe('service: Api', function() {
     $http = _$http_;
     $q = _$q_;
 
-    urlBase = 'http://illinoistrackclub.herokuapp.com/';
+    urlBase = 'https://illinoistrackclub.herokuapp.com/';
     httpGet = $q.defer();
 
     spyOn($http, 'get').and.returnValue(httpGet.promise);
