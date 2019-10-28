@@ -217,10 +217,7 @@ angular.module('itcFrontendApp')
     2019: [{ 
       link: 'https://docs.google.com/document/d/16DytcJaylr7n49szGXyNJyGylE-zkwV0AAYPpwc4a24/edit?usp=sharing',
       date: 'April 22, 2019',
-    }, {
-      link: 'https://docs.google.com/document/d/1XPtXm9bGRJQ3ElHbtd2684UNnKji_Njkf3eeP3UrTCE/edit?usp=sharing',
-      date: '2019 XC Season All',
-    }, ],
+    },],
     2018: [{
       link: 'https://drive.google.com/open?id=1MdL22rd-fJtcvHa60P6m5oAkt4lSgXVa',
       date: 'April 25, 2018',
