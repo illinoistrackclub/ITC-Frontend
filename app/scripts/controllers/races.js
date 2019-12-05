@@ -11,91 +11,79 @@ angular.module('itcFrontendApp')
   };
 
   $scope.crossMeets = [{
-    event: 'Spartan Classic',
-    date: 'September 13, 2019',
-    location: 'Aurora, IL'
+    event: 'TBA',
+    date: 'TBA',
+    location: 'TBA'
   }, {
-    event: 'Brissman/Lundeen Invitational',
-    date: 'October 4, 2019',
-    location: 'Rock Island, IL'
+    event: 'TBA',
+    date: 'TBA',
+    location: 'TBA'
   }, {
-    event: 'Lewis Crossover',
-    date: 'October 12, 2019',
-    location: 'Romeoville, IL'
+    event: 'TBA',
+    date: 'TBA',
+    location: 'TBA'
   }, {
     event: 'NIRCA Cross Country Regionals',
-    date: 'November 2, 2019',
-    location: 'Urbana, IL'
+    date: 'TBA',
+    location: 'TBA'
   }, {
     event: 'NIRCA Cross Country Nationals',
-    date: 'November 16, 2019',
+    date: 'TBA',
     location: 'Hanover County, VA'
   }];
 
   $scope.indoorMeets = [{
     event: 'Titan First Chance',
-    date: 'December 1, 2018',
+    date: 'December 7, 2019',
     location: 'Bloomington, IL'
   },{
-    event: 'John Craft Invite',
-    date: 'January 19, 2019',
-    location: 'Charleston, IL'  
+    event: 'TBA',
+    date: 'TBA',
+    location: 'TBA'  
   },{
-    event: 'Titan Open',
-    date: 'January 26, 2019',
-    location: 'Bloomington, IL'  
+    event: 'TBA',
+    date: 'TBA',
+    location: 'TBA'  
   },{
-    event: 'Jim Green Invite',
-    date: 'February 2, 2019',
-    location: 'Jacksonville, IL'
+    event: 'TBA',
+    date: 'TBA',
+    location: 'TBA'
   }, 
   {
-    event: 'UIndy Invite',
-    date: 'February 9, 2019',
-    location: 'Indianapolis, IN'
+    event: 'TBA',
+    date: 'TBA',
+    location: 'TBA'
   }, 
   {
-    event: 'GVSU Big Meet',
-    date: 'February 9, 2019',
-    location: 'Allendale, MI'
+    event: 'TBA',
+    date: 'TBA',
+    location: 'TBA'
   }, 
   {
     event: 'Illinois Club Relays',
-    date: 'February 23, 2019',
+    date: 'February 29, 2020',
     location: 'Champaign, IL',
     important: true,
     link: 'home_meets/clubrelays'
   }];
 
   $scope.outdoorMeets = [{
-    event: 'WashU Invitational',
-    date: 'March 29, 2019',
-    location: 'St. Louis, MO'
+    event: 'TBA',
+    date: 'TBA',
+    location: 'TBA'
   },{
-    event: 'John Creer Invitational',
-    date: 'March 30, 2019',
-    location: 'Lindenwood, MO'
+    event: 'TBA',
+    date: 'TBA',
+    location: 'TBA'
   },{
-    event: 'Millikin',
-    date: 'April 6, 2019',
-    location: 'Decatur, IL'
+    event: 'TBA',
+    date: 'TBA',
+    location: 'TBA'
   },{
     event: 'NIRCA Track & Field Nationals',
     date: 'April 13-14, 2019',
     location: 'Oxford, OH',
     important: true,
     // link: 'https://clubrunning.org/races/race_info.php?race=766'
-  },{
-    event: 'True Blue Open',
-    date: 'April 27, 2019',
-    location: 'Jacksonville, IL'
-  },{
-    event: 'NCC Dr. Keeler',
-    date: 'May 9-10, 2019',
-    location: 'Naperville, IL'
-  },{
-    event: 'NCC Gregory',
-    date: 'May 15-16, 2019',
-    location: 'Naperville, IL'
   }];
 });
