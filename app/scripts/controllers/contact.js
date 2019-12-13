@@ -122,14 +122,19 @@ angular.module('itcFrontendApp')
     email: 'desarae2@illinois.edu',
     image: '/images/contacts/tf_hurdles.jpg',
   },{
-    name: 'Inga Augustaitis',
+    name: 'Chris Rydberg',
     position: 'Throws Coach',
-    email: 'ingaa2@illinois.edu',
+    email: 'rydberg3@illinois.edu',
     image: '/images/contacts/tf_throws.jpg',
   },{
     name: 'Jad Karajeh',
     position: 'Jumps Coach',
     email: 'karajeh2@illinois.edu',
     image: '/images/contacts/tf_jumps.jpg',
+  },{
+    name: 'Grace McDonough',
+    position: 'Gender Minority Captain',
+    email: 'graceam2@illinois.edu',
+    image: '/images/contacts/tf_gmc.jpg',
   }];
 });
